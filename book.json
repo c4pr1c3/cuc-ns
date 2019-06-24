@@ -21,7 +21,7 @@
             ]
         }
     },
-    "plugins": ["quiz", "katex", "anchor-navigation-ex", "tbfed-pagefooter", "ga", "image-captions", "add-js-css"],
+    "plugins": ["quiz", "katex", "anchor-navigation-ex", "tbfed-pagefooter", "ga", "image-captions", "add-js-css", "edit-link"],
     "pluginsConfig": {
         "tbfed-pagefooter": {
             "copyright":"&copy <a href='https://www.zhihu.com/people/c4pr1c3'>@黄玮</a>",
@@ -58,6 +58,10 @@
             "js": [
                 "js/custom.js"
             ]
+        },
+        "edit-link": {
+            "base": "https://github.com/c4pr1c3/cuc-ns/edit/master",
+            "label": "Edit This Page"
         }
     }
 }
