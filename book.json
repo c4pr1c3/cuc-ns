@@ -1,0 +1,64 @@
+{
+    "gitbook": ">=2.0.0",
+    "title": "网络安全",
+    "description": "本科信息安全专业教材@CUC",
+    "language": "zh-hans",
+    "author": "黄玮",
+    "links": {
+        "sidebar": {
+            "中传信安课程网站": "//sec.cuc.edu.cn/"
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": true,
+            "instapaper": false,
+            "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        }
+    },
+    "plugins": ["quiz", "katex", "anchor-navigation-ex", "tbfed-pagefooter", "ga", "image-captions", "add-js-css"],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+            "copyright":"&copy <a href='https://www.zhihu.com/people/c4pr1c3'>@黄玮</a>",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "quiz": {
+            "labels": {
+                "check"             : "提交检查",
+                "showExplanation"   : "查看题解", 
+                "showCorrect"       : "显示全部",   
+                "explanationHeader" : "题解"
+            },
+            "text": {
+                "noChosen"    : "请至少选择一个正确答案",  
+                "incomplete"  : "没有回答完全" 
+            },
+            "buttons": {
+                "showCorrect"       : true, 
+                "showExplanation"   : true 
+            }
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        },
+        "ga": {
+            "token": "UA-4489768-14"
+        },
+        "image-captions": {
+            "caption": "_CAPTION_",
+            "align": "center"
+        },
+        "add-js-css": {
+            "js": [
+                "js/custom.js"
+            ]
+        }
+    }
+}
+

@@ -1,0 +1,25 @@
+img {
+    cursor: pointer;
+    max-height: 260px;
+    max-width: 800px;
+    width: auto;
+    height: auto;
+}
+
+figure {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding:5px 0;
+}
+
+figcaption {
+    clear: left;
+    margin: 0.75em 0px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+
