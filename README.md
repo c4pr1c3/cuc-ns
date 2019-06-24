@@ -8,11 +8,7 @@
 
 这本“教材”中的大部分内容和原始素材均取之于互联网，经过我这几年的教学实践和每学期上课的修订、改版，自认为可以反馈回互联网了。
 
-这本“教材”的在线PDF版幻灯片可以在[我的《网络安全》课程教学Wiki](http://sec.cuc.edu.cn/huangwei/wiki/teaching_cns.html)查看和下载。
+这本“教材”的配套课程表和 PPT 课件等也已开源在 [c4pr1c3/cuc-wiki](https://github.com/c4pr1c3/cuc-wiki) ，欢迎提交 [Issues](https://github.com/c4pr1c3/cuc-ns/issues) 和 [PR](https://github.com/c4pr1c3/cuc-ns/pulls) 。
 
-离线下载（测试）不同格式的电子书：
-* [pdf格式](http://sec.cuc.edu.cn/huangwei/textbook/ns/ns.pdf)
-* [epub格式](http://sec.cuc.edu.cn/huangwei/textbook/ns/ns.epub)
-* [mobi格式](http://sec.cuc.edu.cn/huangwei/textbook/ns/ns.mobi)
-
+在线查看课本请戳[这里](https://c4pr1c3.github.io/cuc-ns/) 。
 
