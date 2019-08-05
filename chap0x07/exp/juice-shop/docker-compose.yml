@@ -1,0 +1,20 @@
+version: '3'
+services:
+  juice-shop:
+    image: "bkimminich/juice-shop"
+    container_name: "juice-shop"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "127.0.0.1:3000:3000"
+  shake-logger:
+    image: "php:7.2-apache"
+    container_name: "juice-shop-shake-logger"
+    volumes:
+      - ./shake-logger/logger.php:/var/www/html/logger.php
+      - ./shake-logger/shake.js:/var/www/html/shake.js
+    ports:
+      - "8080:80"
