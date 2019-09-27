@@ -46,7 +46,9 @@
 * 规范的 Git 工作流程：
     * **提交作业等待批改**：提交 `PR` 请求将作业分支合并到 `master` 分支；
         * 未 `PR` 时的 `commit` 不会被批改；
-    * 课程没有在教务处系统上查到分数之前，**禁止合并或关闭** 已有的 `PR`；
+    * 课程没有在教务处系统上查到分数之前，**禁止合并或关闭** 已有批改记录的 `PR`，可以在该 `PR` 对应的分支上继续提交新变更；；
+    * 每次实验报告只保留一个 `Open` 状态的 `PR` ，禁止同一次作业发起多个 `PR`；
+    * `PR` 的标题应体现本次实验报告的主题；
 
 > 示例作业目录（所有分支合并到 master 分支后状态）如下：
 
@@ -57,8 +59,9 @@
 ├── README.md
 ├── chap0x01
 │   ├── README.md
-│   ├── vb-setup.png
-│   └── vb-victim-screenshot-1.png
+│   └── img
+│       ├── vb-setup.png
+│       └── vb-victim-screenshot-1.png
 ├── chap0x02
 │   └── README.md
 ├── chap0x03
@@ -66,9 +69,10 @@
 ├── chap0x04
 │   └── README.md
 └── chap0x05
-    ├── README.md
-    ├── exp.py
-    └── nginx.conf
+    ├── README.md
+    └── code
+        ├── exp.py
+        └── nginx.conf
 ```
 
 > 示例 Git 分支结构如下：
