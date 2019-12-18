@@ -111,9 +111,114 @@ http://192.168.56.101:8080/{contextpath}/saveCustomer.mvc
 | 混淆不等于安全 |                                                                                                                                            | [CWE-656](https://cwe.mitre.org/data/definitions/656.html)                                                                                                                                                                                     |
 | 条件竞争 | [OWASP-AT-010](https://www.owasp.org/index.php/Testing_for_Race_Conditions_%28OWASP-AT-010%29)                                                 | [CWE-362](http://cwe.mitre.org/data/definitions/362.html)                                                                                                                                                                                      |
 
+## Kali 上安装 Docker 注意事项
+
+以本书写作时使用 Kali 系统版本为例，如下所示：当前 Kali 版本为 `2019.2` ，注意到其中的 `Codename` 字段为 `n/a` ，即不可用。
+
+```bash
+lsb_release -a
+# No LSB modules are available.
+# Distributor ID: Kali
+# Description:    Kali GNU/Linux Rolling
+# Release:        2019.2
+# Codename:       n/a
+
+# 当前 Kali 版本自带的 Docker 最新版软件包名为 docker.io
+apt-cache policy docker.io
+# docker.io:
+#   Installed: (none)
+#   Candidate: 19.03.4+dfsg2-2
+#   Version table:
+#      19.03.4+dfsg2-2 500
+#         500 http://http.kali.org/kali kali-rolling/main amd64 Packages
+
+# Docker 官方当前使用的软件包名为 docker-ce ，但在 Kali 上没有使用这个软件包名
+apt-cache policy docker-ce
+# docker-ce:
+#   Installed: (none)
+#   Candidate: (none)
+#   Version table:
+```
+
+根据 [`Kali` 官方的介绍](https://www.kali.org/docs/policy/kali-linux-relationship-with-debian/)，`Kali` 是基于 [Debian Testing](https://www.debian.org/releases/testing/) 版本进行二次构建的，因此绝大部分 `Kali` 上的软件包都是来自 `Debian Testing` 版本。在某些情况下，一些较新版本的软件甚至是来自于 `Debian Unstable` 或者 `Debian Experimental` 版本。
+
+以下命令是在 `Debian buster` 版本上执行 `lsb_release -a` 的结果，注意到其中的 `Codename` 字段值为：`buster` 。当我们在执行 `lsb_release -cs` 的时候输出的值就是这里的 `Codename` ，记住这里 `lsb_release -cs` 的输出结果差异对于理解后续 [Docker 官方的安装指南中](https://docs.docker.com/install/linux/docker-ce/debian/) 的安装指令为什么不能直接在 `Kali` 上执行是有帮助的。
+
+```bash
+lsb_release -a
+# No LSB modules are available.
+# Distributor ID: Debian
+# Description:    Debian GNU/Linux 10 (buster)
+# Release:        10
+# Codename:       buster
+```
+
+推荐按照 [Docker 官方的安装指南](https://docs.docker.com/install/linux/docker-ce/debian/) 在 Kali 上安装 `Docker` ，但需要注意的是：不能在 Kali 上直接使用以下命令去添加 `Docker` 官方的 apt 镜像源地址：
+
+```bash
+add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+```
+
+一来，在 `Kali` 上 `lsb_release -cs` 的输出结果是 `n/a` ，这是一个非法的 `Debian` 发行版代号。所以，此处应该替换成当前最新的 `Debian` 稳定版代号（`Docker` 官方通常不支持 `Debian Testing` 版本，例如 `buster` 是当前 `Debian` 系列最新的稳定版本，此时的 `Testing` 版本代号为 `bullseye`），例如当前是 `buster` 。
+二来，建议用浏览器打开 [https://download.docker.com/linux/debian/dists/](https://download.docker.com/linux/debian/dists/) 确认存在 `buster` 子目录（当前确实不存在 `bullseye` 子目录，证明 `Docker` 官方确实还不支持 `Debian Testing` 版本）。
+
+需要注意的是，以下修改后添加 apt 镜像源地址的方法执行依然会报错：
+
+```bash
+add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   buster \
+   test"
+# Traceback (most recent call last):
+#  File "/usr/bin/add-apt-repository", line 95, in <module>
+#    sp = SoftwareProperties(options=options)
+#  File "/usr/lib/python3/dist-packages/softwareproperties/SoftwareProperties.py", line 109, in __init__
+#    self.reload_sourceslist()
+#  File "/usr/lib/python3/dist-packages/softwareproperties/SoftwareProperties.py", line 599, in reload_sourceslist
+#    self.distro.get_sources(self.sourceslist)
+#  File "/usr/lib/python3/dist-packages/aptsources/distro.py", line 93, in get_sources
+#    (self.id, self.codename))
+#aptsources.distro.NoDistroTemplateException: Error: could not find a distribution template for Kali/n/a
+```
+
+可以使用以下单行命令在 `/etc/apt/sources.list` 中添加 `Docker` 官方的 apt 镜像源地址：
+
+```bash
+if [[ $(grep -c "docker.com" /etc/apt/sources.list) -eq 0 ]];then echo "deb https://download.docker.com/linux/debian buster stable" >> /etc/apt/sources.list;fi
+```
+
+在执行 `apt update` 之前应先添加 `Docker` 官方的 GPG 公钥到系统受信任公钥数据库，如下操作：
+
+```bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+apt update
+```
+
+此时再执行 `apt-cache policy docker-ce` 就能看到是由 `Docker` 官方 apt 镜像源提供的最新 `Docker` 社区稳定版了。
+
+```bash
+apt-cache policy docker-ce | head
+# docker-ce:
+#   Installed: (none)
+#   Candidate: 5:19.03.5~3-0~debian-buster
+#   Version table:
+#      5:19.03.5~3-0~debian-buster 500
+#         500 https://download.docker.com/linux/debian buster/stable amd64 Packages
+#      5:19.03.4~3-0~debian-buster 500
+#         500 https://download.docker.com/linux/debian buster/stable amd64 Packages
+#      5:19.03.3~3-0~debian-buster 500
+#         500 https://download.docker.com/linux/debian buster/stable amd64 Packages
+```
+
+接下来的 `Docker` 安装就可以使用 `apt install docker-ce` 完成了。`docker-compose` 的安装依然建议按照 [Docker 官方文档的安装指南](https://docs.docker.com/compose/install/) 进行操作。
+
 ## 工具推荐
 
 * [burpsuite (Kali内置），免费版即可满足课程实验和大部分实战渗透测试之手工测试需求](https://portswigger.net/burp/)
+* [本章实验所需实验环境 `docker-compose up -d` 一键搭建](https://github.com/c4pr1c3/ctf-games)
 
 ## 参考资料推荐
 
