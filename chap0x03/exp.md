@@ -74,4 +74,4 @@ openssl x509 -in xxx.der -inform der -text -noout
 
 - [微软hotmail SSL证书被劫持的真实案例](http://www.freebuf.com/news/45929.html)
 - [GoAgent安全风险提示](https://www.bamsoftware.com/sec/goagent-advisory.html)
-- [密码学应用实践的小学期Wiki（回顾签发证书和配置Apache的HTTPS站点方法）](http://sec.cuc.edu.cn/huangwei/wiki/teaching_ac.html)
+- [密码学应用实践的小学期Wiki（回顾签发证书和配置Apache的HTTPS站点方法）](https://c4pr1c3.github.io/cuc-wiki/ac.html)
