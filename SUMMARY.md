@@ -8,6 +8,7 @@
 * [第三章 网络安全应用基础](chap0x03/main.md)
     * [实验](chap0x03/exp.md)
 * [第四章 网络监听](chap0x04/main.md)
+    * [实验](chap0x04/exp.md)
 * [第五章 网络扫描](chap0x05/main.md)
     * [实验](chap0x05/exp.md)
 * [第六章 网络与系统渗透](chap0x06/main.md)
