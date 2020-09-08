@@ -3,6 +3,13 @@ node_js:
   - "10"
 cache: npm
 
+before_install:
+  - openssl aes-256-cbc -K $gitee_key -iv $gitee_iv -in ./.travis/travis.key.enc -out gitee_deploy_key -d
+  - chmod 600 gitee_deploy_key
+  - eval $(ssh-agent)
+  - ssh-add gitee_deploy_key
+  - git remote add gitee git@gitee.com:c4pr1c3/cuc-ns.git
+
 notifications:
   email:
     on_success: never
@@ -15,12 +22,14 @@ script:
   - gitbook build
 
 after_script:
+  - git checkout -b gh-pages
   - cd _book
   - git init
   - git remote add origin https://${REF}
   - git add .
   - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
   - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
+  - git push --force --quiet gitee gh-pages
 
 branches:
   only:
@@ -30,3 +39,6 @@ env:
   global:
     - REF=github.com/c4pr1c3/cuc-ns.git # 设置 github 地址
 
+addons:
+  ssh_known_hosts:
+    - gitee.com
