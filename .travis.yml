@@ -8,7 +8,6 @@ before_install:
   - chmod 600 gitee_deploy_key
   - eval $(ssh-agent)
   - ssh-add gitee_deploy_key
-  - git remote add gitee git@gitee.com:c4pr1c3/cuc-ns.git
 
 notifications:
   email:
@@ -26,6 +25,8 @@ after_script:
   - cd _book
   - git init
   - git remote add origin https://${REF}
+  - git remote add gitee git@gitee.com:c4pr1c3/cuc-ns.git
+  - git remote -v
   - git add .
   - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
   - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
