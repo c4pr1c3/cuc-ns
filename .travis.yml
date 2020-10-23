@@ -25,12 +25,13 @@ after_script:
   - cd _book
   - git init
   - git remote add origin https://${REF}
-  - git remote add gitee git@gitee.com:c4pr1c3/cuc-ns.git
+  - git remote add gitee "git@gitee.com:c4pr1c3/cuc-ns.git"
   - git remote -v
   - git add .
   - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
   - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
   - git push --force --quiet gitee gh-pages
+  - git push --force --quiet "git@gitee.com:c4pr1c3/cuc-ns.git" master:gh-pages
 
 branches:
   only:
