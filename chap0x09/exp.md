@@ -15,7 +15,7 @@ apt install snort
 
 ```bash
 # 显示IP/TCP/UDP/ICMP头
-snort –v
+snort -v
 
 # 显示应用层数据
 snort -vd
@@ -79,7 +79,7 @@ apt install libperl4-corelibs-perl
 
 本次实验需要的一个最小化的实验环境是2台主机，假设网络拓扑信息如下：
 
-* VM-1 IP: 192.168.56.101 eth1 Host-only 运行 ``nmap`` 扫描 VM-1
+* VM-1 IP: 192.168.56.101 eth1 Host-only 运行 ``nmap`` 扫描 VM-2
 * VM-2 IP: 192.168.56.102 eth1 Host-only 运行 ``snort`` 和 ``guardian.pl``
 
 开始实验之前，VM-1 和 VM-2 可以互相双向访问。
