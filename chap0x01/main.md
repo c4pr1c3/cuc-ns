@@ -319,9 +319,12 @@ NVD（National Vulnerability Database）是美国的国家漏洞数据库，其�
 
 ### 1.3.6 ATT&CK
 
-在前文中我们介绍了 `CVE` 的最初发起机构 [MITRE](https://www.mitre.org/)，这家机构早期的一项主要业务是给美国国防部做威胁建模技术支持，工作内容主要是情报分析，从事反恐情报的领域（起源是911后美国情报提升法案），后续延申到网络空间安全领域，其最大的特色就是分类建模。威胁情报领域的威胁情报交换格式标准 [STIX](https://oasis-open.github.io/cti-documentation/stix/intro.html) 、恶意软件分类和特征标准 [MAEC](https://maecproject.github.io/) 均是由 MITRE 公司创建并负责维护。SITX 1.0 版本有很浓的反恐情报分析影子。到了 STIX 2.0 阶段，其发现仅仅用 TTP 很难描述网络空间网络攻击和恶意代码。因此，在 STIX 2.0 中，引入攻击和恶意代码 2 个相对独立的表述。攻击采用 CAPEC ，恶意代码采用 MEAC ，但是 CAPEC 和 MEAC 过于晦涩，MITRE 随后又在 2015 年发布了 [ATT&CK](https://attack.mitre.org/) 模型及建模字典，用来改进攻击描述。新模型更明确，更易于表达，合并了 CAPEC 和 MEAC，更便于表达和分享，有利于安全自动化，而且更易引入知识图谱等新的人工智能技术。
+在前文中我们介绍了 `CVE` 的最初发起机构 [MITRE](https://www.mitre.org/)，这家机构早期的一项主要业务是给美国国防部做威胁建模技术支持，工作内容主要是情报分析，从事反恐情报的领域（起源是911后美国情报提升法案），后续延申到网络空间安全领域，其最大的特色就是分类建模。威胁情报领域的威胁情报交换格式标准 [STIX](https://oasis-open.github.io/cti-documentation/stix/intro.html) 、恶意软件分类和特征标准 [MAEC](https://maecproject.github.io/) 均是由 MITRE 公司创建并负责维护。SITX 1.0 版本有很浓的反恐情报分析影子。到了 STIX 2.0 阶段，其发现仅仅用 TTP 很难描述网络空间网络攻击和恶意代码。因此，在 STIX 2.0 中，引入攻击和恶意代码 2 个相对独立的表述。攻击采用 CAPEC ，恶意代码采用 MAEC ，但是 CAPEC 和 MAEC 过于晦涩，MITRE 随后又在 2015 年发布了 [ATT&CK](https://attack.mitre.org/) 模型及建模字典，用来改进攻击描述。新模型更明确，更易于表达，合并了 CAPEC 和 MAEC，更便于表达和分享，有利于安全自动化，而且更易引入知识图谱等新的人工智能技术。
 
-`ATT&CK` 模型是在洛克希德-马丁公司提出的 [网络杀伤链（Cyber Kill Chain）模型](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) 的基础上，构建了一套更细粒度、更易共享的知识模型和框架。目前 `ATT&CK` 模型分为三部分，分别是 `PRE-ATT&CK` ，`ATT&CK for Enterprise` 和 `ATT&CK for Mobile` 。其中 `PRE-ATT&CK` 覆盖杀伤链模型的前两个阶段，包含了与攻击者在尝试利用特定目标网络或系统漏洞进行相关操作有关的战术和技术。`ATT&CK for Enterprise` 覆盖杀伤链模型的后五个阶段，`ATT&CK for Enterprise` 由适用于 `Windows` 、`Linux` 和 `macOS` 系统的技术和战术部分共同组成。`ATT&CK for Mobile` 包含适用于移动设备的战术和技术。
+`ATT&CK` 模型是在洛克希德-马丁公司提出的 [网络杀伤链（Cyber Kill Chain）模型](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) 的基础上，构建了一套更细粒度、更易共享的知识模型和框架。目前（2021年5月） `ATT&CK` 模型分为三部分，分别是`ATT&CK for Enterprise`，`ATT&CK for Mobile`和`ATT&CK for ICS` 。`ATT&CK for Enterprise` 描述了攻击者为破坏在企业网络和云中采取的战术和技术，`ATT&CK for Enterprise` 由适用于 `Windows` 、`Linux` 和 `macOS` 系统的技术和战术部分共同组成。`ATT&CK for Mobile` 包含适用于移动设备的战术和技术。`ATT&CK for ICS`适用于工业控制系统网络中的战术和技术。
+
+注：MITER已弃用`PRE-ATT＆CK`矩阵，并将其与 Enterprise 矩阵合并。
+
 
 但是，`ATT&CK` 的战术跟洛克希德·马丁的网络杀伤链不一样，并没有遵循任何线性顺序。相反，攻击者可以随意切换战术来实现最终目标。没有一种战术比其它战术更重要。企业组织必须对当前覆盖范围进行分析，评估组织面临的风险，并采用有意义措施来弥合差距。
 
