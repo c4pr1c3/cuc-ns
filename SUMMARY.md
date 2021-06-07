@@ -30,7 +30,5 @@
     * [数据驱动安全怎么做](ds-security/how.md)
         * [威胁追踪概述](ds-security/threat-hunting.md)
     * [数据驱动安全面临的挑战和机遇](ds-security/challenges.md)
-* 模拟测试
-    * [2016](exam/2016.md)
 * [信息安全思维](mind_of_security.md)
 

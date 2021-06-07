@@ -14,7 +14,7 @@ notifications:
     on_success: never
 
 install:
-  - mkdir -p "${NODE_MODULES_DIR}" && cd "${NODE_MODULES_DIR}" && npm install graceful-fs@4.1.0 --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
+  - mkdir -p "${NODE_MODULES_DIR}" && cd "${NODE_MODULES_DIR}" && npm install graceful-fs@4.2.0 --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
   - npm install -g gitbook-cli
   - gitbook install
 
