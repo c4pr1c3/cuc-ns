@@ -13,12 +13,12 @@ notifications:
     on_success: never
 
 install:
-  - mkdir -p "${NODE_MODULES_DIR}" && cd "${NODE_MODULES_DIR}" && npm install graceful-fs@4.2.0 --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
-  - npm install -g gitbook-cli
-  - gitbook install
+  - npm install gitbook-cli graceful-fs@4.2.0
+  - cd node_modules/npm/node_modules/ && npm install graceful-fs@4.2.0 && cd -
+  - node node_modules/gitbook-cli/bin/gitbook.js install
 
 script:
-  - gitbook build
+  - node node_modules/gitbook-cli/bin/gitbook.js build
 
 after_script:
   - git checkout -b gh-pages
@@ -40,7 +40,6 @@ branches:
 env:
   global:
     - REF=github.com/c4pr1c3/cuc-ns.git # 设置 github 地址
-    - NODE_MODULES_DIR="/home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules"
 
 addons:
   ssh_known_hosts:
