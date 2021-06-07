@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - "15.11.0"
-env:
-  - NODE_MODULES_DIR="/home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules"
 cache: npm
 
 before_install:
@@ -43,6 +41,7 @@ branches:
 env:
   global:
     - REF=github.com/c4pr1c3/cuc-ns.git # 设置 github 地址
+    - NODE_MODULES_DIR="/home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules"
 
 addons:
   ssh_known_hosts:
