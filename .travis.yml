@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "15"
+  - "15.11.0"
 cache: npm
 
 before_install:
@@ -14,7 +14,6 @@ notifications:
     on_success: never
 
 install:
-  - npm clean cache --force # fix https://github.com/nodejs/help/issues/2874
   - npm install -g gitbook-cli
   - gitbook install
 
