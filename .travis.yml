@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "15.11.0"
+env:
+  - NODE_MODULES_DIR="/home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules"
 cache: npm
 
 before_install:
@@ -14,7 +16,7 @@ notifications:
     on_success: never
 
 install:
-  - cd /home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules && npm install graceful-fs@latest --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
+  - mkdir -p "${NODE_MODULES_DIR}" && cd "${NODE_MODULES_DIR}" && npm install graceful-fs@latest --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
   - npm install -g gitbook-cli
   - gitbook install
 
