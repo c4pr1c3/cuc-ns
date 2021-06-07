@@ -14,6 +14,7 @@ notifications:
     on_success: never
 
 install:
+  - npm clean cache --force # fix https://github.com/nodejs/help/issues/2874
   - npm install -g gitbook-cli
   - gitbook install
 
