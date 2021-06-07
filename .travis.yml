@@ -14,6 +14,7 @@ notifications:
     on_success: never
 
 install:
+  - cd /home/travis/.nvm/versions/node/v15.11.0/lib/node_modules/gitbook-cli/node_modules/npm/node_modules && npm install graceful-fs@latest --save && cd -  # ref: https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful
   - npm install -g gitbook-cli
   - gitbook install
 
