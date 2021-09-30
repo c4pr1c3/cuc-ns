@@ -11,7 +11,7 @@
 以下是本次实验需要使用的网络节点说明和主要软件举例：
 
 * VirtualBox 虚拟机
-* 攻击者主机（Attacker）：Kali Rolling 2109.2
+* 攻击者主机（Attacker）：Kali Rolling 2019.2
 * 网关（Gateway, GW）：Debian Buster
 * 靶机（Victim）：From Sqli to shell / xp-sp3 / Kali
 
