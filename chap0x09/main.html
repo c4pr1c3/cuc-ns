@@ -1,0 +1,1112 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第九章 入侵检测 · 网络安全</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黄玮">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exp.html" />
+    
+    
+    <link rel="prev" href="../chap0x08/exp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://c4pr1c3.github.io/cuc-wiki/" target="_blank" class="custom-link">中传信安课程网站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    自序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chap0x01/main.html">
+            
+                <a href="../chap0x01/main.html">
+            
+                    
+                    第一章 网络安全基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chap0x01/exp.html">
+            
+                <a href="../chap0x01/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chap0x01/等级安全保护与计算机安全法规.html">
+            
+                <a href="../chap0x01/等级安全保护与计算机安全法规.html">
+            
+                    
+                    番外 等级安全保护与计算机安全法规
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chap0x02/main.html">
+            
+                <a href="../chap0x02/main.html">
+            
+                    
+                    第二章 系统安全、风险评估理论与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chap0x03/main.html">
+            
+                <a href="../chap0x03/main.html">
+            
+                    
+                    第三章 网络安全应用基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chap0x03/exp.html">
+            
+                <a href="../chap0x03/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chap0x04/main.html">
+            
+                <a href="../chap0x04/main.html">
+            
+                    
+                    第四章 网络监听
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chap0x04/exp.html">
+            
+                <a href="../chap0x04/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chap0x05/main.html">
+            
+                <a href="../chap0x05/main.html">
+            
+                    
+                    第五章 网络扫描
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chap0x05/exp.html">
+            
+                <a href="../chap0x05/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chap0x06/main.html">
+            
+                <a href="../chap0x06/main.html">
+            
+                    
+                    第六章 网络与系统渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chap0x07/main.html">
+            
+                <a href="../chap0x07/main.html">
+            
+                    
+                    第七章 Web应用漏洞攻防
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chap0x07/exp.html">
+            
+                <a href="../chap0x07/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chap0x08/main.html">
+            
+                <a href="../chap0x08/main.html">
+            
+                    
+                    第八章 防火墙
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chap0x08/exp.html">
+            
+                <a href="../chap0x08/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="main.html">
+            
+                <a href="main.html">
+            
+                    
+                    第九章 入侵检测
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="exp.html">
+            
+                <a href="exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chap0x10/main.html">
+            
+                <a href="../chap0x10/main.html">
+            
+                    
+                    第十章 应用程序安全加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chap0x11/main.html">
+            
+                <a href="../chap0x11/main.html">
+            
+                    
+                    第十一章 蜜罐和蜜网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chap0x11/exp.html">
+            
+                <a href="../chap0x11/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chap0x12/main.html">
+            
+                <a href="../chap0x12/main.html">
+            
+                    
+                    第十二章 计算机取证
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chap0x12/exp.html">
+            
+                <a href="../chap0x12/exp.html">
+            
+                    
+                    实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chap0x13/main.html">
+            
+                <a href="../chap0x13/main.html">
+            
+                    
+                    第十三章 社会化网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    第九章番外 数据驱动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../ds-security/what.html">
+            
+                <a href="../ds-security/what.html">
+            
+                    
+                    什么是数据驱动安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../ds-security/why.html">
+            
+                <a href="../ds-security/why.html">
+            
+                    
+                    为什么需要数据驱动安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../ds-security/how.html">
+            
+                <a href="../ds-security/how.html">
+            
+                    
+                    数据驱动安全怎么做
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.3.1" data-path="../ds-security/threat-hunting.html">
+            
+                <a href="../ds-security/threat-hunting.html">
+            
+                    
+                    威胁追踪概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../ds-security/challenges.html">
+            
+                <a href="../ds-security/challenges.html">
+            
+                    
+                    数据驱动安全面临的挑战和机遇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../mind_of_security.html">
+            
+                <a href="../mind_of_security.html">
+            
+                    
+                    信息安全思维
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第九章 入侵检测</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E5D;&#x7AE0;-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;"><b></b>&#x7B2C;&#x4E5D;&#x7AE0; &#x5165;&#x4FB5;&#x68C0;&#x6D4B;</a></li><ul><li><span class="title-icon "></span><a href="#91-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;"><b></b>9.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;</a></li><ul><li><span class="title-icon "></span><a href="#911-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;"><b></b>9.1.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;</a></li><li><span class="title-icon "></span><a href="#912-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;"><b></b>9.1.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;</a></li></ul><li><span class="title-icon "></span><a href="#92-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;"><b></b>9.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;</a></li><ul><li><span class="title-icon "></span><a href="#921-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;"><b></b>9.2.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#922-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;"><b></b>9.2.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;</a></li></ul><li><span class="title-icon "></span><a href="#93-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;"><b></b>9.3 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;</a></li><ul><li><span class="title-icon "></span><a href="#931-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;"><b></b>9.3.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;</a></li><li><span class="title-icon "></span><a href="#932-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;"><b></b>9.3.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;</a></li></ul><li><span class="title-icon "></span><a href="#94-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;"><b></b>9.4 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;</a></li><ul><li><span class="title-icon "></span><a href="#941-&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;"><b></b>9.4.1 &#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;</a></li><li><span class="title-icon "></span><a href="#942-&#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;"><b></b>9.4.2 &#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;</a></li></ul><li><span class="title-icon "></span><a href="#95-&#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;"><b></b>9.5 &#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;</a></li><ul><li><span class="title-icon "></span><a href="#951-&#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;"><b></b>9.5.1 &#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#952-snort"><b></b>9.5.2 Snort</a></li><li><span class="title-icon "></span><a href="#953-suricata"><b></b>9.5.3 Suricata</a></li><li><span class="title-icon "></span><a href="#954-bro--zeek"><b></b>9.5.4 Bro / Zeek</a></li></ul><li><span class="title-icon "></span><a href="#96-&#x601D;&#x8003;&#x9898;"><b></b>9.6 &#x601D;&#x8003;&#x9898;</a></li></ul></ul></div><a href="#&#x7B2C;&#x4E5D;&#x7AE0;-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x4E5D;&#x7AE0;-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;"><a name="&#x7B2C;&#x4E5D;&#x7AE0;-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E5D;&#x7AE0;-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E5D;&#x7AE0; &#x5165;&#x4FB5;&#x68C0;&#x6D4B;</h1>
+<h2 id="91-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;"><a name="91-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#91-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6982;&#x8FF0;</h2>
+<h3 id="911-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;"><a name="911-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;" class="anchor-navigation-ex-anchor" href="#911-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;</h3>
+<figure id="fig1.10.1"><img src="attach/media/image1.png" alt="&#x56FE; 9-1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;"><figcaption class="center">&#x56FE; 9-1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53D1;&#x5C55;&#x7B80;&#x53F2;</figcaption></figure>
+<p>1980&#x5E74;&#xFF0C;James P. Anderson &#x5728;&#x9898;&#x4E3A;&#x201C;&#x8BA1;&#x7B97;&#x673A;&#x5B89;&#x5168;&#x5A01;&#x80C1;&#x76D1;&#x63A7;&#x4E0E;&#x76D1;&#x89C6;&#x201D;&#x7684;&#x6280;&#x672F;&#x62A5;&#x544A;&#x4E2D;&#x9996;&#x6B21;&#x63D0;&#x51FA;&#x4E86;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5C06;&#x5165;&#x4FB5;&#x5C1D;&#x8BD5;&#xFF08;Intrusion attempt&#xFF09;&#x6216;&#x5A01;&#x80C1;&#xFF08;Threat&#xFF09;&#x5B9A;&#x4E49;&#x4E3A;&#x6F5C;&#x5728;&#x7684;&#x3001;&#x6709;&#x9884;&#x8C0B;&#x7684;&#x4E14;&#x672A;&#x7ECF;&#x6388;&#x6743;&#x800C;&#x8BBF;&#x95EE;&#x4FE1;&#x606F;&#x3001;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;&#x3001;&#x81F4;&#x4F7F;&#x7CFB;&#x7EDF;&#x4E0D;&#x53EF;&#x9760;&#x6216;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x7684;&#x4F01;&#x56FE;&#x3002;&#x6B64;&#x5916;&#xFF0C;James P. Anderson &#x9488;&#x5BF9;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x98CE;&#x9669;&#x548C;&#x5A01;&#x80C1;&#x63D0;&#x51FA;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x5206;&#x7C7B;&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5A01;&#x80C1;&#x5206;&#x4E3A;&#x5916;&#x90E8;&#x6E17;&#x900F;&#x3001;&#x5185;&#x90E8;&#x6E17;&#x900F;&#x548C;&#x4E0D;&#x6CD5;&#x884C;&#x4E3A;&#x4E09;&#x79CD;&#xFF0C;&#x8FD8;&#x63D0;&#x51FA;&#x4E86;&#x5229;&#x7528;&#x5BA1;&#x8BA1;&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x76D1;&#x89C6;&#x5165;&#x4FB5;&#x6D3B;&#x52A8;&#x7684;&#x601D;&#x60F3;&#x3002;&#x8FD9;&#x4EFD;&#x62A5;&#x544A;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x5F00;&#x5C71;&#x4E4B;&#x4F5C;&#x3002;</p>
+<p>1986&#x5E74;&#xFF0C;&#x4E3A;&#x68C0;&#x6D4B;&#x7528;&#x6237;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5F02;&#x5E38;&#x8BBF;&#x95EE;&#xFF0C;W.T.Tener &#x5728; IBM &#x4E3B;&#x673A;&#x4E0A;&#x7528; COBOL &#x5F00;&#x53D1;&#x4E86; Discovery &#x7CFB;&#x7EDF;&#xFF0C;&#x662F;&#x6700;&#x65E9;&#x7684;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF08;Host-based Intrusion Detection System, HIDS&#xFF09;&#x539F;&#x578B;&#x3002;1987&#x5E74;&#xFF0C;Dorothy E. Denning &#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x62BD;&#x8C61;&#x6A21;&#x578B;&#xFF0C;&#x9996;&#x6B21;&#x63D0;&#x51FA;&#x5C06;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x6982;&#x5FF5;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x5B89;&#x5168;&#x9632;&#x5FA1;&#x95EE;&#x9898;&#x7684;&#x63AA;&#x65BD;&#x3002;&#x5728;&#x6B64;&#x6A21;&#x578B;&#x4E2D;&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x7531;&#x4E3B;&#x4F53;&#xFF08;Subjects&#xFF09;&#x3001;&#x5BF9;&#x8C61;&#xFF08;Objects&#xFF09;&#x3001;&#x5BA1;&#x8BA1;&#x8BB0;&#x5F55;&#xFF08;Audit records&#xFF09;&#x3001;&#x6D3B;&#x52A8;&#x6863;&#x6848;&#xFF08;Profiles&#xFF09;&#x3001;&#x5F02;&#x5E38;&#x8BB0;&#x5F55;&#xFF08;Anomoly records&#xFF09;&#x548C;&#x6D3B;&#x52A8;&#x89C4;&#x5219;&#xFF08;Activity rules&#xFF09;&#x7EC4;&#x6210;&#x3002;&#x5B83;&#x72EC;&#x7ACB;&#x4E8E;&#x7279;&#x5B9A;&#x7684;&#x7CFB;&#x7EDF;&#x5E73;&#x53F0;&#x3001;&#x5E94;&#x7528;&#x73AF;&#x5883;&#x3001;&#x7CFB;&#x7EDF;&#x5F31;&#x70B9;&#x4EE5;&#x53CA;&#x5165;&#x4FB5;&#x7C7B;&#x578B;&#xFF0C;&#x4E3A;&#x6784;&#x5EFA;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x6846;&#x67B6;&#x3002;</p>
+<p>1988&#x5E74;&#x7684;&#x83AB;&#x91CC;&#x65AF;&#x8815;&#x866B;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x4E4B;&#x540E;&#xFF0C;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x624D;&#x771F;&#x6B63;&#x5F15;&#x8D77;&#x4E86;&#x519B;&#x65B9;&#x3001;&#x5B66;&#x672F;&#x754C;&#x548C;&#x4F01;&#x4E1A;&#x7684;&#x9AD8;&#x5EA6;&#x91CD;&#x89C6;&#x3002;&#x7F8E;&#x56FD;&#x7A7A;&#x519B;&#x3001;&#x56FD;&#x5BB6;&#x5B89;&#x5168;&#x5C40;&#x548C;&#x80FD;&#x6E90;&#x90E8;&#x5171;&#x540C;&#x8D44;&#x52A9;&#x7A7A;&#x519B;&#x5BC6;&#x7801;&#x652F;&#x6301;&#x4E2D;&#x5FC3;&#x3001;&#x52B3;&#x4F26;&#x65AF;&#x5229;&#x5F17;&#x6469;&#x5C14;&#x56FD;&#x5BB6;&#x5B9E;&#x9A8C;&#x5BA4;&#x3001;&#x52A0;&#x5DDE;&#x5927;&#x5B66;&#x6234;&#x7EF4;&#x65AF;&#x5206;&#x6821;&#x3001;Haystack &#x5B9E;&#x9A8C;&#x5BA4;&#xFF0C;&#x5F00;&#x5C55;&#x5BF9;&#x5206;&#x5E03;&#x5F0F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF08;Distributed Intrusion Detection System, DIDS&#xFF09;&#x7684;&#x7814;&#x7A76;&#xFF0C;&#x5C06;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x548C;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x7684;&#x68C0;&#x6D4B;&#x65B9;&#x6CD5;&#x96C6;&#x6210;&#x5230;&#x4E00;&#x8D77;&#x3002;DIDS &#x662F;&#x5206;&#x5E03;&#x5F0F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x5386;&#x53F2;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x91CC;&#x7A0B;&#x7891;&#x5F0F;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x5B83;&#x7684;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#x91C7;&#x7528;&#x4E86;&#x5206;&#x5C42;&#x7ED3;&#x6784;&#xFF0C;&#x5305;&#x62EC;&#x6570;&#x636E;&#x3001;&#x4E8B;&#x4EF6;&#x3001;&#x4E3B;&#x4F53;&#x3001;&#x4E0A;&#x4E0B;&#x6587;&#x3001;&#x5A01;&#x80C1;&#x3001;&#x5B89;&#x5168;&#x72B6;&#x6001;&#x7B49;6&#x5C42;&#x3002;&#x540C;&#x5E74;&#xFF0C;SRI/CSL &#x7684; Teresa Lunt &#x7B49;&#x4EBA;&#x6539;&#x8FDB;&#x4E86; Denning &#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4E13;&#x5BB6;&#x7CFB;&#x7EDF;(Intrusion Detection Expert System, IDES&#xFF09;&#x3002;&#x8BE5;&#x7CFB;&#x7EDF;&#x7528;&#x4E8E;&#x68C0;&#x6D4B;&#x5355;&#x4E00;&#x4E3B;&#x673A;&#x7684;&#x5165;&#x4FB5;&#x5C1D;&#x8BD5;&#xFF0C;&#x63D0;&#x51FA;&#x4E86;&#x4E0E;&#x7CFB;&#x7EDF;&#x5E73;&#x53F0;&#x65E0;&#x5173;&#x7684;&#x5B9E;&#x65F6;&#x68C0;&#x6D4B;&#x601D;&#x60F3;&#xFF0C;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x5668;&#x548C;&#x4E00;&#x4E2A;&#x4E13;&#x5BB6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5206;&#x522B;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x5F02;&#x5E38;&#x6A21;&#x578B;&#x7684;&#x5EFA;&#x7ACB;&#x548C;&#x57FA;&#x4E8E;&#x89C4;&#x5219;&#x7684;&#x7279;&#x5F81;&#x5206;&#x6790;&#x68C0;&#x6D4B;&#x3002;</p>
+<p>1990&#x5E74;&#x662F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x53D1;&#x5C55;&#x53F2;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x5206;&#x6C34;&#x5CAD;&#x3002;&#x8FD9;&#x4E00;&#x5E74;&#xFF0C;&#x52A0;&#x5DDE;&#x5927;&#x5B66;&#x6234;&#x7EF4;&#x65AF;&#x5206;&#x6821;&#x7684; L. T. Heberlein &#x7B49;&#x4EBA;&#x5F00;&#x53D1;&#x51FA;&#x4E86;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF08;Network Intrusion Detection System, NIDS&#xFF09;&#xFF1A;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x76D1;&#x6D4B;&#xFF08;Network Security Monitor, NSM&#xFF09;&#x3002;&#x8BE5;&#x7CFB;&#x7EDF;&#x7B2C;&#x4E00;&#x6B21;&#x76F4;&#x63A5;&#x5C06;&#x7F51;&#x7EDC;&#x6D41;&#x4F5C;&#x4E3A;&#x5BA1;&#x8BA1;&#x6570;&#x636E;&#x6765;&#x6E90;&#xFF0C;&#x56E0;&#x800C;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x5C06;&#x5BA1;&#x8BA1;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;&#x7EDF;&#x4E00;&#x683C;&#x5F0F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x76D1;&#x63A7;&#x5F02;&#x6784;&#x4E3B;&#x673A;&#x3002;&#x4ECE;&#x6B64;&#x4E4B;&#x540E;&#xFF0C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x53D1;&#x5C55;&#x53F2;&#x7FFB;&#x5F00;&#x4E86;&#x65B0;&#x7684;&#x4E00;&#x9875;&#xFF0C;&#x4E24;&#x5927;&#x9635;&#x8425;&#x6B63;&#x5F0F;&#x5F62;&#x6210;&#xFF1A;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x7684;IDS&#x548C;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x7684; IDS&#x3002;</p>
+<p>&#x4ECE;20&#x4E16;&#x7EAA;90&#x5E74;&#x4EE3;&#x5230;&#x73B0;&#x5728;&#xFF0C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x7814;&#x53D1;&#x5448;&#x73B0;&#x51FA;&#x767E;&#x5BB6;&#x4E89;&#x9E23;&#x7684;&#x7E41;&#x8363;&#x5C40;&#x9762;&#xFF0C;1995&#x5E74;&#xFF0C;&#x4E0B;&#x4E00;&#x4EE3;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4E13;&#x5BB6;&#x7CFB;&#x7EDF;&#xFF08;Next Generation IDES, NG-IDES&#xFF09;&#x4EA7;&#x751F;&#xFF0C;&#x53EF;&#x4EE5;&#x68C0;&#x6D4B;&#x591A;&#x4E2A;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5165;&#x4FB5;&#x3002;1996&#x5E74;&#xFF0C;&#x57FA;&#x4E8E;&#x56FE;&#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF08;Graph-based Intrusion Detection System, GrIDS&#xFF09;&#x51FA;&#x73B0;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x9488;&#x5BF9;&#x5927;&#x89C4;&#x6A21;&#x534F;&#x540C;&#x3001;&#x81EA;&#x52A8;&#x5316;&#x68C0;&#x6D4B;&#x3002;1998&#x5E74;&#xFF0C;S.Staniford &#x7B49;&#x4EBA;&#x63D0;&#x51FA;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#xFF08;Common Intrusion Detection Framework, CIDF&#xFF09;&#xFF0C;&#x5C06;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x5206;&#x4E3A;4&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1A;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x5668;&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;&#x5668;&#x3001;&#x54CD;&#x5E94;&#x5355;&#x5143;&#x53CA;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x5C06;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x7EDF;&#x79F0;&#x4E3A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4ECE;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x7B49;&#x5176;&#x4ED6;&#x9014;&#x5F84;&#x5F97;&#x5230;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; IDS &#x8868;&#x8FBE;&#x68C0;&#x6D4B;&#x4FE1;&#x606F;&#x7684;&#x6807;&#x51C6;&#x8BED;&#x8A00;&#x4EE5;&#x53CA;IDS&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF0C;&#x80FD;&#x591F;&#x96C6;&#x6210;&#x5404;&#x79CD; IDS &#x4F7F;&#x4E4B;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B9E;&#x73B0;&#x5404; IDS &#x4E4B;&#x95F4;&#x7684;&#x7EC4;&#x4EF6;&#x91CD;&#x7528;&#xFF0C;&#x6240;&#x4EE5; CIDF &#x4E5F;&#x662F;&#x6784;&#x5EFA;&#x5206;&#x5E03;&#x5F0F; IDS &#x7684;&#x57FA;&#x7840;&#x3002;2007&#x5E74;&#xFF0C;CIDF &#x5DE5;&#x4F5C;&#x7EC4;&#x518D;&#x6B21;&#x53D1;&#x5E03;&#x4E86;3&#x7BC7; IETF RFC &#x6807;&#x51C6;&#x8349;&#x7A3F;&#xFF0C;&#x5206;&#x522B;&#x4E3A; RFC 4765 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6D88;&#x606F;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#xFF08;The Intrusion Detection Message Exchange Format, IDMEF&#xFF09;&#x3001;RFC 4766 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6D88;&#x606F;&#x4EA4;&#x6362;&#x8981;&#x6C42;&#xFF08;The Intrusion Detection Message Exchange Format, IDMEF&#xFF09;&#x548C; RFC 4767 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4EA4;&#x6362;&#x534F;&#x8BAE;&#xFF08;The Intrusion Detection Exchange Protocol, IDXP&#xFF09;&#x3002;</p>
+<h3 id="912-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;"><a name="912-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#912-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x610F;&#x4E49;&#x548C;&#x4F5C;&#x7528;</h3>
+<figure id="fig1.10.2"><img src="attach/media/image2.png" alt="&#x56FE; 9-2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;"><figcaption class="center">&#x56FE; 9-2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;</figcaption></figure>
+<p>&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x5165;&#x4FB5;&#x8005;&#xFF0C;&#x8BC6;&#x522B;&#x5165;&#x4FB5;&#x884C;&#x4E3A;&#xFF0C;&#x76D1;&#x89C6;&#x548C;&#x68C0;&#x6D4B;&#x5DF2;&#x6210;&#x529F;&#x7684;&#x5B89;&#x5168;&#x7A81;&#x7834;&#xFF0C;&#x4E3A;&#x5BF9;&#x6297;&#x5165;&#x4FB5;&#x53CA;&#x65F6;&#x63D0;&#x4F9B;&#x91CD;&#x8981;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x53D1;&#x751F;&#x548C;&#x4E8B;&#x6001;&#x7684;&#x6269;&#x5927;&#xFF0C;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li>&#x5B9E;&#x65F6;&#x68C0;&#x6D4B;&#x7F51;&#x7EDC;&#x7CFB;&#x7EDF;&#x7684;&#x975E;&#x6CD5;&#x884C;&#x4E3A;&#xFF0C;&#x6301;&#x7EED;&#x5730;&#x76D1;&#x89C6;&#x3001;&#x5206;&#x6790;&#x7F51;&#x7EDC;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#xFF0C;&#x53D1;&#x73B0;&#x5E76;&#x53CA;&#x65F6;&#x5904;&#x7406;&#x6240;&#x6355;&#x83B7;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#xFF1B;</li>
+<li>&#x5B89;&#x5168;&#x5BA1;&#x8BA1;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BB0;&#x5F55;&#x7684;&#x7F51;&#x7EDC;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x73B0;&#x8C61;&#xFF0C;&#x4E3A;&#x8BC4;&#x4F30;&#x7CFB;&#x7EDF;&#x7684;&#x5B89;&#x5168;&#x72B6;&#x6001;&#x63D0;&#x4F9B;&#x76F8;&#x5173;&#x8BC1;&#x636E;&#xFF1B;</li>
+<li>&#x4E0D;&#x5360;&#x7528;&#x88AB;&#x4FDD;&#x62A4;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#xFF0C;&#x4F5C;&#x4E3A;&#x72EC;&#x7ACB;&#x7684;&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x5BF9;&#x9ED1;&#x5BA2;&#x900F;&#x660E;&#xFF0C;&#x672C;&#x8EAB;&#x7684;&#x5B89;&#x5168;&#x6027;&#x8F83;&#x9AD8;&#xFF1B;</li>
+<li>&#x4E3B;&#x673A;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x4E8E;&#x88AB;&#x4FDD;&#x62A4;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FDD;&#x62A4;&#x3001;&#x6062;&#x590D;&#x7CFB;&#x7EDF;&#xFF1B;</li>
+</ol>
+<figure id="fig1.10.3"><img src="attach/media/image3.png" alt="&#x56FE; 9-3 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x4F5C;&#x7528;"><figcaption class="center">&#x56FE; 9-3 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x4F5C;&#x7528;</figcaption></figure>
+<p>&#x5728;&#x5B89;&#x5168;&#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x662F;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x548C;&#x884C;&#x4E3A;&#x6A21;&#x5F0F;&#x5224;&#x65AD;&#x5176;&#x98CE;&#x9669;&#x6C34;&#x5E73;&#x7684;&#x5178;&#x578B;&#x7CFB;&#x7EDF;&#xFF0C;&#x9632;&#x706B;&#x5899;&#x76F8;&#x5F53;&#x4E8E;&#x7B2C;&#x4E00;&#x9053;&#x5B89;&#x5168;&#x95F8;&#x95E8;&#xFF0C;&#x53EF;&#x4EE5;&#x7EC4;&#x7EC7;&#x4E00;&#x7C7B;&#x4EBA;&#x7FA4;&#x7684;&#x8FDB;&#x5165;&#xFF0C;&#x4F46;&#x65E0;&#x6CD5;&#x963B;&#x6B62;&#x540C;&#x4E00;&#x7C7B;&#x4EBA;&#x7FA4;&#x4E2D;&#x7684;&#x7834;&#x574F;&#x5206;&#x5B50;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x7EC4;&#x7EC7;&#x5185;&#x90E8;&#x7684;&#x7834;&#x574F;&#x5206;&#x5B50;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x7EC4;&#x7EC7;&#x5185;&#x90E8;&#x7684;&#x7834;&#x574F;&#x5206;&#x5B50;&#xFF1B;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x4E0D;&#x8BA9;&#x4F4E;&#x7EA7;&#x6743;&#x9650;&#x7684;&#x4EBA;&#x505A;&#x8D8A;&#x6743;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F46;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x62E5;&#x6709;&#x9AD8;&#x7EA7;&#x6743;&#x9650;&#x7684;&#x4EBA;&#x4E0D;&#x505A;&#x7834;&#x574F;&#x884C;&#x4E3A;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x4F4E;&#x7EA7;&#x6743;&#x9650;&#x7684;&#x4EBA;&#x901A;&#x8FC7;&#x975E;&#x6CD5;&#x884C;&#x4E3A;&#x83B7;&#x5F97;&#x9AD8;&#x7EA7;&#x6743;&#x9650;&#x3002;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x9632;&#x706B;&#x5899;&#x7CFB;&#x7EDF;&#x7684;&#x5408;&#x7406;&#x8865;&#x5145;&#x548C;&#x6709;&#x529B;&#x5EF6;&#x4F38;&#xFF0C;&#x5B83;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x54CD;&#x5E94;&#x51B3;&#x7B56;&#x63D0;&#x4F9B;&#x5A01;&#x80C1;&#x8BC1;&#x636E;&#xFF0C;&#x5728;&#x4E0D;&#x5F71;&#x54CD;&#x7F51;&#x7EDC;&#x90E8;&#x7F72;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x5B9E;&#x65F6;&#x3001;&#x52A8;&#x6001;&#x5730;&#x68C0;&#x6D4B;&#x6765;&#x81EA;&#x5185;&#x90E8;&#x548C;&#x5916;&#x90E8;&#x7684;&#x5404;&#x79CD;&#x653B;&#x51FB;&#xFF0C;&#x53CA;&#x65F6;&#x3001;&#x51C6;&#x786E;&#x3001;&#x5168;&#x9762;&#x7684;&#x53D1;&#x73B0;&#x5165;&#x4FB5;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x8986;&#x76D6;&#x5230;&#x9632;&#x706B;&#x5899;&#x68C0;&#x6D4B;&#x548C;&#x4FDD;&#x62A4;&#x7684;&#x76F2;&#x533A;&#xFF0C;&#x901A;&#x8FC7;&#x4E0E;&#x9632;&#x706B;&#x5899;&#x534F;&#x540C;&#x8054;&#x52A8;&#xFF0C;&#x8FBE;&#x5230;&#x6709;&#x6548;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x9632;&#x62A4;&#x3002;</p>
+<h2 id="92-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;"><a name="92-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#92-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7406;&#x8BBA;</h2>
+<h3 id="921-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;"><a name="921-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#921-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h3>
+<p>&#x5165;&#x4FB5;&#x68C0;&#x6D4B;(Intrusion Detection)&#xFF0C;&#x6307;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x76D1;&#x89C6;&#xFF0C;&#x53D1;&#x73B0;&#x5404;&#x79CD;&#x653B;&#x51FB;&#x4F01;&#x56FE;&#x3001;&#x653B;&#x51FB;&#x884C;&#x4E3A;&#x6216;&#x8005;&#x653B;&#x51FB;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7684;&#x673A;&#x5BC6;&#x6027;&#x3001;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x53EF;&#x7528;&#x6027;&#x3002;&#x8FDB;&#x884C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x8F6F;&#x4EF6;&#x4E0E;&#x786C;&#x4EF6;&#x7684;&#x7EC4;&#x5408;&#x4FBF;&#x662F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF08;Intrusion Detection System&#xFF0C;IDS&#xFF09;</p>
+<p>&#x8B66;&#x62A5;(Alert)&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x5165;&#x4FB5;&#x6B63;&#x5728;&#x53D1;&#x751F;&#x6216;&#x8005;&#x8BD5;&#x56FE;&#x53D1;&#x751F;&#x65F6;&#xFF0C;IDS&#x5C06;&#x53D1;&#x5E03;&#x4E00;&#x4E2A;&#x8B66;&#x62A5;&#x4FE1;&#x606F;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x3002;&#x5982;&#x679C;&#x63A7;&#x5236;&#x53F0;&#x4E0E;IDS&#x540C;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#xFF0C;&#x8B66;&#x62A5;&#x4FE1;&#x606F;&#x5C06;&#x663E;&#x793A;&#x5728;&#x76D1;&#x89C6;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4F34;&#x968F;&#x7740;&#x58F0;&#x97F3;&#x63D0;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x90A3;&#x4E48;&#x8B66;&#x62A5;&#x5C06;&#x901A;&#x8FC7;IDS&#x5185;&#x7F6E;&#x65B9;&#x6CD5;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x52A0;&#x5BC6;&#x7684;&#xFF09;&#x3001;&#x7B80;&#x5355;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x534F;&#x8BAE;&#xFF08;Simple Network Management Protocol, SNMP)&#xFF08;&#x901A;&#x5E38;&#x4E0D;&#x52A0;&#x5BC6;&#xFF09;&#x3001;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#xFF08;Electronic Mail, E-mail&#xFF09;&#x3001;&#x77ED;&#x4FE1;&#x606F;&#x670D;&#x52A1;&#xFF08;Short Message Service, SMS&#xFF09;&#x3001;IM&#xFF08;&#x5373;&#x65F6;&#x901A;&#x4FE1;&#xFF09;&#x6216;&#x8005;&#x4EE5;&#x4E0A;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x6DF7;&#x5408;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x7BA1;&#x7406;&#x5458;&#x3002;</p>
+<p>&#x5F02;&#x5E38;&#xFF08;Anomoly&#xFF09;&#xFF0C;&#x5F53;&#x6709;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x4E0E;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x653B;&#x51FB;&#x7684;&#x4FE1;&#x53F7;&#x76F8;&#x5339;&#x914D;&#x65F6;&#xFF0C;&#x591A;&#x6570;IDS&#x90FD;&#x4F1A;&#x544A;&#x8B66;&#xFF1B;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x5F02;&#x5E38;&#x7684; IDS &#x4F1A;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5F53;&#x65F6;&#x6D3B;&#x52A8;&#x7684;&#x4E3B;&#x673A;&#x6216;&#x7F51;&#x7EDC;&#x7684;&#x5927;&#x81F4;&#x8F6E;&#x5ED3;&#xFF0C;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x5728;&#x8FD9;&#x4E2A;&#x8F6E;&#x5ED3;&#x4EE5;&#x5916;&#x7684;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#xFF0C;IDS &#x5C31;&#x4F1A;&#x544A;&#x8B66;&#x3002;</p>
+<p>&#x7279;&#x5F81;(Signature)&#xFF0C;IDS&#x7684;&#x6838;&#x5FC3;&#x662F;&#x653B;&#x51FB;&#x7279;&#x5F81;&#xFF08;&#x7B7E;&#x540D;&#xFF09;&#xFF0C;&#x5B83;&#x4F7F;IDS&#x5728;&#xFF08;&#x5165;&#x4FB5;&#xFF09;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x89E6;&#x53D1;&#x8B66;&#x62A5;&#x3002;&#x5982;&#x679C;&#x7279;&#x5F81;&#x4FE1;&#x606F;&#x8FC7;&#x77ED;&#x4F1A;&#x7ECF;&#x5E38;&#x89E6;&#x53D1; IDS&#xFF0C;&#x5BFC;&#x81F4;&#x8BEF;&#x62A5;&#x6216;&#x9519;&#x62A5;&#xFF0C;&#x8FC7;&#x957F;&#x5219;&#x4F1A;&#x51CF;&#x6162;IDS&#x7684;&#x5DE5;&#x4F5C;&#x901F;&#x5EA6;&#x3002;&#x5C06; IDS &#x6240;&#x652F;&#x6301;&#x7684;&#x7279;&#x5F81;&#x6570;&#x89C6;&#x4E3A; IDS &#x597D;&#x574F;&#x7684;&#x6807;&#x51C6;&#x662F;&#x8BC4;&#x4EF7; IDS &#x4EA7;&#x54C1;&#x4F18;&#x52A3;&#x7684;&#x5E38;&#x89C1;&#x8BEF;&#x533A;&#xFF0C;&#x4F8B;&#x5982;&#x6709;&#x7684;&#x5382;&#x5546;&#x7528;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x6DB5;&#x76D6;&#x8BB8;&#x591A;&#x653B;&#x51FB;&#xFF0C;&#x800C;&#x6709;&#x4E9B;&#x5382;&#x5546;&#x5219;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x7279;&#x5F81;&#x5355;&#x72EC;&#x5217;&#x51FA;&#xFF0C;&#x7279;&#x5F81;&#x6570;&#x91CF;&#x7684;&#x591A;&#x5C11;&#x5E76;&#x4E0D;&#x80FD;&#x51B3;&#x5B9A;&#x5A01;&#x80C1;&#x68C0;&#x6D4B;&#x80FD;&#x529B;&#x7684;&#x9AD8;&#x4F4E;&#x3002;</p>
+<h3 id="922-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;"><a name="922-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;" class="anchor-navigation-ex-anchor" href="#922-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x8BC4;&#x4EF7;&#x6307;&#x6807;</h3>
+<p>&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x4E3B;&#x8981;&#x4ECE;&#x4EE5;&#x4E0B;&#x65B9;&#x9762;&#x8FDB;&#x884C;&#x7684;&#x8BC4;&#x4EF7;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x7684;&#x5BB9;&#x9519;&#x80FD;&#x529B;&#x548C;&#x53EF;&#x6301;&#x7EED;&#x8FD0;&#x884C;&#x80FD;&#x529B;&#xFF1B;</li>
+<li>&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x5F00;&#x9500;&#x5927;&#x5C0F;&#xFF0C;&#x5BF9;&#x7F51;&#x7EDC;&#x6027;&#x80FD;&#x5F71;&#x54CD;&#x7684;&#x5927;&#x5C0F;&#xFF1B;</li>
+<li>&#x53EF;&#x6D4B;&#x8BD5;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x653B;&#x51FB;&#x8FDB;&#x884C;&#x68C0;&#x6D4B;&#x6D4B;&#x8BD5;&#xFF1B;</li>
+<li>&#x9002;&#x5E94;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x6613;&#x4E8E;&#x5F00;&#x53D1;&#x548C;&#x6269;&#x5C55;&#xFF1B;</li>
+<li>&#x5B9E;&#x65F6;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x53CA;&#x65E9;&#x53D1;&#x73B0;&#x5165;&#x4FB5;&#x4F01;&#x56FE;&#xFF1B;</li>
+<li>&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x53EF;&#x786E;&#x4FDD;&#x81EA;&#x8EAB;&#x7684;&#x5B89;&#x5168;&#xFF1B;</li>
+<li>&#x51C6;&#x786E;&#x6027;&#xFF0C;&#x6307;&#x7CFB;&#x7EDF;&#x6B63;&#x786E;&#x8BC6;&#x522B;&#x5165;&#x4FB5;&#x884C;&#x4E3A;&#x7684;&#x80FD;&#x529B;&#x3002;</li>
+</ul>
+<p>&#x51C6;&#x786E;&#x6027;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x8BEF;&#x62A5;&#x7387;&#x548C;&#x6F0F;&#x62A5;&#x7387;&#x8FDB;&#x884C;&#x8BC4;&#x4F30;&#xFF0C;&#x8BEF;&#x62A5;&#x7387;&#x548C;&#x6F0F;&#x62A5;&#x7387;&#x662F;&#x8861;&#x91CF;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x6548;&#x7387;&#x7684;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x6307;&#x6807;&#x3002;&#x5728;&#x6211;&#x56FD;&#xFF0C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x8BC4;&#x4EF7;&#x6709;&#x56FD;&#x5BB6;&#x6807;&#x51C6;&#xFF1A;<a href="http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D8069AD3A7E05397BE0A0AB82A" target="_blank">&#x300A;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x6280;&#x672F; &#x7F51;&#x7EDC;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x6280;&#x672F;&#x8981;&#x6C42;&#x548C;&#x6D4B;&#x8BD5;&#x8BC4;&#x4EF7;&#x65B9;&#x6CD5; GB/T 20275-2013&#x300B;</a> &#x3002;</p>
+<p>&#x8BEF;&#x62A5;&#x7387;&#xFF08;False Positive Rate &#xFF0C;FPR&#xFF09;&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E3A;:</p>
+<pre><code>FPR = FP / N
+</code></pre><p>&#x6F0F;&#x62A5;&#x7387;&#xFF08;False Negative Rate &#xFF0C;FNR)&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code>FNR = FN / N
+</code></pre><p>&#x5176;&#x4E2D;&#xFF0C;N &#x662F;&#x8B66;&#x62A5;&#x603B;&#x6570;&#xFF0C;FP &#x662F;&#x8BEF;&#x62A5;&#x4E8B;&#x4EF6;&#x603B;&#x6570;&#x3002;FN &#x4E3A;&#x6F0F;&#x62A5;&#x4E8B;&#x4EF6;&#x603B;&#x6570;&#x3002;&#x6700;&#x7406;&#x60F3;&#x7684;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x8BC4;&#x4F30;&#x7ED3;&#x679C;&#x662F;&#x8BEF;&#x62A5;&#x7387; FPR=0 &#x4E14;&#x6F0F;&#x62A5;&#x7387; FNR=0&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x8BEF;&#x62A5;&#x7387;&#x548C;&#x6F0F;&#x62A5;&#x7387;&#x5E38;&#x5E38;&#x662F;&#x6210;&#x53CD;&#x6BD4;&#x7684;&#x3002;</p>
+<figure id="fig1.10.4"><img src="attach/media/image4.png" alt="&#x56FE; 9-4 &#x6F0F;&#x62A5;&#x7387;&#x548C;&#x8BEF;&#x62A5;&#x7387;&#x95F4;&#x5173;&#x7CFB;"><figcaption class="center">&#x56FE; 9-4 &#x6F0F;&#x62A5;&#x7387;&#x548C;&#x8BEF;&#x62A5;&#x7387;&#x95F4;&#x5173;&#x7CFB;</figcaption></figure>
+<p>&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x6307;&#x6807;&#x53EF;&#x4EE5;&#x5BF9;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x548C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x4E24;&#x79CD;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x8868;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x5F02;&#x5E38;&#x68C0;&#x6D4B;</th>
+<th>&#x8BEF;&#x7528;&#x68C0;&#x6D4B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x53EF;&#x9760;&#x6027;</td>
+<td>&#x4E0D;&#x7A33;&#x5B9A;</td>
+<td>&#x8F83;&#x7A33;&#x5B9A;</td>
+</tr>
+<tr>
+<td>&#x53EF;&#x7528;&#x6027;</td>
+<td>&#x8F83;&#x4F4E;</td>
+<td>&#x8F83;&#x9AD8;</td>
+</tr>
+<tr>
+<td>&#x53EF;&#x6D4B;&#x8BD5;</td>
+<td>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x6CE2;&#x52A8;&#x8F83;&#x5927;</td>
+<td>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x8F83;&#x7A33;&#x5B9A;</td>
+</tr>
+<tr>
+<td>&#x9002;&#x5E94;&#x6027;</td>
+<td>&#x8F83;&#x5F3A;</td>
+<td>&#x8F83;&#x5F31;&#xFF08;&#x96BE;&#x4EE5;&#x68C0;&#x6D4B;&#x672A;&#x77E5;&#x653B;&#x51FB;&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x5B9E;&#x65F6;&#x6027;</td>
+<td>&#x6613;&#x9020;&#x6210;&#x5EF6;&#x65F6;</td>
+<td>&#x5EF6;&#x65F6;&#x8F83;&#x5C0F;</td>
+</tr>
+<tr>
+<td>&#x51C6;&#x786E;&#x6027;</td>
+<td>&#x8BEF;&#x62A5;&#x7387;&#x8F83;&#x9AD8;</td>
+<td>&#x6F0F;&#x62A5;&#x7387;&#x8F83;&#x9AD8;</td>
+</tr>
+<tr>
+<td>&#x5B89;&#x5168;&#x6027;</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="93-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;"><a name="93-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;" class="anchor-navigation-ex-anchor" href="#93-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5173;&#x952E;&#x6280;&#x672F;</h2>
+<h3 id="931-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;"><a name="931-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;" class="anchor-navigation-ex-anchor" href="#931-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.1 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x57FA;&#x672C;&#x6280;&#x672F;</h3>
+<p>&#x524D;&#x9762;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86; Dorothy Denning &#x7684;&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#xFF0C;&#x5176;&#x4E2D;&#x5BA1;&#x8BA1;&#x8BB0;&#x5F55;/&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x5305;/&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8BB0;&#x5F55;&#x3001;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x5668;&#x3001;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#x3001;&#x66F4;&#x65B0;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#x3001;&#x52A8;&#x6001;&#x4EA7;&#x751F;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#x5747;&#x662F;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x64CD;&#x4F5C;&#xFF1B;&#x800C;&#x589E;&#x52A0;/&#x4FEE;&#x6539;&#x89C4;&#x5219;&#x3001;&#x89C4;&#x5219;&#x96C6;&#x5219;&#x662F;&#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x5206;&#x6790;&#xFF1B;&#x4EA7;&#x751F;&#x5F02;&#x5E38;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#x3001;&#x65F6;&#x949F;&#x4FBF;&#x662F;&#x7ED3;&#x679C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5728;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x4E2D;&#xFF0C;&#x5176;&#x4FE1;&#x606F;&#x6765;&#x6E90;&#x4E3B;&#x8981;&#x6709;&#x7CFB;&#x7EDF;&#x6216;&#x7F51;&#x7EDC;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3001;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x3001;&#x6216;&#x89C2;&#x5BDF;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#x3001;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x884C;&#x4E3A;&#xFF08;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;/API&#x8C03;&#x7528;&#x5E8F;&#x5217;/IO&#x89C4;&#x5F8B;&#x7B49;&#xFF09;&#xFF0C;&#x5176;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#x5747;&#x4EE5;&#x5728;&#x672C;&#x4E66;&#x524D;&#x51E0;&#x7AE0;&#x8282;&#x4E2D;&#x8FDB;&#x884C;&#x4E86;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x662F;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x3001;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x6216;&#x662F;&#x57FA;&#x4E8E;&#x4F20;&#x611F;&#x5668;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x8FD0;&#x884C;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x7684;&#x6570;&#x636E;&#x6355;&#x83B7;&#x4F20;&#x611F;&#x5668;&#xFF0C;&#x4EE5;&#x53CA;&#x7269;&#x8054;&#x7F51;&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x4F20;&#x611F;&#x5668;&#x3002;</p>
+<p>&#x4FE1;&#x606F;&#x5206;&#x6790;&#xFF0C;&#x5728;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x4E2D;&#x6709;&#x7EDF;&#x8BA1;&#x5206;&#x6790;&#x3001;&#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;&#xFF0C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x4E2D;&#x7684;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x3002;&#x878D;&#x5408;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x548C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#x662F;&#x5B9E;&#x7528; IDS &#x7CFB;&#x7EDF;&#x7684;&#x666E;&#x904D;&#x4EA7;&#x54C1;&#x7B56;&#x7565;&#x3002;&#x4E0B;&#x9762;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#xFF0C;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>(1) &#x7EDF;&#x8BA1;&#x5206;&#x6790;</p>
+<p>&#x7EDF;&#x8BA1;&#x5206;&#x6790;&#x5BF9;&#x8C61;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6237;&#x3001;&#x6587;&#x4EF6;&#x3001;&#x76EE;&#x5F55;&#x548C;&#x8BBE;&#x5907;&#x7B49;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x4E3A;&#x7EDF;&#x8BA1;&#x5206;&#x6790;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EDF;&#x8BA1;&#x63CF;&#x8FF0;&#xFF0C;&#x6765;&#x7EDF;&#x8BA1;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x65F6;&#x7684;&#x4E00;&#x4E9B;&#x6D4B;&#x91CF;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#x3001;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x6B21;&#x6570;&#x548C;&#x5EF6;&#x65F6;&#x7B49;&#x3002;&#x540E;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x5339;&#x914D;&#xFF0C;&#x6D4B;&#x91CF;&#x5C5E;&#x6027;&#x7684;&#x5E73;&#x5747;&#x503C;&#x5C06;&#x88AB;&#x7528;&#x6765;&#x4E0E;&#x7F51;&#x7EDC;&#x3001;&#x7CFB;&#x7EDF;&#x7684;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x4EFB;&#x4F55;&#x89C2;&#x6D4B;/&#x6D4B;&#x91CF;&#x503C;&#x5728;&#x6B63;&#x5E38;&#x503C;&#x8303;&#x56F4;&#x4E4B;&#x5916;&#x65F6;&#xFF0C;&#x5C31;&#x8BA4;&#x4E3A;&#x6709;&#x5165;&#x4FB5;&#x53D1;&#x751F;&#x3002;</p>
+<p>(2) &#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;</p>
+<p>&#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x6587;&#x4EF6;&#x3001;&#x76EE;&#x5F55;&#x3001;&#x4EFB;&#x610F;&#x6570;&#x5B57;&#x8D44;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x7684;&#x5185;&#x5BB9;&#x53CA;&#x5C5E;&#x6027;&#x3002;&#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;&#x65B9;&#x6CD5;&#x662F;&#x5EFA;&#x7ACB;&#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;&#x5BF9;&#x8C61;&#x5728;&#x6B63;&#x5E38;&#x72B6;&#x6001;&#x65F6;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x7B7E;&#x540D;&#x6765;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x6027;&#x5206;&#x6790;&#x5339;&#x914D;&#xFF0C;&#x67E5;&#x770B;&#x5339;&#x914D;&#x7B7E;&#x540D;&#x503C;&#x662F;&#x5426;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x82E5;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x8BA4;&#x5B9A;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x88AB;&#x5165;&#x4FB5;&#x7BE1;&#x6539;&#x3002;</p>
+<p>&#x9664;&#x53BB;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4ED6;&#x5E38;&#x89C1;&#x7684;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#x6709;&#xFF1A;&#x57FA;&#x4E8E;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x3001;&#x57FA;&#x4E8E;&#x8D1D;&#x53F6;&#x65AF;&#x63A8;&#x7406;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x3001;&#x57FA;&#x4E8E;&#x8D1D;&#x53F6;&#x65AF;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x3001;&#x57FA;&#x4E8E;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x3001;&#x57FA;&#x4E8E;&#x8D1D;&#x53F6;&#x65AF;&#x805A;&#x7C7B;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x7B49;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#xFF0C;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5C06;&#x6536;&#x96C6;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x4E0E;&#x5DF2;&#x77E5;&#x7684;&#x7F51;&#x7EDC;&#x5165;&#x4FB5;&#x548C;&#x7CFB;&#x7EDF;&#x8BEF;&#x7528;&#x6A21;&#x5F0F;&#x89C4;&#x5219;&#x96C6;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x4ECE;&#x800C;&#x53D1;&#x73B0;&#x8FDD;&#x53CD;&#x5B89;&#x5168;&#x7B56;&#x7565;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5165;&#x4FB5;&#x6A21;&#x5F0F;&#x7684;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF08;&#x5982;&#x6267;&#x884C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#xFF09;&#x548C;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#xFF08;&#x5982;&#x83B7;&#x5F97;&#x6743;&#x9650;&#xFF09;&#x3002;&#x5165;&#x4FB5;&#x6A21;&#x5F0F;&#x7684;&#x5339;&#x914D;&#x8FC7;&#x7A0B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#xFF0C;&#x5305;&#x62EC;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3001;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF0C;&#x8FD8;&#x6709;&#x72B6;&#x6001;&#x673A;&#x8FC1;&#x79FB;&#x5E8F;&#x5217;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#x5176;&#x4ED6;&#x5E38;&#x89C1;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#x6709;&#x57FA;&#x4E8E;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x3001;&#x57FA;&#x4E8E;&#x4E13;&#x5BB6;&#x7CFB;&#x7EDF;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x548C;&#x57FA;&#x4E8E;&#x72B6;&#x6001;&#x8FC1;&#x79FB;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x7B49;&#x3002;</p>
+<p>&#x878D;&#x5408;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x548C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#x7684;&#x6280;&#x672F;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<figure id="fig1.10.5"><img src="attach/media/image6.png" alt="&#x56FE; 9-5 &#x878D;&#x5408;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x548C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#x7684;&#x6280;&#x672F;&#x65B9;&#x6CD5;"><figcaption class="center">&#x56FE; 9-5 &#x878D;&#x5408;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x548C;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x6A21;&#x578B;&#x7684;&#x6280;&#x672F;&#x65B9;&#x6CD5;</figcaption></figure>
+<p>&#x5C06;&#x6355;&#x83B7;&#x7684;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x5C06;&#x5E94;&#x7528;&#x5C42;&#x6570;&#x636E;&#x901A;&#x8FC7;&#x767D;&#x540D;&#x5355;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x767D;&#x540D;&#x5355;&#x5339;&#x914D;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x548C;&#x6307;&#x4EE4;&#x6570;&#x636E;&#x653E;&#x5165;&#x72B6;&#x6001;&#x673A;&#x6267;&#x884C;&#xFF0C;&#x540E;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x5206;&#x6790;&#xFF0C;&#x82E5;&#x4E0D;&#x5339;&#x914D;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x7EDF;&#x8BA1;&#x3002;&#x6700;&#x540E;&#x8FDB;&#x884C;&#x6C47;&#x603B;&#x5206;&#x6790;&#x548C;&#x76F8;&#x5E94;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x5E94;&#x5C06;&#x65E0;&#x6CD5;&#x5173;&#x8054;&#x7684;&#x5F02;&#x5E38;&#x6A21;&#x5F0F;&#x52A0;&#x5165;&#x5F02;&#x5E38;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x6316;&#x6398;&#x53CD;&#x9988;&#x7ED9;&#x9ED1;&#x540D;&#x5355;&#x6570;&#x636E;&#x5E93;&#x548C;&#x767D;&#x540D;&#x5355;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x5173;&#x4E8E;&#x7ED3;&#x679C;&#x5904;&#x7406;&#x9636;&#x6BB5;&#xFF0C;&#x5C31;&#x662F;&#x4EA7;&#x751F;&#x544A;&#x8B66;&#xFF0C;&#x8BB0;&#x5F55;&#x544A;&#x8B66;&#x65E5;&#x5FD7;&#x3002;&#x8BF7;&#x6C42;&#x5176;&#x4ED6;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x7684;&#x534F;&#x4F5C;&#x8054;&#x52A8;&#x5982;&#x9632;&#x706B;&#x5899;&#x8054;&#x52A8;&#x3002;</p>
+<h3 id="932-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;"><a name="932-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;" class="anchor-navigation-ex-anchor" href="#932-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3.2 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x4F53;&#x7CFB;&#x67B6;&#x6784;</h3>
+<p>&#x4E3B;&#x673A;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x662F;&#x76D1;&#x89C6;&#x4E0E;&#x5206;&#x6790;&#x4E3B;&#x673A;&#x7684;&#x5BA1;&#x8BA1;&#x8BB0;&#x5F55;&#xFF0C;&#x5224;&#x65AD;&#x80FD;&#x5426;&#x53CA;&#x65F6;&#x91C7;&#x96C6;&#x5230;&#x5BA1;&#x8BA1;&#x8BB0;&#x5F55;&#x3002;&#x53EF;&#x4EE5;&#x4E0D;&#x8FD0;&#x884C;&#x5728;&#x76D1;&#x63A7;&#x4E3B;&#x673A;&#x4E0A;&#x3002;
+&#x7F51;&#x7EDC;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x662F;&#x5BF9;&#x901A;&#x4FE1;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FA6;&#x542C;&#x91C7;&#x96C6;&#x6570;&#x636E;&#x3002;&#x63D0;&#x4F9B;&#x5BF9;&#x7F51;&#x7EDC;&#x901A;&#x7528;&#x7684;&#x4FDD;&#x62A4;&#xFF0C;&#x4E0D;&#x6D88;&#x8017;&#x4E3B;&#x673A;&#x989D;&#x5916;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x4E3B;&#x673A;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD8;&#x662F;&#x7F51;&#x7EDC;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x5305;&#x62EC;&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#x3001;&#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x4EE5;&#x53CA;&#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x3002;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x5982;&#x4E0B;&#xFF1A;
+&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#x662F;&#x91C7;&#x7528;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6536;&#x96C6;&#x4FE1;&#x606F;&#x6C47;&#x603B;&#x4E0A;&#x62A5;&#xFF0C;&#x8FDB;&#x884C;&#x96C6;&#x4E2D;&#x5173;&#x8054;&#x5206;&#x6790;&#x7684;&#x7ED3;&#x6784;&#x5F62;&#x5F0F;&#xFF0C;&#x5177;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x56FE; 9-7 &#x6240;&#x793A;&#x3002;&#x5178;&#x578B;&#x7684;&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#x4EE3;&#x8868;&#x6709;&#xFF1A;DIDS&#xFF08;Distributed Intrusion Detection System&#xFF09;&#xFF08;Snapp et al., 1991&#xFF09;&#x3001;DShield&#xFF08;Internet Storm Center&#xFF0C;2000&#xFF09;&#x3001;NSTAT&#xFF08;Kemmerer,1998&#xFF09;&#x3002;&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x6311;&#x6218;&#x662F;&#x5355;&#x70B9;&#x6545;&#x969C;&#x548C;&#x5355;&#x70B9;&#x74F6;&#x9888;&#x3002;&#x5355;&#x70B9;&#x6545;&#x969C;&#x662F;&#x6307;&#x6C47;&#x603B;&#x5173;&#x8054;&#x5206;&#x6790;&#x8282;&#x70B9;&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#x6545;&#x969C;&#xFF0C;&#x5219;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x65E0;&#x6CD5;&#x5DE5;&#x4F5C;&#x3002;&#x5355;&#x70B9;&#x74F6;&#x9888;&#x662F;&#x6307;&#x6C47;&#x603B;&#x5173;&#x8054;&#x5206;&#x6790;&#x8282;&#x70B9;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x51B3;&#x5B9A;&#x4E86;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E3A;&#x5C0F;&#x578B;&#x516C;&#x53F8;&#x7F51;&#x7EDC;&#x8303;&#x56F4;&#x5185;&#x7684;IDS&#x534F;&#x4F5C;&#xFF0C;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x4E92;&#x8054;&#x7F51;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5927;&#x89C4;&#x6A21;IDS&#x534F;&#x4F5C;&#x3002;</p>
+<figure id="fig1.10.6"><img src="attach/media/image7.png" alt="&#x56FE; 9-6 &#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;"><figcaption class="center">&#x56FE; 9-6 &#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;</figcaption></figure>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x662F;&#x6307;&#x5F15;&#x64CE;&#x548C;&#x63A7;&#x5236;&#x4E2D;&#x5FC3;&#x5728;2&#x4E2A;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0A;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x901A;&#x8BAF;&#x8FDB;&#x884C;&#x8FDC;&#x8DDD;&#x79BB;&#x67E5;&#x770B;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x6784;&#x5F62;&#x5F0F;&#xFF0C;&#x53EF;&#x7EC6;&#x5206;&#x4E3A;&#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x548C;&#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x3002;</p>
+<p>&#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x7279;&#x70B9;&#x662F;&#x5B58;&#x5728;&#x5206;&#x533A;&#x548C;&#x201C;&#x9010;&#x5C42;&#x201D;&#x6C47;&#x805A;&#x5F0F;&#x5173;&#x8054;&#x5206;&#x6790;&#x3002;&#x5206;&#x533A;&#x53EF;&#x5206;&#x4E3A;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x3001;&#x7BA1;&#x7406;&#x57DF;&#x3001;&#x76F8;&#x8FD1;&#x8F6F;&#x4EF6;&#x5E73;&#x53F0;&#x4EE5;&#x53CA;&#x9884;&#x671F;&#x5165;&#x4FB5;&#x79CD;&#x7C7B;&#xFF0C;&#x5177;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x56FE; 9-8 &#x6240;&#x793A;&#x3002;&#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x662F;&#xFF1A;GrIDS(Staniford-Chen et al., 1996)&#x3001;The EMERALD project (Porras and Neumann, 1997)&#x3001;DSOC (Distributed Security Operation Center, Abdoul Karim Ganame et al., 2008)&#x3001;Servin and Kudenko (2008) &#x3001;reinforcement learning based&#x3001;AAFID(Balasubramaniyan et al., 1998)&#x3001;NetSTAT (Vigna, 1999)&#x3002;&#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x4F18;&#x70B9;&#x662F;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x7565;&#x9AD8;&#x4E8E;&#x96C6;&#x4E2D;&#x5F0F;&#x7ED3;&#x6784;&#xFF0C;&#x6311;&#x6218;&#x662F;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x4ECD;&#x53D7;&#x5230;&#x9AD8;&#x5C42;&#x6B21;&#x8282;&#x70B9;&#x80FD;&#x529B;&#x7684;&#x5236;&#x7EA6;&#xFF1B;&#x9AD8;&#x5C42;&#x8282;&#x70B9;&#x5F15;&#x53D1;&#x7684;&#x5355;&#x70B9;&#x6545;&#x969C;&#x4E5F;&#x4ECD;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#xFF1B;&#x5E76;&#x4E14;&#x7CFB;&#x7EDF;&#x7684;&#x68C0;&#x51FA;&#x7387;&#x8F83;&#x4F4E;&#xFF0C;&#x4FE1;&#x606F;&#x5728;&#x201C;&#x6C47;&#x805A;&#x201D;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x7531;&#x4E8E;&#x201C;&#x538B;&#x7F29;&#x201D;&#x800C;&#x5BFC;&#x81F4;&#x201C;&#x635F;&#x5931;&#x201D;&#x548C;&#x201C;&#x5931;&#x771F;&#x201D;&#x3002;</p>
+<figure id="fig1.10.7"><img src="attach/media/image8.png" alt="&#x56FE; 9-7 &#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;"><figcaption class="center">&#x56FE; 9-7 &#x7B49;&#x7EA7;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;</figcaption></figure>
+<p>&#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;&#x7684;&#x7279;&#x70B9;&#x662F;&#x65E0;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#xFF0C;&#x8282;&#x70B9;&#x95F4;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x4E3A;P2P&#x3001;Gossip&#x534F;&#x8BAE;&#x3001;&#x7EC4;&#x64AD;&#x6216;&#x53D1;&#x5E03;/&#x8BA2;&#x9605;&#x673A;&#x5236;&#xFF0C;&#x5177;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x56FE;9-9&#x6240;&#x793A;&#x3002;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x6709;&#xFF1A;Locasto et al. (2005): P2P based &#x3001;The DOMINO project (Yegneswaran et al., 2004; Barford and Jha, 2004)&#x3001;Dash et al. (2006)&#x3001;Garcia et al. (2004)&#x3001;MADIDF (Mobile Agents based Distributed Intrusion Detection Framework) (Dayong Ye et al., 2008) &#x3001;Indra (Janakiraman and Zhang, 2003)&#x3001;CSM (White et al., 1996)&#x3002;&#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x6311;&#x6218;&#x662F;&#x68C0;&#x6D4B;&#x7CBE;&#x5EA6;&#x4F4E;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x5DEE;&#x3001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x96BE;&#x5EA6;&#x9AD8;&#x3002;</p>
+<figure id="fig1.10.8"><img src="attach/media/image9.png" alt="&#x56FE; 9-8 &#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;"><figcaption class="center">&#x56FE; 9-8 &#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x7ED3;&#x6784;</figcaption></figure>
+<p>&#x534F;&#x4F5C;&#x5F0F;&#x653B;&#x51FB;&#x7684;&#x7279;&#x70B9;&#x4E3B;&#x8981;&#x662F;&#xFF1A;&#x91C7;&#x7528;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x534F;&#x540C;&#xFF0C;&#x4E14;&#x6709;&#x53D1;&#x8D77;&#x6E90;&#x3002;&#x5206;&#x5E03;&#x5F0F;&#x68C0;&#x6D4B;&#x7684;&#x4F18;&#x52BF;&#x4E3A;&#x53EF;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x534F;&#x4F5C;&#x5F0F;&#x653B;&#x51FB;&#x7684;&#x771F;&#x6B63;&#x6E90;&#x5934;&#xFF0C;&#x53EF;&#x907F;&#x514D;&#x5BF9;&#x540C;&#x6E90;&#x653B;&#x51FB;&#x7684;&#x91CD;&#x590D;&#x62A5;&#x8B66;&#x3002;</p>
+<h2 id="94-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;"><a name="94-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;" class="anchor-navigation-ex-anchor" href="#94-&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6807;&#x51C6;&#x5316;</h2>
+<h3 id="941-&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;"><a name="941-&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;" class="anchor-navigation-ex-anchor" href="#941-&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4.1 &#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;</h3>
+<p>&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#xFF08;Common Intrusion Detection Framework, CIDF&#xFF09;&#x662F;&#x7F8E;&#x56FD;&#x56FD;&#x9632;&#x9AD8;&#x7EA7;&#x7814;&#x7A76;&#x9879;&#x76EE;&#x5C40;&#xFF08;Defense Advanced Research Projects Agency, DARPA&#xFF09;&#x4E3A; IDS &#x6570;&#x636E;&#x4EA4;&#x6362;&#x800C;&#x4F5C;&#x51FA;&#x7684;&#x4E00;&#x4E2A;&#x5C1D;&#x8BD5;&#x3002;&#x5B9A;&#x4E49;&#x4E86; IDS &#x8868;&#x8FBE;&#x68C0;&#x6D4B;&#x4FE1;&#x606F;&#x7684;&#x6807;&#x51C6;&#x8BED;&#x8A00;&#x4EE5;&#x53CA;IDS&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF0C;&#x7B26;&#x5408; CIDF &#x89C4;&#x8303;&#x7684; IDS &#x548C;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x68C0;&#x6D4B;&#x4FE1;&#x606F;&#xFF0C;&#x8FDB;&#x884C;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#x3002;&#x5E76;&#x96C6;&#x6210;&#x4E86;&#x5404;&#x79CD;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x4F7F;&#x4E4B;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#xFF0C;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x57FA;&#x7840;&#x3002;</p>
+<p>CIDF&#x7684;&#x89C4;&#x8303;&#x6587;&#x6863;&#x5305;&#x62EC;&#x56DB;&#x90E8;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF08;The Common Intrusion Detection Framework Architecture, CIDFA&#xFF09;&#xFF0C;&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684; IDS &#x7684;&#x901A;&#x7528;&#x6A21;&#x578B;&#xFF1B;&#x89C4;&#x8303;&#x8BED;&#x8A00;&#xFF08;A Common Intrusion Specification Language, CISL&#xFF09;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x5404;&#x79CD;&#x68C0;&#x6D4B;&#x4FE1;&#x606F;&#x7684;&#x6807;&#x51C6;&#x8BED;&#x8A00;&#xFF1B;&#x5185;&#x90E8;&#x901A;&#x8BAF;&#xFF08; Communication in the Common Intrusion Detection Framework&#xFF09;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; IDS &#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;&#x6807;&#x51C6;&#x534F;&#x8BAE;&#xFF1B;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;&#xFF08;(Common Intrusion Detection Framework APIs, CIDF APIs&#xFF09;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x6574;&#x5957;&#x6807;&#x51C6;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;&#xFF08;API &#x51FD;&#x6570;&#xFF09;&#x3002;</p>
+<p>CIDF &#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x6587;&#x6863;&#x5C06;&#x4E00;&#x4E2A; IDS &#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x7EC4;&#x4EF6;:&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x5668;(Event generators)&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;&#x5668;(Event analyzers)&#x3001;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x5E93;(Event databases)&#x54CD;&#x5E94;&#x548C;&#x5355;&#x5143;(Response units)&#x3002;&#x5E76;&#x5C06; IDS &#x9700;&#x8981;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x7EDF;&#x79F0;&#x4E3A;&#x4E8B;&#x4EF6;(event)&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x7684; IDS &#x4ECE;&#x7F51;&#x7EDC;&#x4E2D;&#x63D0;&#x53D6;&#x7684;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x7684; IDS &#x4ECE;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x7B49;&#x5176;&#x5B83;&#x9014;&#x5F84;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;&#x3002;CIDF &#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x662F;&#x4EE5;&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5BF9;&#x8C61;(generalized intrusion detection objects&#xFF0C;gido)&#x7684;&#x5F62;&#x5F0F;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x4E00;&#x4E2A; gido &#x53EF;&#x4EE5;&#x8868;&#x793A;&#x5728;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x65F6;&#x523B;&#x53D1;&#x751F;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E00;&#x7CFB;&#x5217;&#x4E8B;&#x4EF6;&#x4E2D;&#x5F97;&#x51FA;&#x7684;&#x4E00;&#x4E9B;&#x7ED3;&#x8BBA;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6267;&#x884C;&#x67D0;&#x4E2A;&#x884C;&#x52A8;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<figure id="fig1.10.9"><img src="attach/media/image10.png" alt="&#x56FE; 9-9 &#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#xFF08;CIDF&#xFF09;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;"><figcaption class="center">&#x56FE; 9-9 &#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#xFF08;CIDF&#xFF09;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;</figcaption></figure>
+<p>&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x5668;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x91C7;&#x96C6;&#xFF0C;&#x4ECE;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x5916;&#x7684;&#x6574;&#x4E2A;&#x8BA1;&#x7B97;&#x73AF;&#x5883;&#x4E2D;&#x83B7;&#x5F97;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4EE5; CIDF gido &#x683C;&#x5F0F;&#x5411;&#x7CFB;&#x7EDF;&#x7684;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x63D0;&#x4F9B;&#x6B64;&#x4E8B;&#x4EF6;&#x3002;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x5668;&#x662F;&#x6240;&#x6709;IDS&#x6240;&#x9700;&#x8981;&#x7684;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x4E8B;&#x4EF6;&#x5206;&#x6790;&#x5668;&#x662F;&#x5206;&#x6790;&#x90E8;&#x5206;&#xFF0C;&#x4ECE;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x63A5;&#x6536; gido&#xFF0C;&#x5206;&#x6790;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x65B0;&#x7684; gido&#x3002;&#x8BEF;&#x7528;/&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#x5747;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x5F97;&#x5230;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x54CD;&#x5E94;&#x5355;&#x5143;&#x4E3A;&#x54CD;&#x5E94;&#x90E8;&#x5206;&#xFF0C;&#x662F;&#x5BF9;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x4F5C;&#x51FA;&#x4F5C;&#x51FA;&#x53CD;&#x5E94;&#x7684;&#x529F;&#x80FD;&#x5355;&#x5143;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3001;&#x91CD;&#x7F6E;&#x8FDE;&#x63A5;&#x3001;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x7B49;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x62A5;&#x8B66;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x548C;&#x9632;&#x706B;&#x5899;&#x7B49;&#x5176;&#x4ED6;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x8054;&#x52A8;&#x54CD;&#x5E94;&#x3002;</p>
+<p>&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5305;&#x542B;&#x65E5;&#x5FD7;&#xFF0C;&#x662F;&#x5B58;&#x653E;&#x5404;&#x79CD;&#x4E2D;&#x95F4;&#x548C;&#x6700;&#x7EC8;&#x6570;&#x636E;&#x7684;&#x5730;&#x65B9;&#x7684;&#x7EDF;&#x79F0;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x3002;</p>
+<p>&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#x7684;&#x89C4;&#x8303;&#x8BED;&#x8A00;&#xFF0C;&#x662F;&#x5404; IDS &#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684; CISL &#x6765;&#x8868;&#x793A;&#x539F;&#x59CB;&#x4E8B;&#x4EF6;&#x4FE1;&#x606F;&#xFF08;&#x5BA1;&#x8BA1;&#x8E2A;&#x8FF9;&#x8BB0;&#x5F55;&#x548C;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x6D41;&#x4FE1;&#x606F;&#xFF09;&#x3001;&#x5206;&#x6790;&#x7ED3;&#x679C;&#xFF08;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#x548C;&#x653B;&#x51FB;&#x7279;&#x5F81;&#x63CF;&#x8FF0;&#xFF09;&#x3001;&#x54CD;&#x5E94;&#x6307;&#x4EE4;&#xFF08;&#x505C;&#x6B62;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x6D3B;&#x52A8;&#x6216;&#x4FEE;&#x6539;&#x7EC4;&#x4EF6;&#x7684;&#x5B89;&#x5168;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E86; IDS &#x4E4B;&#x95F4;&#x4FE1;&#x606F;&#x5171;&#x4EAB;&#x7684;&#x57FA;&#x7840;&#x3002;CISL &#x662F; CIDF &#x7684;&#x6700;&#x6838;&#x5FC3;&#x4E5F;&#x662F;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;gido &#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x7F16;&#x7801;&#x662F; CISL &#x7684;&#x91CD;&#x70B9;&#x3002;</p>
+<p>&#x5185;&#x90E8;&#x901A;&#x8BAF;&#x7684;&#x5339;&#x914D;&#x670D;&#x52A1;&#x4E3A; CIDF &#x5404;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8BC6;&#x522B;&#x3001;&#x5B9A;&#x4F4D;&#x548C;&#x4FE1;&#x606F;&#x5171;&#x4EAB;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684;&#x7EDF;&#x4E00;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x662F;&#x57FA;&#x4E8E;&#x8F7B;&#x91CF;&#x76EE;&#x5F55;&#x8BBF;&#x95EE;&#x534F;&#x8BAE;&#xFF08;Lightweight Directory Access Protocol, LDAP&#xFF09;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x5185;&#x90E8;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x7684;&#x6D88;&#x606F;&#x5C42;&#x5728;&#x6613;&#x53D7;&#x653B;&#x51FB;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x51E0;&#x79CD;&#x5B89;&#x5168;&#xFF08;&#x4FDD;&#x5BC6;&#x3001;&#x53EF;&#x4FE1;&#x3001;&#x5B8C;&#x6574;&#xFF09;&#x5E76;&#x53EF;&#x9760;&#x7684;&#x4FE1;&#x606F;&#x4EA4;&#x6362;&#x673A;&#x5236;&#xFF0C;&#x4F7F;&#x901A;&#x4FE1;&#x4E0E;&#x963B;&#x585E;&#x548C;&#x975E;&#x963B;&#x585E;&#x5904;&#x7406;&#x65E0;&#x5173;&#x3001;&#x4F7F;&#x901A;&#x4FE1;&#x4E0E;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x65E0;&#x5173;&#x3001;&#x4F7F;&#x901A;&#x4FE1;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65E0;&#x5173;&#x3001;&#x4F7F;&#x901A;&#x4FE1;&#x4E0E;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x65E0;&#x5173;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x901A;&#x7528;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x6846;&#x67B6;&#x7684;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x4E86;&#x89E3;&#x7F16;&#x7801;&#x548C;&#x4F20;&#x9012;&#x8FC7;&#x7A0B;&#x5177;&#x4F53;&#x7EC6;&#x8282;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EE5;&#x4E00;&#x79CD;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x6784;&#x5EFA;&#x548C;&#x4F20;&#x9012; gido&#xFF0C;&#x5982;&#x4F7F;&#x7528; gido &#x7F16;&#x89E3;&#x7801; API&#x3001;&#x6D88;&#x606F;&#x5C42; API &#x3001;gido &#x4F20;&#x8F93; API &#x3001;gido &#x52A8;&#x6001;&#x8FFD;&#x52A0; API &#x3001;&#x7B7E;&#x540D; API &#x548C;&#x9876;&#x5C42; CIDF &#x7684; API&#x3002;</p>
+<h3 id="942-&#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;"><a name="942-&#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;" class="anchor-navigation-ex-anchor" href="#942-&#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4.2 &#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;</h3>
+<p>&#x5B89;&#x5168;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#xFF08;Open Platform for Security, OPSEC&#xFF09;&#x8054;&#x76DF;&#x6210;&#x7ACB;&#x4E8E;1997&#x5E74;&#xFF0C;&#x7531;&#x8F6F;&#x4EF6;&#x6280;&#x672F;&#x516C;&#x53F8; Checkpoint &#x53D1;&#x8D77;&#x3002;&#x6210;&#x7ACB;&#x76EE;&#x7684;&#x662F;&#x5411;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x7684;&#x3001;&#x80FD;&#x591F;&#x5728;&#x591A;&#x5382;&#x5546;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x7D27;&#x5BC6;&#x96C6;&#x6210;&#x7684;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x8054;&#x76DF;&#x63D0;&#x4F9B;&#x96C6;&#x6210;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x57FA;&#x4E8E; Checkpoint &#x5E73;&#x53F0;&#x7684;&#x5B89;&#x5168;&#x670D;&#x52A1;&#x3002;OPSEC &#x6269;&#x5C55;&#x4E86; Check Point &#x5B89;&#x5168;&#x865A;&#x62DF;&#x7F51;&#x7EDC;&#xFF08;Secure Virtual Network, SVN&#xFF09;&#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF0C;&#x5177;&#x4F53;&#x6784;&#x6210;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5185;&#x5BB9;&#x5B89;&#x5168;&#xFF0C;&#x91C7;&#x7528;&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x534F;&#x8BAE;&#xFF08;Content Vectoring Protocol, CVP&#xFF09;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x626B;&#x63CF;&#x7ECF;&#x8FC7;&#x7F51;&#x7EDC;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x5305;&#x5185;&#x5BB9;&#xFF1B;</li>
+<li>Web&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#xFF0C;&#x91C7;&#x7528;Web&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x534F;&#x8BAE;&#xFF08;URL Filtering Protocol, UFP&#xFF09;&#x5B9A;&#x4E49; Client/Server &#x5F02;&#x6B65;&#x63A5;&#x53E3;&#x6765;&#x5206;&#x7C7B;&#x548C;&#x63A7;&#x5236;&#x57FA;&#x4E8E;&#x7279;&#x5B9A;URL&#x5730;&#x5740;&#x7684;&#x901A;&#x4FE1;&#xFF1B;</li>
+<li>&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#xFF0C;&#x91C7;&#x7528; <strong> &#x53EF;&#x7591;&#x884C;&#x4E3A;&#x76D1;&#x6D4B;&#x534F;&#x8BAE;&#xFF1F; </strong>&#xFF08;Suspicious Activity Monitoring Protocol, SAMP&#xFF09;&#x8BC6;&#x522B;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x53EF;&#x7591;&#x884C;&#x4E3A;&#xFF0C;&#x5E76;&#x901A;&#x77E5;&#x9632;&#x706B;&#x5899;&#x53CA;&#x65F6;&#x5904;&#x7406;&#xFF1B;</li>
+<li>&#x4E8B;&#x4EF6;&#x96C6;&#x6210;&#xFF0C;&#x63D0;&#x4F9B; Log Export API &#x548C; Event Logging API &#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#x96C6;&#x6210; API&#xFF0C;&#x5141;&#x8BB8;&#x7B2C;&#x4E09;&#x65B9;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x7BA1;&#x7406;&#x5206;&#x6790;&#xFF0C;&#x91C7;&#x7528; Check Point &#x4E2D;&#x592E;&#x7B56;&#x7565;&#x6570;&#x636E;&#x5E93;&#x63A5;&#x53E3;&#xFF08;Check Point Management Interface, CPMI&#xFF09;&#xFF0C;&#x5141;&#x8BB8;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x5B89;&#x5168;&#x5730;&#x8BBF;&#x95EE;&#x5B58;&#x50A8;&#x5728;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF1B;</li>
+<li>&#x53CC;&#x673A;&#x70ED;&#x5907;&#x4EFD;&#xFF0C;&#x5373;&#x5E26;&#x8D1F;&#x8F7D;&#x5E73;&#x8861;&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#xFF08;Load Balancing, HA/LB&#xFF09;&#x548C;&#x53CC;&#x673A;&#x70ED;&#x5907;&#x4EFD;&#xFF08;Hot Standby, HA-HS) &#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x5230;&#x5730;&#x5740;&#x7684;&#x6620;&#x5C04; UAM (User Address Mapping)&#xFF1B;</li>
+<li>&#x5B89;&#x5168;&#x7684;&#x7535;&#x5B50;&#x5546;&#x52A1;&#x5E94;&#x7528;&#xFF0C;&#x91C7;&#x7528;&#x7528;&#x6237;&#x6743;&#x9650; API&#xFF08;UserAuthority API, UAA&#xFF09;&#xFF1B;</li>
+<li>&#x5DE5;&#x4E1A;&#x6807;&#x51C6;&#x534F;&#x8BAE;&#xFF0C;&#x5305;&#x62EC;&#x8BA4;&#x8BC1;&#x534F;&#x8BAE;&#xFF08;Radius/TACACS+&#xFF09;&#x3001;SNMP&#x3001;LDAP &#x3002;</li>
+</ul>
+<h2 id="95-&#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;"><a name="95-&#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#95-&#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5 &#x5B9E;&#x6218;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;</h2>
+<h3 id="951-&#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;"><a name="951-&#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#951-&#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.1 &#x5178;&#x578B;&#x90E8;&#x7F72;&#x65B9;&#x5F0F;</h3>
+<figure id="fig1.10.10"><img src="attach/media/image11.png" alt="&#x56FE;9-10 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x5178;&#x578B;&#x90E8;&#x7F72;&#x6A21;&#x5F0F;"><figcaption class="center">&#x56FE;9-10 &#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7684;&#x5178;&#x578B;&#x90E8;&#x7F72;&#x6A21;&#x5F0F;</figcaption></figure>
+<p>&#x56FE;9-10&#x662F;&#x4E00;&#x4E2A; IDS &#x7684;&#x5178;&#x578B;&#x90E8;&#x7F72;&#x56FE;&#x3002;&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#x90E8;&#x7F72; IDS &#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A; NIDS &#x548C; HIDS&#xFF0C;&#x6839;&#x636E;&#x7F51;&#x7EDC;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x548C;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x786E;&#x5B9A;&#x5177;&#x4F53;&#x7684;&#x90E8;&#x7F72;&#x60C5;&#x51B5;&#x3002;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x6E90;&#x4EE3;&#x8868;&#x662F; Snort&#xFF0C; Snort &#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;NIDS&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x591A;&#x6A21;&#x5F0F;&#x62A5;&#x6587;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x3001;&#x55C5;&#x63A2;&#x5DE5;&#x5177;&#x3001;&#x62A5;&#x6587;&#x8BB0;&#x5F55;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x53D6;&#x8BC1;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x3002;&#x5E94;&#x7528;&#x573A;&#x666F;&#x6709;&#x5728;&#x7EBF;&#x5206;&#x6790;&#x548C;&#x79BB;&#x7EBF;&#x5206;&#x6790;&#x3002;</p>
+<h3 id="952-snort"><a name="952-snort" class="anchor-navigation-ex-anchor" href="#952-snort"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.2 Snort</h3>
+<h4 id="9521-sonrt&#x6982;&#x8FF0;"><a name="9521-sonrt&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#9521-sonrt&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.2.1 Sonrt&#x6982;&#x8FF0;</h4>
+<p>Snort &#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x6027;&#xFF1A;&#x8F7B;&#x5DE7;&#xFF0C;&#x6E90;&#x4EE3;&#x7801;&#x4E0D;&#x5230;1MB&#xFF1B;&#x5177;&#x6709;&#x79FB;&#x690D;&#x6027;&#xFF0C;&#x5728; Linux, Windows, MacOS X, Solaris, BSD, IRIX, Tru64, HP-UX &#x5E73;&#x53F0;&#x4E0B;&#x5747;&#x53EF;&#x4F7F;&#x7528;&#xFF1B;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;&#x767E;&#x5146;&#x7F51;&#x7EDC;&#x7EBF;&#x901F;&#x5904;&#x7406;&#xFF1B;&#x53EF;&#x914D;&#x7F6E;&#xFF0C;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x7684;&#x89C4;&#x5219;&#x8BED;&#x8A00;&#xFF0C;&#x4E30;&#x5BCC;&#x7684;&#x65E5;&#x5FD7;/&#x914D;&#x7F6E;&#x5206;&#x6790;&#x5DE5;&#x5177;&#xFF1B;&#x514D;&#x8D39;&#xFF0C;GPL &#x5F00;&#x6E90;&#x3002;</p>
+<p>Snort &#x7684;&#x8BBE;&#x8BA1;&#x9075;&#x5B88;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x7F51;&#x7EDC;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#xFF0C;&#x57FA;&#x4E8E; Libpcap &#x7684;&#x62A5;&#x6587;&#x55C5;&#x63A2;&#x63A5;&#x53E3;&#xFF0C;&#x57FA;&#x4E8E;&#x89C4;&#x5219;&#x7684;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x548C;&#x652F;&#x6301;&#x65E0;&#x9650;&#x6269;&#x5C55;&#x7684;&#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>Snort &#x7684;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x662F;&#x57FA;&#x4E8E;&#x6307;&#x7EB9;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x91C7;&#x7528;&#x6A21;&#x5757;&#x5316;&#x8BBE;&#x8BA1;&#x3002;&#x5177;&#x6709;&#x4E30;&#x5BCC;&#x7684;&#x68C0;&#x6D4B;&#x80FD;&#x529B;&#xFF08;&#x5185;&#x7F6E;&#x89C4;&#x5219;&#xFF09;&#xFF0C;&#x53EF;&#x8FDB;&#x884C;&#x9690;&#x853D;&#x626B;&#x63CF;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BC6;&#x522B;&#x626B;&#x63CF;,&#x3001;&#x7F13;&#x51B2;&#x533A;&#x6EA2;&#x51FA;&#x653B;&#x51FB;&#x3001;&#x540E;&#x95E8;&#x548C;CGI&#x6F0F;&#x6D1E;&#x5229;&#x7528;&#x7B49;&#x7B49;&#x3002;&#x89C4;&#x5219;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x5341;&#x5206;&#x7075;&#x6D3B;&#xFF0C;&#x6613;&#x4E8E;&#x521B;&#x5EFA;&#x65B0;&#x89C4;&#x5219;&#x3002;</p>
+<p>Snort &#x7684;&#x63D2;&#x4EF6;&#x6709;&#x9884;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x62A5;&#x6587;&#x5728;&#x88AB;&#x9001;&#x5230;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x4E4B;&#x524D;&#x53EF;&#x4EE5;&#x5148;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;&#xFF1B;&#x68C0;&#x6D4B;&#x529F;&#x80FD;&#xFF0C;&#x9488;&#x5BF9;&#x5355;&#x4E2A;&#x62A5;&#x6587;/&#x62A5;&#x6587;&#x5B57;&#x6BB5;&#x7684;&#x5FEB;&#x901F;&#x68C0;&#x6D4B;&#xFF1B;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#xFF0C;&#x83B7;&#x53D6;&#x5176;&#x4ED6;&#x63D2;&#x4EF6;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
+<p>Snort &#x6709;&#x4E09;&#x79CD;&#x4E3B;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;&#x55C5;&#x63A2;&#x6A21;&#x5F0F;&#x3001;&#x62A5;&#x6587;&#x8BB0;&#x5F55;&#x6A21;&#x5F0F;&#x548C; NIDS &#x6A21;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;NIDS &#x6A21;&#x5F0F;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#x3002;&#x55C5;&#x63A2;&#x6A21;&#x5F0F;&#x7C7B;&#x4F3C; tcpdump&#xFF0C;&#x89E3;&#x7801;&#x62A5;&#x6587;&#x540E;&#x8F93;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;(&#x63A7;&#x5236;&#x53F0;)&#xFF0C;&#x53EF;&#x652F;&#x6301; BPF &#x8FC7;&#x6EE4;&#x89C4;&#x5219;&#xFF0C;&#x56FE; 9-11 &#x4E3A;&#x6355;&#x83B7;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;&#x622A;&#x56FE;&#x3002;&#x62A5;&#x6587;&#x8BB0;&#x5F55;&#x6A21;&#x5F0F;&#xFF0C;&#x53EF;&#x4F7F;&#x7528; ASCII, tcpdump, XML &#x548C;&#x6570;&#x636E;&#x5E93;&#x7B49;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x5BF9;&#x8BB0;&#x5F55;&#x7684;&#x62A5;&#x6587;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684;&#x5206;&#x6790;&#x3001;&#x53D6;&#x8BC1;&#x3002;NIDS &#x6A21;&#x5F0F;&#xFF0C;&#x5728; BackTrack5 &#x81EA;&#x5E26;&#x7684; Snort 2.8.5.2 (Build 121) &#x4E0A;&#x6709;4000&#x591A;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x652F;&#x6301;&#x591A;&#x79CD;&#x68C0;&#x6D4B;&#x6A21;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#x57FA;&#x4E8E;&#x89C4;&#x5219;&#x3001;&#x7EDF;&#x8BA1;&#x5F02;&#x5E38;&#x3001;&#x57FA;&#x4E8E;&#x534F;&#x8BAE;&#x7B49;&#x3002;</p>
+<figure id="fig1.10.11"><img src="attach/media/image12.png" alt="&#x56FE; 9-11 &#x6355;&#x83B7;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;"><figcaption class="center">&#x56FE; 9-11 &#x6355;&#x83B7;&#x7684;&#x6570;&#x636E;&#x62A5;&#x6587;</figcaption></figure>
+<h4 id="9522-snort&#x89C4;&#x5219;"><a name="9522-snort&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#9522-snort&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.2.2 Snort&#x89C4;&#x5219;</h4>
+<figure id="fig1.10.12"><img src="attach/media/image13.png" alt="&#x56FE; 9-12 Snort&#x89C4;&#x5219;"><figcaption class="center">&#x56FE; 9-12 Snort&#x89C4;&#x5219;</figcaption></figure>
+<p>Snort &#x4E3A;&#x5355;&#x884C;&#x89C4;&#x5219;&#xFF0C;&#x5927;&#x591A;&#x6570; snort &#x89C4;&#x5219;&#x90FD;&#x5199;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x884C;&#x4E0A;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x591A;&#x884C;&#x4E4B;&#x95F4;&#x7684;&#x884C;&#x5C3E;&#x7528;&quot;/&quot;&#x5206;&#x9694;&#x3002;Snort &#x89C4;&#x5219;&#x88AB;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x903B;&#x8F91;&#x90E8;&#x5206;&#xFF1A;&#x89C4;&#x5219;&#x5934;&#x548C;&#x89C4;&#x5219;&#x9009;&#x9879;&#x3002;&#x89C4;&#x5219;&#x5934;&#x5305;&#x542B;&#x89C4;&#x5219;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x534F;&#x8BAE;&#xFF0C;&#x6E90;&#x548C;&#x76EE;&#x6807;ip&#x5730;&#x5740;&#x4E0E;&#x7F51;&#x7EDC;&#x63A9;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x6E90;&#x548C;&#x76EE;&#x6807;&#x7AEF;&#x53E3;&#x4FE1;&#x606F;&#xFF1B;&#x89C4;&#x5219;&#x9009;&#x9879;&#x90E8;&#x5206;&#x5305;&#x542B;&#x62A5;&#x8B66;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x548C;&#x8981;&#x68C0;&#x67E5;&#x7684;&#x5305;&#x7684;&#x5177;&#x4F53;&#x90E8;&#x5206;&#x3002;</p>
+<p>snort.conf &#x5B9A;&#x4E49;&#x4E86;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;var RULE_PATH /etc/snort/rules</p>
+<p>&#x7EDD;&#x5927;&#x591A;&#x6570; snort &#x89C4;&#x5219;&#x90FD;&#x662F;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x89C4;&#x5219;&#xFF0C;&#x5373;&#x8BC6;&#x522B;&#x5DF2;&#x77E5;&#x7684;&#x5165;&#x4FB5;&#x884C;&#x4E3A;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x90FD;&#x7528;&#x5728;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x4E0A;&#x3002;&#x6781;&#x5C11;&#x6570;&#x7684; snort &#x89C4;&#x5219;&#x662F;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x89C4;&#x5219;&#xFF0C;&#x5373;&#x57FA;&#x4E8E;&#x7EDF;&#x8BA1;&#x5F02;&#x5E38;&#x7684;&#x68C0;&#x6D4B;&#xFF0C;&#x4F8B;&#x5982; threshold.conf &#x4F7F;&#x7528;&#x9608;&#x503C;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;Limit &#x662F;&#x6BCF;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x9608;&#x503C;&#x5230;&#x8FBE;&#x65F6;&#x5C31;&#x62A5;&#x8B66;&#xFF0C;&#x6BCF;&#x6B21;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x6700;&#x591A;&#x62A5;&#x8B66;&#x4E00;&#x6B21;&#x3002;Threshold &#x662F;&#x6BCF;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x7684;&#x6BCF;M&#x6B21;&#x9608;&#x503C;&#x5230;&#x8FBE;&#x65F6;&#x62A5;&#x8B66;&#xFF0C;&#x6BCF;&#x6B21;&#x7EDF;&#x8BA1;&#x5468;&#x62A5;&#x62A5;&#x8B66;&#x6B21;&#x6570;&#x4E0D;&#x9650;&#xFF0C;Both &#x662F;&#x4EE5;&#x4E0A;2&#x79CD;&#x7684;&#x7EFC;&#x5408;&#x3002;</p>
+<figure id="fig1.10.13"><img src="attach/media/image14.png" alt="&#x56FE; 9-13 Snort&#x89C4;&#x5219;&#x683C;&#x5F0F;"><figcaption class="center">&#x56FE; 9-13 Snort&#x89C4;&#x5219;&#x683C;&#x5F0F;</figcaption></figure>
+<p>&#x89C4;&#x5219;&#x6267;&#x884C;&#x4E8B;&#x7684;&#x987A;&#x5E8F;&#x5E76;&#x4E0D;&#x662F;&#x6309;&#x7167;&#x89C4;&#x5219;&#x7684;&#x51FA;&#x73B0;&#x987A;&#x5E8F;&#xFF0C;&#x800C;&#x662F;&#x6309;&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6267;&#x884C;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x5982;&#x4E0B;&#x4F9D;&#x6B21;&#x9012;&#x51CF;&#xFF1A;</p>
+<pre><code>Pass &gt;Drop &gt; Alert &gt; Log
+</code></pre><figure id="fig1.10.14"><img src="attach/media/image15.png" alt="&#x56FE;9-14 &#x5904;&#x7406;&#x6D41;&#x7A0B;"><figcaption class="center">&#x56FE;9-14 &#x5904;&#x7406;&#x6D41;&#x7A0B;</figcaption></figure>
+<figure id="fig1.10.15"><img src="attach/media/image16.png" alt="&#x56FE; 9-15 &#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x89C4;&#x5219;"><figcaption class="center">&#x56FE; 9-15 &#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x89C4;&#x5219;</figcaption></figure>
+<p>&#x7EDD;&#x5927;&#x591A;&#x6570; snort &#x89C4;&#x5219;&#x90FD;&#x662F;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x89C4;&#x5219;&#xFF0C;&#x8BC6;&#x522B;&#x5DF2;&#x77E5;&#x7684;&#x5165;&#x4FB5;&#x884C;&#x4E3A;&#xFF0C;Snort &#x7684;&#x4E3B;&#x8981;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x90FD;&#x7528;&#x5728;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x4E0A;&#x3002;&#x6781;&#x5C11;&#x6570;&#x7684; snort &#x89C4;&#x5219;&#x662F;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#xFF0C;&#x57FA;&#x4E8E;&#x7EDF;&#x8BA1;&#x5F02;&#x5E38;&#x3002;&#x6709; threshold.conf &#x4F7F;&#x7528;&#x9608;&#x503C;&#x6CD5;&#xFF0C;Limit &#x662F;&#x6BCF;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x9608;&#x503C;&#x5230;&#x8FBE;&#x65F6;&#x5C31;&#x62A5;&#x8B66;&#xFF0C;&#x6BCF;&#x6B21;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x6700;&#x591A;&#x62A5;&#x8B66;&#x4E00;&#x6B21;&#x3002;Threshold &#x662F;&#x6BCF;&#x7EDF;&#x8BA1;&#x5468;&#x671F;&#x7684;&#x6BCF;M&#x6B21;&#x9608;&#x503C;&#x5230;&#x8FBE;&#x65F6;&#x62A5;&#x8B66;&#xFF0C;&#x6BCF;&#x6B21;&#x7EDF;&#x8BA1;&#x5468;&#x62A5;&#x62A5;&#x8B66;&#x6B21;&#x6570;&#x4E0D;&#x9650;&#xFF0C;Both &#x662F;&#x4EE5;&#x4E0A;2&#x79CD;&#x7684;&#x7EFC;&#x5408;&#x3002;</p>
+<figure id="fig1.10.16"><img src="attach/media/image17.png" alt="&#x56FE; 9-16 &#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x89C4;&#x5219;"><figcaption class="center">&#x56FE; 9-16 &#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x89C4;&#x5219;</figcaption></figure>
+<h4 id="9523-snort&#x67B6;&#x6784;"><a name="9523-snort&#x67B6;&#x6784;" class="anchor-navigation-ex-anchor" href="#9523-snort&#x67B6;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.2.3 Snort&#x67B6;&#x6784;</h4>
+<figure id="fig1.10.17"><img src="attach/media/image18.png" alt="&#x56FE; 9-17 Snort &#x6570;&#x636E;&#x6D41;&#x56FE;"><figcaption class="center">&#x56FE; 9-17 Snort &#x6570;&#x636E;&#x6D41;&#x56FE;</figcaption></figure>
+<p>Snort &#x7684;&#x7ED3;&#x6784;&#x7531;4&#x5927;&#x8F6F;&#x4EF6;&#x6A21;&#x5757;&#x7EC4;&#x6210;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x6570;&#x636E;&#x5305;&#x55C5;&#x63A2;&#x6A21;&#x5757;&#x2014;&#x2014;&#x8D1F;&#x8D23;&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x5BF9;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF1B;</p>
+<p>&#xFF08;2&#xFF09;&#x9884;&#x5904;&#x7406;&#x6A21;&#x5757;&#x2014;&#x2014;&#x8BE5;&#x6A21;&#x5757;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x63D2;&#x4EF6;&#x6765;&#x68C0;&#x67E5;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x4ECE;&#x4E2D;&#x53D1;&#x73B0;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x201C;&#x884C;&#x4E3A;&#x201D;&#xFF0C;&#x5982;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#xFF0C;IP &#x788E;&#x7247;&#x7B49;&#xFF0C;&#x6570;&#x636E;&#x5305;&#x7ECF;&#x8FC7;&#x9884;&#x5904;&#x7406;&#x540E;&#x624D;&#x4F20;&#x5230;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#xFF1B;</p>
+<p>&#xFF08;3&#xFF09;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x2014;&#x2014;&#x8BE5;&#x6A21;&#x5757;&#x662F; Snort &#x7684;&#x6838;&#x5FC3;&#x6A21;&#x5757;&#x3002;&#x5F53;&#x6570;&#x636E;&#x5305;&#x4ECE;&#x9884;&#x5904;&#x7406;&#x5668;&#x9001;&#x8FC7;&#x6765;&#x540E;&#xFF0C;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x4F9D;&#x636E;&#x9884;&#x5148;&#x8BBE;&#x7F6E;&#x7684;&#x89C4;&#x5219;&#x68C0;&#x67E5;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x4E00;&#x65E6;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x5305;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x67D0;&#x6761;&#x89C4;&#x5219;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x5C31;&#x901A;&#x77E5;&#x62A5;&#x8B66;&#x6A21;&#x5757;&#xFF0C;&#x56FE;9-18&#x4E3A;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8868;&#x793A;&#xFF0C;&#x56FE; 9-19 &#x4E3A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5B8C;&#x5168;&#x5C55;&#x5F00;&#x89C6;&#x56FE;&#xFF1B;</p>
+<p>&#xFF08;4&#xFF09;&#x8F93;&#x51FA;&#x62A5;&#x8B66;/&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x2014;&#x2014;&#x7ECF;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x68C0;&#x67E5;&#x540E;&#x7684;Snort&#x6570;&#x636E;&#x9700;&#x8981;&#x4EE5;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x679C;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x4E2D;&#x7684;&#x67D0;&#x6761;&#x89C4;&#x5219;&#x88AB;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x6761;&#x62A5;&#x8B66;&#xFF0C;&#x8FD9;&#x6761;&#x62A5;&#x8B66;&#x4FE1;&#x606F;&#x4F1A;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x3001;UNIXsocket&#x3001;WindowsPopup(SMB)&#x3001;SNMP &#x534F;&#x8BAE;&#x7684; trap &#x547D;&#x4EE4;&#x4F20;&#x9001;&#x7ED9;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C06;&#x62A5;&#x8B66;&#x4F20;&#x9001;&#x7ED9;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#xFF08;&#x5982;SnortSam&#xFF09;&#xFF0C;&#x53E6;&#x5916;&#x62A5;&#x8B66;&#x4FE1;&#x606F;&#x4E5F;&#x53EF;&#x4EE5;&#x8BB0;&#x5165; SQL &#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<figure id="fig1.10.18"><img src="attach/media/image19.png" alt="&#x56FE; 9-18 &#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8868;&#x793A;"><figcaption class="center">&#x56FE; 9-18 &#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8868;&#x793A;</figcaption></figure>
+<figure id="fig1.10.19"><img src="attach/media/image20.png" alt="&#x56FE; 9-19 &#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5C55;&#x5F00;&#x56FE;"><figcaption class="center">&#x56FE; 9-19 &#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5C55;&#x5F00;&#x56FE;</figcaption></figure>
+<p>&#x5173;&#x4E8E; Snort &#x7684;&#x914D;&#x7F6E;&#x547D;&#x4EE4;&#xFF1A;/etc/snort/snort.conf&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x76F8;&#x5173;&#x53D8;&#x91CF;&#xFF0C;&#x914D;&#x7F6E;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7684;&#x5E93;&#xFF0C;&#x914D;&#x7F6E;&#x9884;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x914D;&#x7F6E;&#x8F93;&#x51FA;&#x63D2;&#x4EF6;&#xFF0C;&#x589E;&#x52A0;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x6307;&#x4EE4;&#xFF0C;&#x5B9A;&#x4E49;&#x542F;&#x7528;&#x7684;&#x89C4;&#x5219;&#x96C6;&#x3002;</p>
+<h3 id="953-suricata"><a name="953-suricata" class="anchor-navigation-ex-anchor" href="#953-suricata"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.3 Suricata</h3>
+<p><a href="https://suricata-ids.org/" target="_blank">Suricata</a> &#x662F;&#x975E;&#x76C8;&#x5229;&#x6027;&#x7EC4;&#x7EC7;&#x5F00;&#x653E;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x57FA;&#x91D1;&#x4F1A;&#xFF08;Open Information Security Foundation, OISF&#xFF09;&#x4E3B;&#x5BFC;&#x548C;&#x652F;&#x6301;&#x7684;&#x4E00;&#x4E2A;&#x514D;&#x8D39;&#x3001;&#x5F00;&#x6E90;&#x3001;&#x6210;&#x719F;&#x3001;&#x9AD8;&#x6027;&#x80FD;&#x548C;&#x5065;&#x58EE;&#x7684;&#x7F51;&#x7EDC;&#x5A01;&#x80C1;&#x68C0;&#x6D4B;&#x5F15;&#x64CE;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5B9E;&#x65F6;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x3001;&#x5185;&#x8054;&#x5165;&#x4FB5;&#x4FDD;&#x62A4;&#xFF08;Intrusion Prevention System, IPS&#xFF09;&#x3001;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x76D1;&#x63A7;&#xFF08;Network Security Monitoring, NSM&#xFF09;&#x548C;&#x79BB;&#x7EBF; pcap &#x5904;&#x7406;&#x3002;Suricata &#x4F7F;&#x7528;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x89C4;&#x5219;&#x548C;&#x7B7E;&#x540D;&#x8BED;&#x8A00;&#x6765;&#x68C0;&#x67E5;&#x7F51;&#x7EDC;&#xFF0C;&#x6D41;&#x91CF;&#xFF0C;&#x652F;&#x6301;&#x4F7F;&#x7528;Lua&#x811A;&#x672C;&#x8BED;&#x8A00;&#x68C0;&#x6D4B;&#x590D;&#x6742;&#x5A01;&#x80C1;&#x3002;Suricata &#x4F7F;&#x7528;&#x6807;&#x51C6; YAML &#x8F93;&#x5165;&#x683C;&#x5F0F;&#x548C; JSON &#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x548C;&#x7B2C;&#x4E09;&#x65B9;&#x5B89;&#x5168;&#x4FE1;&#x606F;&#x548C;&#x4E8B;&#x4EF6;&#x7BA1;&#x7406;&#xFF08;Security Information and Event Management, SIEM&#xFF09;&#x5DE5;&#x5177;&#xFF08;&#x4F8B;&#x5982;Splunk&#x3001;ELK&#x548C;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF09;&#x96C6;&#x6210;&#x5341;&#x5206;&#x5BB9;&#x6613;&#x3002;</p>
+<figure id="fig1.10.20"><img src="attach/media/kibana-selks4.png" alt="&#x56FE; 9-20 Suricata&#x4EA7;&#x751F;&#x7684;&#x62A5;&#x8B66;&#x65E5;&#x5FD7;&#x53EF;&#x89C6;&#x5316;&#x6548;&#x679C;&#x56FE;"><figcaption class="center">&#x56FE; 9-20 Suricata&#x4EA7;&#x751F;&#x7684;&#x62A5;&#x8B66;&#x65E5;&#x5FD7;&#x53EF;&#x89C6;&#x5316;&#x6548;&#x679C;&#x56FE;</figcaption></figure>
+<p>Suricata&#x548C;Snort&#x7684;&#x7279;&#x6027;&#x5BF9;&#x6BD4;&#x5982;&#x4E0B;&#x8868;&#x683C;&#x6240;&#x793A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5BF9;&#x6BD4;&#x9879;</th>
+<th>Snort</th>
+<th>Suricata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5F00;&#x53D1;&#x8005;</td>
+<td>Sourcefire, Inc.</td>
+<td>Open Information Security Foundation (OISF)</td>
+</tr>
+<tr>
+<td>&#x9879;&#x76EE;&#x5386;&#x53F2;</td>
+<td>1998 -</td>
+<td>2009 -</td>
+</tr>
+<tr>
+<td>&#x7F16;&#x7A0B;&#x8BED;&#x8A00;</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</td>
+<td>&#x8DE8;&#x5E73;&#x53F0;</td>
+<td>&#x8DE8;&#x5E73;&#x53F0;</td>
+</tr>
+<tr>
+<td>&#x6700;&#x65B0;&#x7A33;&#x5B9A;&#x7248;</td>
+<td><a href="https://s3.amazonaws.com/snort-org-site/production/release_files/files/000/006/397/original/release_notes_2.9.11.txt?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&amp;Expires=1511841091&amp;Signature=JGm6my%2BW7l8Dvb%2BjakXkOYLF0pg%3D" target="_blank">2.9.11 (2017/09/05)</a></td>
+<td>4.0.1 (2017/10/18)</td>
+</tr>
+<tr>
+<td>&#x5E76;&#x884C;&#x5904;&#x7406;</td>
+<td>&#x5355;&#x7EBF;&#x7A0B;&#xFF08;<a href="https://github.com/snort3/snort3" target="_blank">Snort3&#x5B8C;&#x5168;&#x91CD;&#x5199;&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;</a>&#xFF09;</td>
+<td>&#x591A;&#x7EBF;&#x7A0B;</td>
+</tr>
+<tr>
+<td>IPv6&#x652F;&#x6301;</td>
+<td>&#x6709;</td>
+<td>&#x6709;</td>
+</tr>
+<tr>
+<td>Snort (VRT)&#x89C4;&#x5219;&#x8BED;&#x6CD5;&#x517C;&#x5BB9;&#x6027;</td>
+<td>&#x517C;&#x5BB9;</td>
+<td>&#x517C;&#x5BB9;</td>
+</tr>
+<tr>
+<td>Emerging Threats Rules &#x517C;&#x5BB9;&#x6027;</td>
+<td>&#x517C;&#x5BB9;</td>
+<td>&#x517C;&#x5BB9;</td>
+</tr>
+<tr>
+<td>&#x65E5;&#x5FD7;&#x683C;&#x5F0F;</td>
+<td>Unified2</td>
+<td>Unified2 / JSON</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5173;&#x4E8E;Suricata&#x7684;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="http://suricata.readthedocs.io/en/latest/" target="_blank">&#x5B98;&#x7F51;&#x5728;&#x7EBF;&#x624B;&#x518C;</a>&#x3002;</p>
+<h3 id="954-bro--zeek"><a name="954-bro--zeek" class="anchor-navigation-ex-anchor" href="#954-bro--zeek"><i class="fa fa-link" aria-hidden="true"></i></a>9.5.4 Bro / Zeek</h3>
+<p><a href="https://blog.zeek.org//2018/10/renaming-bro-project_11.html" target="_blank">2018 &#x5E74; 10 &#x6708; 11 &#x65E5;</a> &#x539F; <code>Bro</code> &#x5F00;&#x53D1;&#x8005;&#x56E2;&#x961F;&#x5BA3;&#x5E03;&#x5C06;&#x62E5;&#x6709; 20 &#x5E74;&#x5386;&#x53F2;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE; <code>Bro</code> &#x66F4;&#x540D;&#x4E3A; <code>Zeek</code> &#xFF0C;&#x539F;&#x6709; <code>Bro</code> &#x76F8;&#x5173;&#x6587;&#x6863;&#x548C;&#x5DE5;&#x5177;&#x5305;&#x5185;&#x5305;&#x542B;&#x7684;&#x7A0B;&#x5E8F;&#x547D;&#x540D;&#x5C06;&#x7ECF;&#x5386;&#x4E00;&#x6BB5; <code>Bro</code> &#x548C; <code>Zeek</code> &#x5171;&#x5B58;&#x7684;&#x65F6;&#x671F;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x540D;&#x79F0;&#x4E2D;&#x5305;&#x542B; <code>bro</code> &#x7684;&#x5DE5;&#x5177;&#x548C;&#x672F;&#x8BED;&#x7EDF;&#x4E00;&#x8FC1;&#x79FB;&#x5230; <code>zeek</code> &#x76F8;&#x5173;&#x547D;&#x540D;&#x89C4;&#x8303;&#x3002;</p>
+<blockquote>
+<p>Zeek is the new name for the long-established Bro system. Note that parts of the system retain the &quot;Bro&quot; name, and it also often appears in the documentation and distributions.</p>
+</blockquote>
+<p>&#x6839;&#x636E; Zeek &#x5B98;&#x7F51;&#x7684;&#x6587;&#x6863;&#x4ECB;&#x7ECD;&#xFF0C;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x51FA; Zeek &#x7684;&#x4E3B;&#x8981;&#x7279;&#x6027;&#xFF1A;</p>
+<ul>
+<li>&#x90E8;&#x7F72;<ul>
+<li>&#x8FD0;&#x884C;&#x5728;&#x666E;&#x901A;&#x786C;&#x4EF6;&#x548C;&#x6807;&#x51C6;UNIX&#x7CFB;&#x7EDF;&#xFF08;&#x5305;&#x62EC; Linux, FreeBSD, MacOS&#xFF09;</li>
+<li>&#x57FA;&#x4E8E;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x5206;&#x6D41;&#x6216;&#x955C;&#x50CF;&#x7AEF;&#x53E3;&#x65B9;&#x5F0F;&#x7684;&#x5B8C;&#x5168;&#x88AB;&#x52A8;&#x6D41;&#x91CF;&#x5206;&#x6790;</li>
+<li>&#x57FA;&#x4E8E;&#x6807;&#x51C6; libpcap &#x63A5;&#x53E3;&#x6355;&#x83B7;&#x6570;&#x636E;&#x62A5;&#x6587;</li>
+<li>&#x5B9E;&#x65F6;&#x548C;&#x79BB;&#x7EBF;&#x5206;&#x6790;</li>
+<li>&#x652F;&#x6301;&#x5927;&#x89C4;&#x6A21;&#x96C6;&#x7FA4;&#x90E8;&#x7F72;</li>
+<li>&#x540C;&#x65F6;&#x652F;&#x6301;&#x5355;&#x673A;&#x548C;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x6846;&#x67B6;</li>
+<li>&#x57FA;&#x4E8E; BSD &#x534F;&#x8BAE;&#x5F00;&#x6E90;</li>
+</ul>
+</li>
+<li>&#x5206;&#x6790;<ul>
+<li>&#x5168;&#x9762;&#x884C;&#x4E3A;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7528;&#x4E8E;&#x79BB;&#x7EBF;&#x5206;&#x6790;&#x548C;&#x53D6;&#x8BC1;</li>
+<li>&#x7AEF;&#x53E3;&#x65E0;&#x5173;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x5206;&#x6790;</li>
+<li>&#x652F;&#x6301;&#x591A;&#x79CD;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#xFF08;&#x5305;&#x62EC;&#xFF1A;DNS&#x3001;FTP&#x3001;HTTP&#x3001;IRC&#x3001;SMTP&#x3001;SSH&#x3001;SSL&#xFF09;</li>
+<li>&#x5E94;&#x7528;&#x5C42;&#x8D1F;&#x8F7D;&#x5185;&#x5BB9;&#x5206;&#x6790;&#x5305;&#x62EC; MD5/SHA1 &#x8BA1;&#x7B97;&#x7528;&#x4E8E;&#x6307;&#x7EB9;</li>
+<li>&#x5B8C;&#x5168; IPv6 &#x652F;&#x6301;</li>
+<li>&#x96A7;&#x9053;&#x534F;&#x8BAE;&#x68C0;&#x6D4B;&#x548C;&#x5206;&#x6790;&#xFF08;&#x5305;&#x62EC; Ayiya, Teredo, GTPv1&#xFF09;&#x3002;Zeek &#x91CD;&#x7EC4;&#x8BC6;&#x522B;&#x7684;&#x96A7;&#x9053;&#x534F;&#x8BAE;&#x8D1F;&#x8F7D;&#x5C31;&#x50CF;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x96A7;&#x9053;&#x534F;&#x8BAE;&#x4E00;&#x6837;&#x53BB;&#x5206;&#x6790;&#x5185;&#x5C42;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x534F;&#x8BAE;&#x5206;&#x6790;&#x671F;&#x95F4;&#x652F;&#x6301;&#x5927;&#x91CF;&#x5408;&#x6CD5;&#x6027;&#x68C0;&#x67E5;&#x65B9;&#x6CD5;</li>
+<li>&#x652F;&#x6301; IDS &#x98CE;&#x683C;&#x7684;&#x6A21;&#x5F0F;&#x5339;&#x914D;</li>
+</ul>
+</li>
+<li>&#x53EF;&#x7F16;&#x7A0B;&#x6027;<ul>
+<li>&#x4F7F;&#x7528;&#x56FE;&#x7075;&#x5B8C;&#x5907;&#x8BED;&#x8A00;&#x6765;&#x5B8C;&#x6210;&#x4EFB;&#x610F;&#x5206;&#x6790;&#x4EFB;&#x52A1;&#x7684;&#x8868;&#x8FBE;&#x523B;&#x753B;</li>
+<li>&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x7F16;&#x7A0B;&#x6A21;&#x578B;</li>
+<li>&#x5185;&#x7F6E;&#x4E13;&#x4E1A;&#x9886;&#x57DF;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x652F;&#x6301;&#xFF0C;&#x4F8B;&#x5982; IP &#x5730;&#x5740;&#xFF08;IPv4 &#x548C; IPv6 &#x5730;&#x5740;&#x900F;&#x660E;&#x5904;&#x7406;&#xFF09;&#x3001;&#x7AEF;&#x53E3;&#x53F7;&#x548C;&#x65F6;&#x949F;</li>
+<li>&#x5E7F;&#x6CDB;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#xFF08;&#x7A97;&#x53E3;&#xFF09;&#x7684;&#x8FFD;&#x8E2A;&#x548C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7BA1;&#x7406;</li>
+</ul>
+</li>
+<li>&#x63A5;&#x53E3;<ul>
+<li>&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#x4E3A;&#x683C;&#x5F0F;&#x5316;&#x540E;&#x7684; ASCII &#x65E5;&#x5FD7;</li>
+<li>&#x53EF;&#x9009;&#x540E;&#x7AEF;&#x652F;&#x6301; ElasticSearch &#x548C;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x3002;&#x66F4;&#x591A;&#x6570;&#x636E;&#x5E93;&#x63A5;&#x53E3;&#x4ECD;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x5916;&#x90E8;&#x6570;&#x636E;&#x5B9E;&#x65F6;&#x5BFC;&#x5165;&#x96C6;&#x6210;&#x5206;&#x6790;&#x3002;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5E93;&#x4ECD;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x3002;</li>
+<li>&#x5916;&#x90E8;C&#x8BED;&#x8A00;&#x7F16;&#x7A0B;&#x5E93;&#x7528;&#x4E8E; Zeek &#x4E8B;&#x4EF6;&#x548C;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;&#x4EA4;&#x6362;&#x3002;&#x652F;&#x6301; Perl&#x3001;Python &#x548C; Ruby &#x8BED;&#x8A00;&#x6DF7;&#x7F16;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x4ECE;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x8C03;&#x7528;&#x4EFB;&#x4F55;&#x5916;&#x90E8;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<figure id="fig1.10.21"><img src="attach/media/Bro_Arch.png" alt="&#x56FE; 9-21 Bro &#x67B6;&#x6784;&#x56FE;"><figcaption class="center">&#x56FE; 9-21 Bro &#x67B6;&#x6784;&#x56FE;</figcaption></figure>
+<p>Zeek &#x5728;&#x67B6;&#x6784;&#x4E0A;&#x6709;2&#x4E2A;&#x4E3B;&#x8981;&#x7EC4;&#x4EF6;&#xFF1A;&#x4E8B;&#x4EF6;&#x5F15;&#x64CE;&#xFF08;&#x6838;&#x5FC3;&#xFF09;&#x5C06;&#x5165;&#x7AD9;&#x62A5;&#x6587;&#x6D41;&#x5904;&#x7406;&#x51CF;&#x5C11;&#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x4E9B;&#x4E8B;&#x4EF6;&#x91C7;&#x7528;&#x7B56;&#x7565;&#x65E0;&#x5173;&#x672F;&#x8BED;&#x523B;&#x753B;&#x4E86;&#x7F51;&#x7EDC;&#x884C;&#x4E3A;&#xFF0C;&#x5373;&#xFF1A;&#x63CF;&#x8FF0;&#x4E86;&#x89C2;&#x6D4B;&#x5230;&#x7684;&#x8868;&#x73B0;&#xFF08;what&#xFF09;&#x800C;&#x4E0D;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#xFF08;why&#xFF09;&#x6216;&#x91CD;&#x8981;&#x6027;&#x7A0B;&#x5EA6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6BCF;&#x4E2A;&#x7F51;&#x7EDC; HTTP &#x8BF7;&#x6C42;&#x90FD;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x7684;http_request&#x4E8B;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;&#x53C2;&#x4E0E;&#x7684; IP &#x5730;&#x5740;&#x3001;&#x7AEF;&#x53E3;&#x3001;URI&#x3001;HTTP &#x7248;&#x672C;&#x7B49;&#x3002;&#x4E8B;&#x4EF6;&#x672C;&#x8EAB;&#x5E76;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8FDB;&#x4E00;&#x6B65;&#x89E3;&#x8BFB;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;URI&#x662F;&#x5426;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x6076;&#x610F;&#x7AD9;&#x70B9;&#x3002;</p>
+<p>&#x4E0A;&#x8FF0;&#x8BED;&#x4E49;&#x7279;&#x5F81;&#x5219;&#x6765;&#x81EA; Zeek &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#x8F93;&#x51FA;&#xFF1A;&#x811A;&#x672C;&#x89E3;&#x91CA;&#x5F15;&#x64CE;&#xFF0C;&#x8BE5;&#x5F15;&#x64CE;&#x6267;&#x884C;&#x4E00;&#x7EC4;&#x4F7F;&#x7528; Zeek &#x81EA;&#x5B9A;&#x4E49;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E9B;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF0C;&#x5373;&#xFF1A;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x4E0D;&#x540C;&#x884C;&#x4E3A;&#x65F6;&#x8BE5;&#x91C7;&#x53D6;&#x54EA;&#x4E9B;&#x54CD;&#x5E94;&#x884C;&#x52A8;&#x3002;&#x66F4;&#x4E00;&#x822C;&#x7684;&#x60C5;&#x5F62;&#x662F; Zeek &#x80FD;&#x591F;&#x4ECE;&#x8F93;&#x5165;&#x6D41;&#x91CF;&#x4E2D;&#x63A8;&#x5BFC;&#x51FA;&#x4EFB;&#x610F;&#x60F3;&#x5F97;&#x5230;&#x7684;&#x7279;&#x5F81;&#x548C;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x3002;Zeek &#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x5185;&#x7F6E;&#x4E00;&#x7CFB;&#x5217;&#xFF08;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#xFF09;&#x9886;&#x57DF;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x76F8;&#x5173;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x66F4;&#x4E3A;&#x5173;&#x952E;&#x7684;&#x662F;&#x652F;&#x6301;&#x811A;&#x672C;&#x7EF4;&#x62A4;&#x65F6;&#x95F4;&#x72B6;&#x6001;&#x673A;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x8DE8;&#x8FDE;&#x63A5;&#x4F1A;&#x8BDD;&#x548C;&#x4E3B;&#x673A;&#x8FB9;&#x754C;&#x5BF9;&#x89C2;&#x6D4B;&#x5230;&#x7684;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x8FFD;&#x6EAF;&#x548C;&#x5173;&#x8054;&#x3002;Zeek &#x811A;&#x672C;&#x53EF;&#x4EE5;&#x4EA7;&#x751F;&#x5B9E;&#x65F6;&#x544A;&#x8B66;&#x5E76;&#x6309;&#x9700;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x5916;&#x90E8;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5BF9;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x653B;&#x51FB;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x4E3B;&#x52A8;&#x54CD;&#x5E94;&#x3002;</p>
+<p>Zeek &#x76F8;&#x6BD4;&#x8F83;&#x4E8E; Snort &#x548C; Suricata &#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x72EC;&#x7279;&#x7279;&#x6027;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3002;&#x540C;&#x65F6;&#x652F;&#x6301;&#x5355;&#x673A;&#x548C;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x6211;&#x4EEC;&#x6240;&#x505A;&#x7684;&#x7CFB;&#x7EDF;&#x4E0D;&#x4F1A;&#x5C40;&#x9650;&#x4E8E;&#x539F;&#x578B;&#x6F14;&#x793A;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x5728;&#x6D41;&#x91CF;&#x91C7;&#x96C6;&#x8FD9;&#x4E2A;&#x9700;&#x6C42;&#x4E0A;&#x5B9E;&#x73B0;&#x5FEB;&#x901F;&#x6269;&#x5C55;&#xFF1B;</li>
+<li>&#x5168;&#x9762;&#x884C;&#x4E3A;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7528;&#x4E8E;&#x79BB;&#x7EBF;&#x5206;&#x6790;&#x548C;&#x53D6;&#x8BC1;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x8FD9;&#x4E9B;&#x65E5;&#x5FD7;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9E;&#x65F6;&#x8F93;&#x51FA;&#x4E3A; ASCII &#x683C;&#x5F0F;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x628A;&#x8FD9;&#x4E9B;&#x65E5;&#x5FD7;&#x5B9E;&#x65F6;&#x5BFC;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5B9E;&#x65F6;&#x65E5;&#x5FD7;&#x5206;&#x6790;&#x5F15;&#x64CE;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5206;&#x6790;&#x3002;&#x7ED3;&#x5408;&#x4E3B;&#x673A;&#x548C;&#x8BBE;&#x5907;&#x65E5;&#x5FD7;&#x3001;&#x60C5;&#x666F;&#x6570;&#x636E;&#x548C;&#x5A01;&#x80C1;&#x60C5;&#x62A5;&#xFF0C;&#x4E3A;&#x5173;&#x8054;&#x5206;&#x6790;&#x63D0;&#x4F9B;&#x4E86;&#x5FC5;&#x8981;&#x7684;&#x6765;&#x6E90;&#x8F93;&#x5165;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x53EF;&#x7F16;&#x7A0B;&#x6027;&#xFF0C;&#x4F7F;&#x5F97;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x5B9E;&#x65F6;&#x5BF9;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x8FDB;&#x884C;&#x5C31;&#x8FD1;&#x5728;&#x7EBF;&#x5206;&#x6790;&#x548C;&#x5173;&#x952E;&#x4FE1;&#x606F;&#x62BD;&#x53D6;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x6839;&#x636E;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x4E2D;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#x8FDB;&#x884C;&#x7075;&#x6D3B;&#x9002;&#x914D;&#xFF0C;&#x6EE1;&#x8DB3;&#x7CFB;&#x7EDF;&#x603B;&#x4F53;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#x9700;&#x6C42;&#x3002;</li>
+</ul>
+<p>&#x4E0B;&#x56FE;&#x5C31;&#x662F; Zeek &#x96C6;&#x7FA4;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x7684;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x62D3;&#x6251;&#x56FE;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6D41;&#x91CF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8BBE;&#x5907;&#x3001;&#x589E;&#x52A0; Zeek &#x5F15;&#x64CE;&#x6570;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7CFB;&#x7EDF;&#x5904;&#x7406;&#x80FD;&#x529B;&#x7684;&#x6C34;&#x5E73;&#x5E73;&#x6ED1;&#x6269;&#x5C55;&#x5347;&#x7EA7;&#x3002;</p>
+<figure id="fig1.10.22"><img src="attach/media/Bro_Arch_Cluster.png" alt="&#x56FE; 9-22 Bro &#x96C6;&#x7FA4;&#x67B6;&#x6784;&#x62D3;&#x6251;&#x56FE;"><figcaption class="center">&#x56FE; 9-22 Bro &#x96C6;&#x7FA4;&#x67B6;&#x6784;&#x62D3;&#x6251;&#x56FE;</figcaption></figure>
+<p>Zeek &#x5BF9;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x5E76;&#x5C06;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x5206;&#x7C7B;&#x5B58;&#x50A8;&#x5230;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x540C;&#x6587;&#x4EF6;&#xFF0C;&#x6839;&#x636E;<a href="https://www.zeek.org/sphinx/script-reference/log-files.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;&#x8BF4;&#x660E;</a>&#xFF0C;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#x5206;&#x6210;&#x51E0;&#x4E2A;&#x5927;&#x7C7B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5927;&#x7C7B;&#x4E2D;&#x53C8;&#x7EC6;&#x5206;&#x4E86;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x5FD7;&#x7C7B;&#x522B;&#xFF1A;</p>
+<table>
+   <tr>
+      <td>&#x65E5;&#x5FD7;&#x7C7B;&#x522B;</td>
+      <td>&#x6587;&#x4EF6;&#x540D;</td>
+      <td>&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+   </tr>
+   <tr>
+      <td rowspan="6">&#x534F;&#x8BAE;&#x89E3;&#x6790;</td>
+      <td><a href="https://www.bro.org/sphinx-git/scripts/base/protocols/conn/main.bro.html" target="_blank">conn.log</a></td>
+      <td>TCP/UDP/ICMP &#x8FDE;&#x63A5;&#x5386;&#x53F2;&#x8BB0;&#x5F55;</td>
+   </tr>
+   <tr>
+    <td><a href="https://www.bro.org/sphinx-git/scripts/base/protocols/dns/main.bro.html" target="_blank">dns.log</a></td>
+    <td>DNS &#x89E3;&#x6790;&#x5386;&#x53F2;&#x8BB0;&#x5F55;</td>
+   </tr>
+   <tr>
+    <td><a href="https://www.bro.org/sphinx-git/scripts/base/protocols/dhcp/main.bro.html" target="_blank">dhcp.log</a></td>
+    <td>DHCP &#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x53D1;&#x73B0;&#x65B0;&#x5165;&#x7F51;&#x4E3B;&#x673A;</td>
+   </tr>
+   <tr>
+     <td><a href="https://www.bro.org/sphinx/scripts/base/protocols/http/main.bro.html#type-HTTP::Info" target="_blank">http.log</a></td>
+     <td>HTTP &#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;</td>
+   </tr>
+   <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/protocols/ssh/main.bro.html#type-SSH::Info" target="_blank">ssh.log</a></td>
+    <td>SSH &#x6D3B;&#x52A8;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/tunnels/main.bro.html#type-Tunnel::Info" target="_blank">tunnel.log</a></td>
+    <td>&#x96A7;&#x9053;&#x534F;&#x8BAE;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+     <td rowspan="3">&#x6587;&#x4EF6;&#x8D1F;&#x8F7D;&#x63D0;&#x53D6;&#x3001;&#x8FD8;&#x539F;&#x548C;&#x5206;&#x6790;</td> 
+     <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/files/main.bro.html#type-Files::Info" target="_blank">files.log</a></td>
+     <td>&#x6587;&#x4EF6;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#xFF08;&#x6563;&#x5217;&#x503C;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x3001;&#x6587;&#x4EF6;&#x8FD8;&#x539F;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#x3001;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x3001;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x5F00;&#x653E;API&#x68C0;&#x7D22;&#x7ED3;&#x679C;&#x8BB0;&#x5F55;&#x7B49;&#xFF09;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/files/x509/main.bro.html#type-X509::Info" target="_blank">x509.log</a></td>
+    <td>&#x8BC6;&#x522B;&#x63D0;&#x53D6;&#x6210;&#x529F;&#x7684; X.509 &#x8BC1;&#x4E66;&#x4FE1;&#x606F;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/files/pe/main.bro.html#type-PE::Info" target="_blank">pe.log</a></td>
+    <td>PE &#x6587;&#x4EF6;&#x8BC6;&#x522B;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+    <td rowspan="2">&#x68C0;&#x6D4B;&#x62A5;&#x8B66;</td>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/intel/main.bro.html#type-Intel::Info" target="_blank">intel.log</a></td>
+    <td>&#x5A01;&#x80C1;&#x60C5;&#x62A5;&#x5339;&#x914D;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/notice/main.bro.html#type-Notice::Info" target="_blank">notice.log</a></td>
+    <td>Bro&#x901A;&#x77E5;&#x4E8B;&#x4EF6;&#x8BB0;&#x5F55;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x5B9E;&#x73B0;&#x7684;&#x5305;&#x542B; APT &#x68C0;&#x6D4B;&#x76F8;&#x5173;&#x91CD;&#x8981;&#x544A;&#x8B66;&#x4FE1;&#x606F;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#xFF1A;SSL &#x8BC1;&#x4E66;&#x672A;&#x901A;&#x8FC7;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x3001;&#x8BF7;&#x6C42;&#x7591;&#x4F3C;&#x6076;&#x610F; /C2 &#x57DF;&#x540D;&#x4EE5;&#x53CA; ARP &#x6B3A;&#x9A97;&#x7C7B;&#x6D88;&#x606F;&#x544A;&#x8B66;</td>
+  </tr>
+  <tr>
+    <td rowspan="2">&#x60C5;&#x666F;&#x6570;&#x636E;&#xFF08;&#x7F51;&#x7EDC;&#x6982;&#x51B5;&#xFF09;</td>
+    <td><a href="https://www.bro.org/sphinx/scripts/policy/protocols/ssl/known-certs.bro.html#type-Known::CertsInfo" target="_blank">known_certs.log</a></td>
+    <td>&#x5DF2;&#x8BC6;&#x522B; SSL &#x8BC1;&#x4E66;&#x8BB0;&#x5F55;&#xFF0C;&#x7528;&#x4E8E;&#x907F;&#x514D;&#x5728; x509.log &#x4E2D;&#x91CD;&#x590D;&#x8BB0;&#x5F55;&#x6761;&#x76EE;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/software/main.bro.html#type-Software::Info" target="_blank">software.log</a> </td>
+    <td>&#x5DF2;&#x8BC6;&#x522B;&#x901A;&#x4FE1;&#x8F6F;&#x4EF6;&#x8BE6;&#x7EC6;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+    <td rowspan="2">&#x6742;&#x9879;</td> 
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/dpd/main.bro.html#type-DPD::Info" target="_blank">dpd.log</a></td>
+    <td>&#x6DF1;&#x5EA6;&#x5305;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x6D88;&#x606F;</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/frameworks/notice/weird.bro.html#type-Weird::Info" target="_blank">weird.log</a> </td>
+    <td>&#x5F02;&#x5E38;&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x884C;&#x4E3A;&#x8BB0;&#x5F55;</td>
+  </tr>
+  <tr>
+    <td>Bro &#x72B6;&#x6001;&#x8BCA;&#x65AD;</td>
+    <td><a href="https://www.bro.org/sphinx/scripts/base/protocols/ssl/main.bro.html#type-SSL::Info" target="_blank">ssl.log</a> </td>
+    <td>SSL/TLS &#x63E1;&#x624B;&#x4FE1;&#x606F;&#x8BB0;&#x5F55;</td>
+  </tr></table>
+
+
+<h2 id="96-&#x601D;&#x8003;&#x9898;"><a name="96-&#x601D;&#x8003;&#x9898;" class="anchor-navigation-ex-anchor" href="#96-&#x601D;&#x8003;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>9.6 &#x601D;&#x8003;&#x9898;</h2>
+<ul>
+<li>&#x5982;&#x4F55;&#x7406;&#x89E3;&#x201C;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x8BEF;&#x62A5;&#x7387;&#x8D8A;&#x9AD8;&#xFF0C;&#x6F0F;&#x62A5;&#x7387;&#x4F4E;&#x7684;&#x6982;&#x7387;&#x5C31;&#x8D8A;&#x9AD8;&#x201D;&#x8FD9;&#x53E5;&#x8BDD;&#xFF1F;</li>
+<li>&#x63CF;&#x8FF0;&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;&#x8BEF;&#x7528;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#x548C;&#x5F02;&#x5E38;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#xFF0C;&#x5E76;&#x5404;&#x4E3E;&#x4E00;&#x5B9E;&#x9645;&#x7B97;&#x6CD5;&#x8BF4;&#x660E;&#x3002;</li>
+</ul>
+<footer class="page-footer"><span class="copyright">&#xA9; <a href="https://www.zhihu.com/people/c4pr1c3" target="_blank">@&#x9EC4;&#x73AE;</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-11-29 23:33:36
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chap0x08/exp.html" class="navigation navigation-prev " aria-label="Previous page: 实验">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exp.html" class="navigation navigation-next " aria-label="Next page: 实验">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第九章 入侵检测","level":"1.10","depth":1,"next":{"title":"实验","level":"1.10.1","depth":2,"path":"chap0x09/exp.md","ref":"chap0x09/exp.md","articles":[]},"previous":{"title":"实验","level":"1.9.1","depth":2,"path":"chap0x08/exp.md","ref":"chap0x08/exp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","anchor-navigation-ex","tbfed-pagefooter","ga","image-captions","add-js-css","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy <a href='https://www.zhihu.com/people/c4pr1c3'>@黄玮</a>","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"add-js-css":{"js":["js/custom.js"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"quiz":{"labels":{"check":"提交检查","showExplanation":"查看题解","showCorrect":"显示全部","explanationHeader":"题解"},"text":{"noChosen":"请至少选择一个正确答案","incomplete":"没有回答完全"},"buttons":{"showCorrect":true,"showExplanation":true}},"ga":{"configuration":"auto","token":"UA-4489768-14"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/c4pr1c3/cuc-ns/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"image-captions":{"caption":"_CAPTION_","align":"center","variable_name":"_pictures"}},"theme":"default","author":"黄玮","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"index.html#fig1.1.1","level":"1.1","align":"center","list_caption":"Figure: License: CC BY-NC-SA 4.0","alt":"License: CC BY-NC-SA 4.0","nro":1,"url":"https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg","index":1,"caption_template":"_CAPTION_","label":"License: CC BY-NC-SA 4.0","attributes":{},"skip":false,"key":"1.1.1"},{"backlink":"chap0x01/main.html#fig1.2.1","level":"1.2","align":"center","list_caption":"Figure: 图 1-1 网络安全漏洞管理标准的安全测量和安全管理架构","alt":"图 1-1 网络安全漏洞管理标准的安全测量和安全管理架构","nro":2,"url":"attach/chap0x01/media/Cyber_Security_Measurement_and_Management_Poster.png","index":1,"caption_template":"_CAPTION_","label":"图 1-1 网络安全漏洞管理标准的安全测量和安全管理架构","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"chap0x01/main.html#fig1.2.2","level":"1.2","align":"center","list_caption":"Figure: 图 1-2 网络安全漏洞管理标准的安全测量关系图","alt":"图 1-2 网络安全漏洞管理标准的安全测量关系图","nro":3,"url":"attach/chap0x01/media/SCE-2011-8-26-p2.png","index":2,"caption_template":"_CAPTION_","label":"图 1-2 网络安全漏洞管理标准的安全测量关系图","attributes":{},"skip":false,"key":"1.2.2"},{"backlink":"chap0x01/main.html#fig1.2.3","level":"1.2","align":"center","list_caption":"Figure: 图 1-3 破壳漏洞NVD漏洞详情","alt":"图 1-3 破壳漏洞NVD漏洞详情","nro":4,"url":"attach/chap0x01/media/cve-nvd.png","index":3,"caption_template":"_CAPTION_","label":"图 1-3 破壳漏洞NVD漏洞详情","attributes":{},"skip":false,"key":"1.2.3"},{"backlink":"chap0x01/main.html#fig1.2.4","level":"1.2","align":"center","list_caption":"Figure: 图 1-4 破壳漏洞NVD评级","alt":"图 1-4 破壳漏洞NVD评级","nro":5,"url":"attach/chap0x01/media/cve-cvss.png","index":4,"caption_template":"_CAPTION_","label":"图 1-4 破壳漏洞NVD评级","attributes":{},"skip":false,"key":"1.2.4"},{"backlink":"chap0x01/main.html#fig1.2.5","level":"1.2","align":"center","list_caption":"Figure: 图 1-5 破壳漏洞NVD漏洞类型","alt":"图 1-5 破壳漏洞NVD漏洞类型","nro":6,"url":"attach/chap0x01/media/cve-cwe.png","index":5,"caption_template":"_CAPTION_","label":"图 1-5 破壳漏洞NVD漏洞类型","attributes":{},"skip":false,"key":"1.2.5"},{"backlink":"chap0x01/main.html#fig1.2.6","level":"1.2","align":"center","list_caption":"Figure: 图 1-6 破壳漏洞NVD环境详情","alt":"图 1-6 破壳漏洞NVD环境详情","nro":7,"url":"attach/chap0x01/media/cve-cpe.png","index":6,"caption_template":"_CAPTION_","label":"图 1-6 破壳漏洞NVD环境详情","attributes":{},"skip":false,"key":"1.2.6"},{"backlink":"chap0x01/main.html#fig1.2.7","level":"1.2","align":"center","list_caption":"Figure: 图 1-7 破壳漏洞攻击方法","alt":"图 1-7 破壳漏洞攻击方法","nro":8,"url":"attach/chap0x01/media/cve-capec.png","index":7,"caption_template":"_CAPTION_","label":"图 1-7 破壳漏洞攻击方法","attributes":{},"skip":false,"key":"1.2.7"},{"backlink":"chap0x01/main.html#fig1.2.8","level":"1.2","align":"center","list_caption":"Figure: 图 1-8 破壳漏洞OVAL描述","alt":"图 1-8 破壳漏洞OVAL描述","nro":9,"url":"attach/chap0x01/media/cve-oval.png","index":8,"caption_template":"_CAPTION_","label":"图 1-8 破壳漏洞OVAL描述","attributes":{},"skip":false,"key":"1.2.8"},{"backlink":"chap0x01/main.html#fig1.2.9","level":"1.2","align":"center","list_caption":"Figure: 图 1-9 ATT&CK for Enterprise","alt":"图 1-9 ATT&CK for Enterprise","nro":10,"url":"attach/chap0x01/media/ATTACKMatrixforEnterprise.png","index":9,"caption_template":"_CAPTION_","label":"图 1-9 ATT&CK for Enterprise","attributes":{},"skip":false,"key":"1.2.9"},{"backlink":"chap0x01/main.html#fig1.2.10","level":"1.2","align":"center","list_caption":"Figure: 图 1-10 ATT&CK 导航工具生成图示例","alt":"图 1-10 ATT&CK 导航工具生成图示例","nro":11,"url":"attach/chap0x01/media/attack-navigation-layer.svg","index":10,"caption_template":"_CAPTION_","label":"图 1-10 ATT&CK 导航工具生成图示例","attributes":{},"skip":false,"key":"1.2.10"},{"backlink":"chap0x01/main.html#fig1.2.11","level":"1.2","align":"center","list_caption":"Figure: 图 1-11 安全威胁分层模型","alt":"图 1-11 安全威胁分层模型","nro":12,"url":"attach/chap0x01/visio/Security-threat-model.png","index":11,"caption_template":"_CAPTION_","label":"图 1-11 安全威胁分层模型","attributes":{},"skip":false,"key":"1.2.11"},{"backlink":"chap0x01/main.html#fig1.2.12","level":"1.2","align":"center","list_caption":"Figure: 图 1-12 P2DR模型","alt":"图 1-12 P2DR模型","nro":13,"url":"attach/chap0x01/visio/P2DR.png","index":12,"caption_template":"_CAPTION_","label":"图 1-12 P2DR模型","attributes":{},"skip":false,"key":"1.2.12"},{"backlink":"chap0x01/main.html#fig1.2.13","level":"1.2","align":"center","list_caption":"Figure: 图 1-13 P2DR2动态安全模型","alt":"图 1-13 P2DR2动态安全模型","nro":14,"url":"attach/chap0x01/visio/P2DR2.png","index":13,"caption_template":"_CAPTION_","label":"图 1-13 P2DR2动态安全模型","attributes":{},"skip":false,"key":"1.2.13"},{"backlink":"chap0x02/main.html#fig1.3.1","level":"1.3","align":"center","list_caption":"Figure: <a href=\"attach/media/Linux_Distribution_Timeline.png\">图 2-1 Linux 发行版历史时间线（点击查看完整图片）</a>","alt":"<a href=\"attach/media/Linux_Distribution_Timeline.png\">图 2-1 Linux 发行版历史时间线（点击查看完整图片）</a>","nro":15,"url":"attach/media/Linux_Distribution_Timeline.clipped.png","index":1,"caption_template":"_CAPTION_","label":"<a href=\"attach/media/Linux_Distribution_Timeline.png\">图 2-1 Linux 发行版历史时间线（点击查看完整图片）</a>","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"chap0x02/main.html#fig1.3.2","level":"1.3","align":"center","list_caption":"Figure: 图 2-2 Windows 发行版历史时间线","alt":"图 2-2 Windows 发行版历史时间线","nro":16,"url":"attach/media/windows_operating_systems_history.png","index":2,"caption_template":"_CAPTION_","label":"图 2-2 Windows 发行版历史时间线","attributes":{},"skip":false,"key":"1.3.2"},{"backlink":"chap0x02/main.html#fig1.3.3","level":"1.3","align":"center","list_caption":"Figure: 图 2-3 URL 结构示意图","alt":"图 2-3 URL 结构示意图","nro":17,"url":"attach/media/URL.png","index":3,"caption_template":"_CAPTION_","label":"图 2-3 URL 结构示意图","attributes":{},"skip":false,"key":"1.3.3"},{"backlink":"chap0x02/main.html#fig1.3.4","level":"1.3","align":"center","list_caption":"Figure: 图 2-4 访问控制与其他安全服务的关系","alt":"图 2-4 访问控制与其他安全服务的关系","nro":18,"url":"attach/media/Access-Contorl.png","index":4,"caption_template":"_CAPTION_","label":"图 2-4 访问控制与其他安全服务的关系","attributes":{},"skip":false,"key":"1.3.4"},{"backlink":"chap0x02/main.html#fig1.3.5","level":"1.3","align":"center","list_caption":"Figure: 图 2-5 访问控制过程","alt":"图 2-5 访问控制过程","nro":19,"url":"attach/media/AccessControlFlow.png","index":5,"caption_template":"_CAPTION_","label":"图 2-5 访问控制过程","attributes":{},"skip":false,"key":"1.3.5"},{"backlink":"chap0x02/main.html#fig1.3.6","level":"1.3","align":"center","list_caption":"Figure: 图 2-6 访问控制系统基本结构","alt":"图 2-6 访问控制系统基本结构","nro":20,"url":"attach/media/image3.jpg","index":6,"caption_template":"_CAPTION_","label":"图 2-6 访问控制系统基本结构","attributes":{},"skip":false,"key":"1.3.6"},{"backlink":"chap0x02/main.html#fig1.3.7","level":"1.3","align":"center","list_caption":"Figure: 图 2-7 经典访问控制模型","alt":"图 2-7 经典访问控制模型","nro":21,"url":"attach/media/MAC.png","index":7,"caption_template":"_CAPTION_","label":"图 2-7 经典访问控制模型","attributes":{},"skip":false,"key":"1.3.7"},{"backlink":"chap0x02/main.html#fig1.3.8","level":"1.3","align":"center","list_caption":"Figure: 图 2-8 基于角色的访问控制模型","alt":"图 2-8 基于角色的访问控制模型","nro":22,"url":"attach/media/image5.jpg","index":8,"caption_template":"_CAPTION_","label":"图 2-8 基于角色的访问控制模型","attributes":{},"skip":false,"key":"1.3.8"},{"backlink":"chap0x03/main.html#fig1.4.1","level":"1.4","align":"center","list_caption":"Figure: 图 3-1 经典代理服务模型","alt":"图 3-1 经典代理服务模型","nro":23,"url":"attach/media/image1.png","index":1,"caption_template":"_CAPTION_","label":"图 3-1 经典代理服务模型","attributes":{},"skip":false,"key":"1.4.1"},{"backlink":"chap0x03/main.html#fig1.4.2","level":"1.4","align":"center","list_caption":"Figure: 图 3-2 正向代理原理图","alt":"图 3-2 正向代理原理图","nro":24,"url":"attach/media/image2.png","index":2,"caption_template":"_CAPTION_","label":"图 3-2 正向代理原理图","attributes":{},"skip":false,"key":"1.4.2"},{"backlink":"chap0x03/main.html#fig1.4.3","level":"1.4","align":"center","list_caption":"Figure: 图 3-3 反向代理原理图","alt":"图 3-3 反向代理原理图","nro":25,"url":"attach/media/image3.png","index":3,"caption_template":"_CAPTION_","label":"图 3-3 反向代理原理图","attributes":{},"skip":false,"key":"1.4.3"},{"backlink":"chap0x03/main.html#fig1.4.4","level":"1.4","align":"center","list_caption":"Figure: 图 3-4 手工配置IE浏览器代理服务1","alt":"图 3-4 手工配置IE浏览器代理服务1","nro":26,"url":"attach/media/image6.png","index":4,"caption_template":"_CAPTION_","label":"图 3-4 手工配置IE浏览器代理服务1","attributes":{},"skip":false,"key":"1.4.4"},{"backlink":"chap0x03/main.html#fig1.4.5","level":"1.4","align":"center","list_caption":"Figure: 图 3-5 手工配置IE浏览器代理服务2","alt":"图 3-5 手工配置IE浏览器代理服务2","nro":27,"url":"attach/media/image5.png","index":5,"caption_template":"_CAPTION_","label":"图 3-5 手工配置IE浏览器代理服务2","attributes":{},"skip":false,"key":"1.4.5"},{"backlink":"chap0x03/main.html#fig1.4.6","level":"1.4","align":"center","list_caption":"Figure: 图 3-6 手工配置IE浏览器代理服务3","alt":"图 3-6 手工配置IE浏览器代理服务3","nro":28,"url":"attach/media/image4.png","index":6,"caption_template":"_CAPTION_","label":"图 3-6 手工配置IE浏览器代理服务3","attributes":{},"skip":false,"key":"1.4.6"},{"backlink":"chap0x03/main.html#fig1.4.7","level":"1.4","align":"center","list_caption":"Figure: 图 3-7 Access VPN","alt":"图 3-7 Access VPN","nro":29,"url":"attach/Visio/Access-VPN.png","index":7,"caption_template":"_CAPTION_","label":"图 3-7 Access VPN","attributes":{},"skip":false,"key":"1.4.7"},{"backlink":"chap0x03/main.html#fig1.4.8","level":"1.4","align":"center","list_caption":"Figure: 图 3-8 Intranet VPN","alt":"图 3-8 Intranet VPN","nro":30,"url":"attach/Visio/Intranet-VPN.png","index":8,"caption_template":"_CAPTION_","label":"图 3-8 Intranet VPN","attributes":{},"skip":false,"key":"1.4.8"},{"backlink":"chap0x03/main.html#fig1.4.9","level":"1.4","align":"center","list_caption":"Figure: 图 3-9 Extranet VPN","alt":"图 3-9 Extranet VPN","nro":31,"url":"attach/Visio/Extranet-VPN.png","index":9,"caption_template":"_CAPTION_","label":"图 3-9 Extranet VPN","attributes":{},"skip":false,"key":"1.4.9"},{"backlink":"chap0x03/main.html#fig1.4.10","level":"1.4","align":"center","list_caption":"Figure: 图 3-10 SOCKS代理原理图","alt":"图 3-10 SOCKS代理原理图","nro":32,"url":"attach/media/image14.png","index":10,"caption_template":"_CAPTION_","label":"图 3-10 SOCKS代理原理图","attributes":{},"skip":false,"key":"1.4.10"},{"backlink":"chap0x03/main.html#fig1.4.11","level":"1.4","align":"center","list_caption":"Figure: 图 3-11 匿名通信示意图","alt":"图 3-11 匿名通信示意图","nro":33,"url":"attach/media/image15.png","index":11,"caption_template":"_CAPTION_","label":"图 3-11 匿名通信示意图","attributes":{},"skip":false,"key":"1.4.11"},{"backlink":"chap0x03/main.html#fig1.4.12","level":"1.4","align":"center","list_caption":"Figure: 图 3-12 MIX-NET 节点工作示意图","alt":"图 3-12 MIX-NET 节点工作示意图","nro":34,"url":"attach/media/image16.png","index":12,"caption_template":"_CAPTION_","label":"图 3-12 MIX-NET 节点工作示意图","attributes":{},"skip":false,"key":"1.4.12"},{"backlink":"chap0x03/main.html#fig1.4.13","level":"1.4","align":"center","list_caption":"Figure: 图 3-13 MIX-NET 网络原理示意图","alt":"图 3-13 MIX-NET 网络原理示意图","nro":35,"url":"attach/media/image17.png","index":13,"caption_template":"_CAPTION_","label":"图 3-13 MIX-NET 网络原理示意图","attributes":{},"skip":false,"key":"1.4.13"},{"backlink":"chap0x03/main.html#fig1.4.14","level":"1.4","align":"center","list_caption":"Figure: 图 3-14 Crowds 网络原理示意图","alt":"图 3-14 Crowds 网络原理示意图","nro":36,"url":"attach/media/image18.png","index":14,"caption_template":"_CAPTION_","label":"图 3-14 Crowds 网络原理示意图","attributes":{},"skip":false,"key":"1.4.14"},{"backlink":"chap0x03/main.html#fig1.4.15","level":"1.4","align":"center","list_caption":"Figure: 图 3-15 Tarzan 原理示意图","alt":"图 3-15 Tarzan 原理示意图","nro":37,"url":"attach/media/image19.png","index":15,"caption_template":"_CAPTION_","label":"图 3-15 Tarzan 原理示意图","attributes":{},"skip":false,"key":"1.4.15"},{"backlink":"chap0x03/main.html#fig1.4.16","level":"1.4","align":"center","list_caption":"Figure: 图 3-16 洋葱路由原理图","alt":"图 3-16 洋葱路由原理图","nro":38,"url":"attach/media/image20.png","index":16,"caption_template":"_CAPTION_","label":"图 3-16 洋葱路由原理图","attributes":{},"skip":false,"key":"1.4.16"},{"backlink":"chap0x03/main.html#fig1.4.17","level":"1.4","align":"center","list_caption":"Figure: 图 3-17 设置浏览器代理","alt":"图 3-17 设置浏览器代理","nro":39,"url":"attach/media/image21.png","index":17,"caption_template":"_CAPTION_","label":"图 3-17 设置浏览器代理","attributes":{},"skip":false,"key":"1.4.17"},{"backlink":"chap0x03/main.html#fig1.4.18","level":"1.4","align":"center","list_caption":"Figure: 图 3-18 remote_host 字段","alt":"图 3-18 remote_host 字段","nro":40,"url":"attach/media/image22.png","index":18,"caption_template":"_CAPTION_","label":"图 3-18 remote_host 字段","attributes":{},"skip":false,"key":"1.4.18"},{"backlink":"chap0x03/exp.html#fig1.4.1.1","level":"1.4.1","align":"center","list_caption":"Figure: 图1 在Chrome的开发者工具中查看启用HSTS站点的通信数据","alt":"图1 在Chrome的开发者工具中查看启用HSTS站点的通信数据","nro":41,"url":"attach/HSTS.png","index":1,"caption_template":"_CAPTION_","label":"图1 在Chrome的开发者工具中查看启用HSTS站点的通信数据","attributes":{},"skip":false,"key":"1.4.1.1"},{"backlink":"chap0x03/exp.html#fig1.4.1.2","level":"1.4.1","align":"center","list_caption":"Figure: 图2 未启用HSTS站点被SSL中间人攻击时Chrome浏览器的警告提示","alt":"图2 未启用HSTS站点被SSL中间人攻击时Chrome浏览器的警告提示","nro":42,"url":"attach/HSTS-2.png","index":2,"caption_template":"_CAPTION_","label":"图2 未启用HSTS站点被SSL中间人攻击时Chrome浏览器的警告提示","attributes":{},"skip":false,"key":"1.4.1.2"},{"backlink":"chap0x03/exp.html#fig1.4.1.3","level":"1.4.1","align":"center","list_caption":"Figure: 图3 未启用HSTS站点被SSL中间人攻击时Chrome浏览器在用户允许继续访问情况下","alt":"图3 未启用HSTS站点被SSL中间人攻击时Chrome浏览器在用户允许继续访问情况下","nro":43,"url":"attach/HSTS-3.png","index":3,"caption_template":"_CAPTION_","label":"图3 未启用HSTS站点被SSL中间人攻击时Chrome浏览器在用户允许继续访问情况下","attributes":{},"skip":false,"key":"1.4.1.3"},{"backlink":"chap0x03/exp.html#fig1.4.1.4","level":"1.4.1","align":"center","list_caption":"Figure: 图4 启用HSTS站点被SSL中间人攻击时Chrome浏览器禁止用户继续访问","alt":"图4 启用HSTS站点被SSL中间人攻击时Chrome浏览器禁止用户继续访问","nro":44,"url":"attach/HSTS-4.png","index":4,"caption_template":"_CAPTION_","label":"图4 启用HSTS站点被SSL中间人攻击时Chrome浏览器禁止用户继续访问","attributes":{},"skip":false,"key":"1.4.1.4"},{"backlink":"chap0x04/main.html#fig1.5.1","level":"1.5","align":"center","list_caption":"Figure: 图 4-1 被动监听示意图","alt":"图 4-1 被动监听示意图","nro":45,"url":"attach/media/re-image1.png","index":1,"caption_template":"_CAPTION_","label":"图 4-1 被动监听示意图","attributes":{},"skip":false,"key":"1.5.1"},{"backlink":"chap0x04/main.html#fig1.5.2","level":"1.5","align":"center","list_caption":"Figure: 图 4-2 交换式网络环境被动监听失败示意图","alt":"图 4-2 交换式网络环境被动监听失败示意图","nro":46,"url":"attach/media/re-image2.png","index":2,"caption_template":"_CAPTION_","label":"图 4-2 交换式网络环境被动监听失败示意图","attributes":{},"skip":false,"key":"1.5.2"},{"backlink":"chap0x04/main.html#fig1.5.3","level":"1.5","align":"center","list_caption":"Figure: 图 4-3 无故 ARP 原理示意图","alt":"图 4-3 无故 ARP 原理示意图","nro":47,"url":"attach/media/re-image3.png","index":3,"caption_template":"_CAPTION_","label":"图 4-3 无故 ARP 原理示意图","attributes":{},"skip":false,"key":"1.5.3"},{"backlink":"chap0x04/main.html#fig1.5.4","level":"1.5","align":"center","list_caption":"Figure: 图 4-4 终端 ARP 缓存投毒示意图","alt":"图 4-4 终端 ARP 缓存投毒示意图","nro":48,"url":"attach/media/re-image4.png","index":4,"caption_template":"_CAPTION_","label":"图 4-4 终端 ARP 缓存投毒示意图","attributes":{},"skip":false,"key":"1.5.4"},{"backlink":"chap0x04/main.html#fig1.5.5","level":"1.5","align":"center","list_caption":"Figure: 图 4-5 交换机 DoS 原理示意图","alt":"图 4-5 交换机 DoS 原理示意图","nro":49,"url":"attach/media/re-image5.png","index":5,"caption_template":"_CAPTION_","label":"图 4-5 交换机 DoS 原理示意图","attributes":{},"skip":false,"key":"1.5.5"},{"backlink":"chap0x04/main.html#fig1.5.6","level":"1.5","align":"center","list_caption":"Figure: 图 4-6 交换机 MAC 泛洪攻击原理示意图","alt":"图 4-6 交换机 MAC 泛洪攻击原理示意图","nro":50,"url":"attach/media/re-image6.png","index":6,"caption_template":"_CAPTION_","label":"图 4-6 交换机 MAC 泛洪攻击原理示意图","attributes":{},"skip":false,"key":"1.5.6"},{"backlink":"chap0x04/main.html#fig1.5.7","level":"1.5","align":"center","list_caption":"Figure: 图 4-7 交换机端口复原原理示意图","alt":"图 4-7 交换机端口复原原理示意图","nro":51,"url":"attach/media/re-image7.png","index":7,"caption_template":"_CAPTION_","label":"图 4-7 交换机端口复原原理示意图","attributes":{},"skip":false,"key":"1.5.7"},{"backlink":"chap0x04/main.html#fig1.5.8","level":"1.5","align":"center","list_caption":"Figure: 图 4-8 Wireshark 主界面","alt":"图 4-8 Wireshark 主界面","nro":52,"url":"attach/media/re-image8.png","index":8,"caption_template":"_CAPTION_","label":"图 4-8 Wireshark 主界面","attributes":{},"skip":false,"key":"1.5.8"},{"backlink":"chap0x04/main.html#fig1.5.9","level":"1.5","align":"center","list_caption":"Figure: 图 4-9 检测共享式网络环境中的监听者示意图","alt":"图 4-9 检测共享式网络环境中的监听者示意图","nro":53,"url":"attach/media/re-image9.png","index":9,"caption_template":"_CAPTION_","label":"图 4-9 检测共享式网络环境中的监听者示意图","attributes":{},"skip":false,"key":"1.5.9"},{"backlink":"chap0x04/main.html#fig1.5.10","level":"1.5","align":"center","list_caption":"Figure: 图 4-10 检测终端用户的 ARP 缓存表示意图","alt":"图 4-10 检测终端用户的 ARP 缓存表示意图","nro":54,"url":"attach/media/re-image10.png","index":10,"caption_template":"_CAPTION_","label":"图 4-10 检测终端用户的 ARP 缓存表示意图","attributes":{},"skip":false,"key":"1.5.10"},{"backlink":"chap0x05/main.html#fig1.6.1","level":"1.6","align":"center","list_caption":"Figure: 图 5-1 网络扫描的基本思想","alt":"图 5-1 网络扫描的基本思想","nro":55,"url":"attach/media/image1.png","index":1,"caption_template":"_CAPTION_","label":"图 5-1 网络扫描的基本思想","attributes":{},"skip":false,"key":"1.6.1"},{"backlink":"chap0x05/main.html#fig1.6.2","level":"1.6","align":"center","list_caption":"Figure: 图 5-2 TCP/IP 协议栈标准","alt":"图 5-2 TCP/IP 协议栈标准","nro":56,"url":"attach/media/image2.png","index":2,"caption_template":"_CAPTION_","label":"图 5-2 TCP/IP 协议栈标准","attributes":{},"skip":false,"key":"1.6.2"},{"backlink":"chap0x05/main.html#fig1.6.3","level":"1.6","align":"center","list_caption":"Figure: 图 5-3 TCP 三次握手","alt":"图 5-3 TCP 三次握手","nro":57,"url":"attach/media/image003.png","index":3,"caption_template":"_CAPTION_","label":"图 5-3 TCP 三次握手","attributes":{},"skip":false,"key":"1.6.3"},{"backlink":"chap0x05/main.html#fig1.6.4","level":"1.6","align":"center","list_caption":"Figure: 图 5-4 TCP 报文头部格式","alt":"图 5-4 TCP 报文头部格式","nro":58,"url":"attach/media/image004.png","index":4,"caption_template":"_CAPTION_","label":"图 5-4 TCP 报文头部格式","attributes":{},"skip":false,"key":"1.6.4"},{"backlink":"chap0x05/main.html#fig1.6.5","level":"1.6","align":"center","list_caption":"Figure: 图 5-5 TCP 实现举例","alt":"图 5-5 TCP 实现举例","nro":59,"url":"attach/media/image005.png","index":5,"caption_template":"_CAPTION_","label":"图 5-5 TCP 实现举例","attributes":{},"skip":false,"key":"1.6.5"},{"backlink":"chap0x05/main.html#fig1.6.6","level":"1.6","align":"center","list_caption":"Figure: 图 5-6 UDP 报头格式","alt":"图 5-6 UDP 报头格式","nro":60,"url":"attach/media/image006.png","index":6,"caption_template":"_CAPTION_","label":"图 5-6 UDP 报头格式","attributes":{},"skip":false,"key":"1.6.6"},{"backlink":"chap0x05/main.html#fig1.6.7","level":"1.6","align":"center","list_caption":"Figure: 图 5-7 UDP 的实现","alt":"图 5-7 UDP 的实现","nro":61,"url":"attach/media/image007.png","index":7,"caption_template":"_CAPTION_","label":"图 5-7 UDP 的实现","attributes":{},"skip":false,"key":"1.6.7"},{"backlink":"chap0x05/main.html#fig1.6.8","level":"1.6","align":"center","list_caption":"Figure: 图 5-8 ICMP 报头","alt":"图 5-8 ICMP 报头","nro":62,"url":"attach/media/image008.png","index":8,"caption_template":"_CAPTION_","label":"图 5-8 ICMP 报头","attributes":{},"skip":false,"key":"1.6.8"},{"backlink":"chap0x05/main.html#fig1.6.9","level":"1.6","align":"center","list_caption":"Figure: 图 5-9 扫描知识库的构建原理","alt":"图 5-9 扫描知识库的构建原理","nro":63,"url":"attach/media/image009.png","index":9,"caption_template":"_CAPTION_","label":"图 5-9 扫描知识库的构建原理","attributes":{},"skip":false,"key":"1.6.9"},{"backlink":"chap0x05/main.html#fig1.6.10","level":"1.6","align":"center","list_caption":"Figure: 图 5-10 /etc/services 文件","alt":"图 5-10 /etc/services 文件","nro":64,"url":"attach/media/image010.png","index":10,"caption_template":"_CAPTION_","label":"图 5-10 /etc/services 文件","attributes":{},"skip":false,"key":"1.6.10"},{"backlink":"chap0x05/main.html#fig1.6.11","level":"1.6","align":"center","list_caption":"Figure: 图 5-11 ARP 扫描","alt":"图 5-11 ARP 扫描","nro":65,"url":"attach/media/image011.png","index":11,"caption_template":"_CAPTION_","label":"图 5-11 ARP 扫描","attributes":{},"skip":false,"key":"1.6.11"},{"backlink":"chap0x05/main.html#fig1.6.12","level":"1.6","align":"center","list_caption":"Figure: 图 5-12 ICMP Echo 扫描","alt":"图 5-12 ICMP Echo 扫描","nro":66,"url":"attach/media/image012.png","index":12,"caption_template":"_CAPTION_","label":"图 5-12 ICMP Echo 扫描","attributes":{},"skip":false,"key":"1.6.12"},{"backlink":"chap0x05/main.html#fig1.6.13","level":"1.6","align":"center","list_caption":"Figure: 图 5-13 ICMP Sweep 扫描","alt":"图 5-13 ICMP Sweep 扫描","nro":67,"url":"attach/media/image013.png","index":13,"caption_template":"_CAPTION_","label":"图 5-13 ICMP Sweep 扫描","attributes":{},"skip":false,"key":"1.6.13"},{"backlink":"chap0x05/main.html#fig1.6.14","level":"1.6","align":"center","list_caption":"Figure: 图 5-14 ICMP Broadcast 扫描","alt":"图 5-14 ICMP Broadcast 扫描","nro":68,"url":"attach/media/image014.png","index":14,"caption_template":"_CAPTION_","label":"图 5-14 ICMP Broadcast 扫描","attributes":{},"skip":false,"key":"1.6.14"},{"backlink":"chap0x05/main.html#fig1.6.15","level":"1.6","align":"center","list_caption":"Figure: 图 5-15 TCP Connect 扫描","alt":"图 5-15 TCP Connect 扫描","nro":69,"url":"attach/media/image015.png","index":15,"caption_template":"_CAPTION_","label":"图 5-15 TCP Connect 扫描","attributes":{},"skip":false,"key":"1.6.15"},{"backlink":"chap0x05/main.html#fig1.6.16","level":"1.6","align":"center","list_caption":"Figure: 图 5-16 UDP 扫描","alt":"图 5-16 UDP 扫描","nro":70,"url":"attach/media/image016.png","index":16,"caption_template":"_CAPTION_","label":"图 5-16 UDP 扫描","attributes":{},"skip":false,"key":"1.6.16"},{"backlink":"chap0x05/main.html#fig1.6.17","level":"1.6","align":"center","list_caption":"Figure: 图 5-17 TCP/SYN 扫描","alt":"图 5-17 TCP/SYN 扫描","nro":71,"url":"attach/media/image017.png","index":17,"caption_template":"_CAPTION_","label":"图 5-17 TCP/SYN 扫描","attributes":{},"skip":false,"key":"1.6.17"},{"backlink":"chap0x05/main.html#fig1.6.18","level":"1.6","align":"center","list_caption":"Figure: 图 5-18 TCP 间接扫描","alt":"图 5-18 TCP 间接扫描","nro":72,"url":"attach/media/image018.png","index":18,"caption_template":"_CAPTION_","label":"图 5-18 TCP 间接扫描","attributes":{},"skip":false,"key":"1.6.18"},{"backlink":"chap0x05/main.html#fig1.6.19","level":"1.6","align":"center","list_caption":"Figure: 图 5-19 FIN 扫描","alt":"图 5-19 FIN 扫描","nro":73,"url":"attach/media/image019.png","index":19,"caption_template":"_CAPTION_","label":"图 5-19 FIN 扫描","attributes":{},"skip":false,"key":"1.6.19"},{"backlink":"chap0x05/main.html#fig1.6.20","level":"1.6","align":"center","list_caption":"Figure: 图 5-20 TCP Xmas 扫描","alt":"图 5-20 TCP Xmas 扫描","nro":74,"url":"attach/media/image020.png","index":20,"caption_template":"_CAPTION_","label":"图 5-20 TCP Xmas 扫描","attributes":{},"skip":false,"key":"1.6.20"},{"backlink":"chap0x05/main.html#fig1.6.21","level":"1.6","align":"center","list_caption":"Figure: 图 5-21 TCP Null 扫描","alt":"图 5-21 TCP Null 扫描","nro":75,"url":"attach/media/image021.png","index":21,"caption_template":"_CAPTION_","label":"图 5-21 TCP Null 扫描","attributes":{},"skip":false,"key":"1.6.21"},{"backlink":"chap0x05/main.html#fig1.6.22","level":"1.6","align":"center","list_caption":"Figure: 图 5-22 ACK 扫描","alt":"图 5-22 ACK 扫描","nro":76,"url":"attach/media/image022.png","index":22,"caption_template":"_CAPTION_","label":"图 5-22 ACK 扫描","attributes":{},"skip":false,"key":"1.6.22"},{"backlink":"chap0x05/main.html#fig1.6.23","level":"1.6","align":"center","list_caption":"Figure: 图 5-23 IDLE 扫描","alt":"图 5-23 IDLE 扫描","nro":77,"url":"attach/media/image023.png","index":23,"caption_template":"_CAPTION_","label":"图 5-23 IDLE 扫描","attributes":{},"skip":false,"key":"1.6.23"},{"backlink":"chap0x05/main.html#fig1.6.24","level":"1.6","align":"center","list_caption":"Figure: 图 5-24 Windows 系统 Ping 程序实现","alt":"图 5-24 Windows 系统 Ping 程序实现","nro":78,"url":"attach/media/image024.png","index":24,"caption_template":"_CAPTION_","label":"图 5-24 Windows 系统 Ping 程序实现","attributes":{},"skip":false,"key":"1.6.24"},{"backlink":"chap0x05/main.html#fig1.6.25","level":"1.6","align":"center","list_caption":"Figure: 图 5-25 Linux 系统 Ping 程序实现","alt":"图 5-25 Linux 系统 Ping 程序实现","nro":79,"url":"attach/media/image025.png","index":25,"caption_template":"_CAPTION_","label":"图 5-25 Linux 系统 Ping 程序实现","attributes":{},"skip":false,"key":"1.6.25"},{"backlink":"chap0x05/main.html#fig1.6.26","level":"1.6","align":"center","list_caption":"Figure: 图 5-26 ping 命令运行结果","alt":"图 5-26 ping 命令运行结果","nro":80,"url":"attach/media/image026.png","index":26,"caption_template":"_CAPTION_","label":"图 5-26 ping 命令运行结果","attributes":{},"skip":false,"key":"1.6.26"},{"backlink":"chap0x05/main.html#fig1.6.27","level":"1.6","align":"center","list_caption":"Figure: 图 5-27 Nmap 扫描","alt":"图 5-27 Nmap 扫描","nro":81,"url":"attach/media/image027.png","index":27,"caption_template":"_CAPTION_","label":"图 5-27 Nmap 扫描","attributes":{},"skip":false,"key":"1.6.27"},{"backlink":"chap0x05/main.html#fig1.6.28","level":"1.6","align":"center","list_caption":"Figure: 图 5-28 Nmap 扫描流程图","alt":"图 5-28 Nmap 扫描流程图","nro":82,"url":"attach/media/image028.png","index":28,"caption_template":"_CAPTION_","label":"图 5-28 Nmap 扫描流程图","attributes":{},"skip":false,"key":"1.6.28"},{"backlink":"chap0x06/main.html#fig1.7.1","level":"1.7","align":"center","list_caption":"Figure: 图 6-1 内容分发网络示意图","alt":"图 6-1 内容分发网络示意图","nro":83,"url":"attach/media/image1.png","index":1,"caption_template":"_CAPTION_","label":"图 6-1 内容分发网络示意图","attributes":{},"skip":false,"key":"1.7.1"},{"backlink":"chap0x06/main.html#fig1.7.2","level":"1.7","align":"center","list_caption":"Figure: 图 6-2 基于 CDN 的云安全","alt":"图 6-2 基于 CDN 的云安全","nro":84,"url":"attach/media/image2.png","index":2,"caption_template":"_CAPTION_","label":"图 6-2 基于 CDN 的云安全","attributes":{},"skip":false,"key":"1.7.2"},{"backlink":"chap0x06/main.html#fig1.7.3","level":"1.7","align":"center","list_caption":"Figure: 图 6-3 网络安全威胁历史趋势","alt":"图 6-3 网络安全威胁历史趋势","nro":85,"url":"attach/media/image3.png","index":3,"caption_template":"_CAPTION_","label":"图 6-3 网络安全威胁历史趋势","attributes":{},"skip":false,"key":"1.7.3"},{"backlink":"chap0x06/main.html#fig1.7.4","level":"1.7","align":"center","list_caption":"Figure: 图 6-4 使用 dig 从域名获取 IP","alt":"图 6-4 使用 dig 从域名获取 IP","nro":86,"url":"attach/media/image4.png","index":4,"caption_template":"_CAPTION_","label":"图 6-4 使用 dig 从域名获取 IP","attributes":{},"skip":false,"key":"1.7.4"},{"backlink":"chap0x06/main.html#fig1.7.5","level":"1.7","align":"center","list_caption":"Figure: 图 6-6 查询指定 IP 地址上注册了哪些域名","alt":"图 6-6 查询指定 IP 地址上注册了哪些域名","nro":87,"url":"attach/media/image6.png","index":5,"caption_template":"_CAPTION_","label":"图 6-6 查询指定 IP 地址上注册了哪些域名","attributes":{},"skip":false,"key":"1.7.5"},{"backlink":"chap0x06/main.html#fig1.7.6","level":"1.7","align":"center","list_caption":"Figure: 图 6-7 built with 网站","alt":"图 6-7 built with 网站","nro":88,"url":"attach/media/image10.png","index":6,"caption_template":"_CAPTION_","label":"图 6-7 built with 网站","attributes":{},"skip":false,"key":"1.7.6"},{"backlink":"chap0x06/main.html#fig1.7.7","level":"1.7","align":"center","list_caption":"Figure: 图 6-8 360 公司董事长周鸿祎先生的手机号泄漏","alt":"图 6-8 360 公司董事长周鸿祎先生的手机号泄漏","nro":89,"url":"attach/media/image11.png","index":7,"caption_template":"_CAPTION_","label":"图 6-8 360 公司董事长周鸿祎先生的手机号泄漏","attributes":{},"skip":false,"key":"1.7.7"},{"backlink":"chap0x06/main.html#fig1.7.8","level":"1.7","align":"center","list_caption":"Figure: 图 6-9 SegmentFault 的 2012 年光棍节 Hack Game 光速通关","alt":"图 6-9 SegmentFault 的 2012 年光棍节 Hack Game 光速通关","nro":90,"url":"attach/media/image12.png","index":8,"caption_template":"_CAPTION_","label":"图 6-9 SegmentFault 的 2012 年光棍节 Hack Game 光速通关","attributes":{},"skip":false,"key":"1.7.8"},{"backlink":"chap0x07/main.html#fig1.8.1","level":"1.8","align":"center","list_caption":"Figure: 图 7-1 Web 应用服务简化模型图","alt":"图 7-1 Web 应用服务简化模型图","nro":91,"url":"attach/media/image01.png","index":1,"caption_template":"_CAPTION_","label":"图 7-1 Web 应用服务简化模型图","attributes":{},"skip":false,"key":"1.8.1"},{"backlink":"chap0x07/exp.html#fig1.8.1.1","level":"1.8.1","align":"center","list_caption":"Figure: vulnerability categories breakdown","alt":"vulnerability categories breakdown","nro":92,"url":"attach/media/juice-shop-categories.png","index":1,"caption_template":"_CAPTION_","label":"vulnerability categories breakdown","attributes":{},"skip":false,"key":"1.8.1.1"},{"backlink":"chap0x08/main.html#fig1.9.1","level":"1.9","align":"center","list_caption":"Figure: 图 8-1 防火墙示意图","alt":"图 8-1 防火墙示意图","nro":93,"url":"attach/media/image1.png","index":1,"caption_template":"_CAPTION_","label":"图 8-1 防火墙示意图","attributes":{},"skip":false,"key":"1.9.1"},{"backlink":"chap0x08/main.html#fig1.9.2","level":"1.9","align":"center","list_caption":"Figure: 图 8-2 防火墙发展历程简图","alt":"图 8-2 防火墙发展历程简图","nro":94,"url":"attach/media/image2.png","index":2,"caption_template":"_CAPTION_","label":"图 8-2 防火墙发展历程简图","attributes":{},"skip":false,"key":"1.9.2"},{"backlink":"chap0x08/main.html#fig1.9.3","level":"1.9","align":"center","list_caption":"Figure: 图 8-3 包过滤技术","alt":"图 8-3 包过滤技术","nro":95,"url":"attach/media/image3.png","index":3,"caption_template":"_CAPTION_","label":"图 8-3 包过滤技术","attributes":{},"skip":false,"key":"1.9.3"},{"backlink":"chap0x08/main.html#fig1.9.4","level":"1.9","align":"center","list_caption":"Figure: 图 8-4 状态检测技术","alt":"图 8-4 状态检测技术","nro":96,"url":"attach/media/image4.png","index":4,"caption_template":"_CAPTION_","label":"图 8-4 状态检测技术","attributes":{},"skip":false,"key":"1.9.4"},{"backlink":"chap0x08/main.html#fig1.9.5","level":"1.9","align":"center","list_caption":"Figure: 图 8-5 状态检测技术基本流程图","alt":"图 8-5 状态检测技术基本流程图","nro":97,"url":"attach/media/image5.png","index":5,"caption_template":"_CAPTION_","label":"图 8-5 状态检测技术基本流程图","attributes":{},"skip":false,"key":"1.9.5"},{"backlink":"chap0x08/main.html#fig1.9.6","level":"1.9","align":"center","list_caption":"Figure: 图 8-6 应用级代理","alt":"图 8-6 应用级代理","nro":98,"url":"attach/media/image6.png","index":6,"caption_template":"_CAPTION_","label":"图 8-6 应用级代理","attributes":{},"skip":false,"key":"1.9.6"},{"backlink":"chap0x08/main.html#fig1.9.7","level":"1.9","align":"center","list_caption":"Figure: 图 8-7 Telnet 示例图","alt":"图 8-7 Telnet 示例图","nro":99,"url":"attach/media/image7.png","index":7,"caption_template":"_CAPTION_","label":"图 8-7 Telnet 示例图","attributes":{},"skip":false,"key":"1.9.7"},{"backlink":"chap0x08/main.html#fig1.9.8","level":"1.9","align":"center","list_caption":"Figure: 图 8-8 Netfilter 架构","alt":"图 8-8 Netfilter 架构","nro":100,"url":"attach/media/image8.png","index":8,"caption_template":"_CAPTION_","label":"图 8-8 Netfilter 架构","attributes":{},"skip":false,"key":"1.9.8"},{"backlink":"chap0x08/main.html#fig1.9.9","level":"1.9","align":"center","list_caption":"Figure: 图 8-9 Netfilter/iptable 架构","alt":"图 8-9 Netfilter/iptable 架构","nro":101,"url":"attach/media/image9.png","index":9,"caption_template":"_CAPTION_","label":"图 8-9 Netfilter/iptable 架构","attributes":{},"skip":false,"key":"1.9.9"},{"backlink":"chap0x08/main.html#fig1.9.10","level":"1.9","align":"center","list_caption":"Figure: 图 8-10 系统流程图","alt":"图 8-10 系统流程图","nro":102,"url":"attach/media/image10.png","index":10,"caption_template":"_CAPTION_","label":"图 8-10 系统流程图","attributes":{},"skip":false,"key":"1.9.10"},{"backlink":"chap0x08/main.html#fig1.9.11","level":"1.9","align":"center","list_caption":"Figure: 图 8-11 Netfilter 架构的数据流图","alt":"图 8-11 Netfilter 架构的数据流图","nro":103,"url":"attach/media/image11.png","index":11,"caption_template":"_CAPTION_","label":"图 8-11 Netfilter 架构的数据流图","attributes":{},"skip":false,"key":"1.9.11"},{"backlink":"chap0x08/main.html#fig1.9.12","level":"1.9","align":"center","list_caption":"Figure: 图 8-12 信息包过滤过程","alt":"图 8-12 信息包过滤过程","nro":104,"url":"attach/media/image12.png","index":12,"caption_template":"_CAPTION_","label":"图 8-12 信息包过滤过程","attributes":{},"skip":false,"key":"1.9.12"},{"backlink":"chap0x08/main.html#fig1.9.13","level":"1.9","align":"center","list_caption":"Figure: 图 8-13 路由模式","alt":"图 8-13 路由模式","nro":105,"url":"attach/media/image14.png","index":13,"caption_template":"_CAPTION_","label":"图 8-13 路由模式","attributes":{},"skip":false,"key":"1.9.13"},{"backlink":"chap0x08/main.html#fig1.9.14","level":"1.9","align":"center","list_caption":"Figure: 图 8-14 透明模式","alt":"图 8-14 透明模式","nro":106,"url":"attach/media/image15.png","index":14,"caption_template":"_CAPTION_","label":"图 8-14 透明模式","attributes":{},"skip":false,"key":"1.9.14"},{"backlink":"chap0x08/main.html#fig1.9.15","level":"1.9","align":"center","list_caption":"Figure: 图 8-15 混合模式","alt":"图 8-15 混合模式","nro":107,"url":"attach/media/image16.png","index":15,"caption_template":"_CAPTION_","label":"图 8-15 混合模式","attributes":{},"skip":false,"key":"1.9.15"},{"backlink":"chap0x08/main.html#fig1.9.16","level":"1.9","align":"center","list_caption":"Figure: 图 8-16 双机热备模式","alt":"图 8-16 双机热备模式","nro":108,"url":"attach/media/image17.png","index":16,"caption_template":"_CAPTION_","label":"图 8-16 双机热备模式","attributes":{},"skip":false,"key":"1.9.16"},{"backlink":"chap0x08/main.html#fig1.9.17","level":"1.9","align":"center","list_caption":"Figure: 图 8-17 防火墙串行接入在网络设备之前","alt":"图 8-17 防火墙串行接入在网络设备之前","nro":109,"url":"attach/media/image18.png","index":17,"caption_template":"_CAPTION_","label":"图 8-17 防火墙串行接入在网络设备之前","attributes":{},"skip":false,"key":"1.9.17"},{"backlink":"chap0x08/main.html#fig1.9.18","level":"1.9","align":"center","list_caption":"Figure: 图 8-18 防火墙串行接入在设备之后","alt":"图 8-18 防火墙串行接入在设备之后","nro":110,"url":"attach/media/image19.png","index":18,"caption_template":"_CAPTION_","label":"图 8-18 防火墙串行接入在设备之后","attributes":{},"skip":false,"key":"1.9.18"},{"backlink":"chap0x08/main.html#fig1.9.19","level":"1.9","align":"center","list_caption":"Figure: 图 8-19 防火墙部署于应用服务器之上","alt":"图 8-19 防火墙部署于应用服务器之上","nro":111,"url":"attach/media/image20.png","index":19,"caption_template":"_CAPTION_","label":"图 8-19 防火墙部署于应用服务器之上","attributes":{},"skip":false,"key":"1.9.19"},{"backlink":"chap0x08/main.html#fig1.9.20","level":"1.9","align":"center","list_caption":"Figure: 图 8-20 私有地址","alt":"图 8-20 私有地址","nro":112,"url":"attach/media/image27.png","index":20,"caption_template":"_CAPTION_","label":"图 8-20 私有地址","attributes":{},"skip":false,"key":"1.9.20"},{"backlink":"chap0x08/main.html#fig1.9.21","level":"1.9","align":"center","list_caption":"Figure: 图 8-21 静态网络地址转换","alt":"图 8-21 静态网络地址转换","nro":113,"url":"attach/media/image28.png","index":21,"caption_template":"_CAPTION_","label":"图 8-21 静态网络地址转换","attributes":{},"skip":false,"key":"1.9.21"},{"backlink":"chap0x08/main.html#fig1.9.22","level":"1.9","align":"center","list_caption":"Figure: 图 8-22 动态网络地址转换","alt":"图 8-22 动态网络地址转换","nro":114,"url":"attach/media/image29.png","index":22,"caption_template":"_CAPTION_","label":"图 8-22 动态网络地址转换","attributes":{},"skip":false,"key":"1.9.22"},{"backlink":"chap0x08/main.html#fig1.9.23","level":"1.9","align":"center","list_caption":"Figure: 图 8-23 网络地址端口映射","alt":"图 8-23 网络地址端口映射","nro":115,"url":"attach/media/image30.png","index":23,"caption_template":"_CAPTION_","label":"图 8-23 网络地址端口映射","attributes":{},"skip":false,"key":"1.9.23"},{"backlink":"chap0x08/exp.html#fig1.9.1.1","level":"1.9.1","align":"center","list_caption":"Figure: 图8-24 IP 映射情景","alt":"图8-24 IP 映射情景","nro":116,"url":"attach/media/image31.png","index":1,"caption_template":"_CAPTION_","label":"图8-24 IP 映射情景","attributes":{},"skip":false,"key":"1.9.1.1"},{"backlink":"chap0x08/exp.html#fig1.9.1.2","level":"1.9.1","align":"center","list_caption":"Figure: 图8-25 概要统计数据","alt":"图8-25 概要统计数据","nro":117,"url":"attach/media/image32.png","index":2,"caption_template":"_CAPTION_","label":"图8-25 概要统计数据","attributes":{},"skip":false,"key":"1.9.1.2"},{"backlink":"chap0x09/main.html#fig1.10.1","level":"1.10","align":"center","list_caption":"Figure: 图 9-1 入侵检测发展简史","alt":"图 9-1 入侵检测发展简史","nro":118,"url":"attach/media/image1.png","index":1,"caption_template":"_CAPTION_","label":"图 9-1 入侵检测发展简史","attributes":{},"skip":false,"key":"1.10.1"},{"backlink":"chap0x09/main.html#fig1.10.2","level":"1.10","align":"center","list_caption":"Figure: 图 9-2 入侵检测","alt":"图 9-2 入侵检测","nro":119,"url":"attach/media/image2.png","index":2,"caption_template":"_CAPTION_","label":"图 9-2 入侵检测","attributes":{},"skip":false,"key":"1.10.2"},{"backlink":"chap0x09/main.html#fig1.10.3","level":"1.10","align":"center","list_caption":"Figure: 图 9-3 入侵检测系统的作用","alt":"图 9-3 入侵检测系统的作用","nro":120,"url":"attach/media/image3.png","index":3,"caption_template":"_CAPTION_","label":"图 9-3 入侵检测系统的作用","attributes":{},"skip":false,"key":"1.10.3"},{"backlink":"chap0x09/main.html#fig1.10.4","level":"1.10","align":"center","list_caption":"Figure: 图 9-4 漏报率和误报率间关系","alt":"图 9-4 漏报率和误报率间关系","nro":121,"url":"attach/media/image4.png","index":4,"caption_template":"_CAPTION_","label":"图 9-4 漏报率和误报率间关系","attributes":{},"skip":false,"key":"1.10.4"},{"backlink":"chap0x09/main.html#fig1.10.5","level":"1.10","align":"center","list_caption":"Figure: 图 9-5 融合使用异常检测和误用检测模型的技术方法","alt":"图 9-5 融合使用异常检测和误用检测模型的技术方法","nro":122,"url":"attach/media/image6.png","index":5,"caption_template":"_CAPTION_","label":"图 9-5 融合使用异常检测和误用检测模型的技术方法","attributes":{},"skip":false,"key":"1.10.5"},{"backlink":"chap0x09/main.html#fig1.10.6","level":"1.10","align":"center","list_caption":"Figure: 图 9-6 集中式结构","alt":"图 9-6 集中式结构","nro":123,"url":"attach/media/image7.png","index":6,"caption_template":"_CAPTION_","label":"图 9-6 集中式结构","attributes":{},"skip":false,"key":"1.10.6"},{"backlink":"chap0x09/main.html#fig1.10.7","level":"1.10","align":"center","list_caption":"Figure: 图 9-7 等级分布式结构","alt":"图 9-7 等级分布式结构","nro":124,"url":"attach/media/image8.png","index":7,"caption_template":"_CAPTION_","label":"图 9-7 等级分布式结构","attributes":{},"skip":false,"key":"1.10.7"},{"backlink":"chap0x09/main.html#fig1.10.8","level":"1.10","align":"center","list_caption":"Figure: 图 9-8 完全分布式结构","alt":"图 9-8 完全分布式结构","nro":125,"url":"attach/media/image9.png","index":8,"caption_template":"_CAPTION_","label":"图 9-8 完全分布式结构","attributes":{},"skip":false,"key":"1.10.8"},{"backlink":"chap0x09/main.html#fig1.10.9","level":"1.10","align":"center","list_caption":"Figure: 图 9-9 通用入侵检测框架（CIDF）体系结构","alt":"图 9-9 通用入侵检测框架（CIDF）体系结构","nro":126,"url":"attach/media/image10.png","index":9,"caption_template":"_CAPTION_","label":"图 9-9 通用入侵检测框架（CIDF）体系结构","attributes":{},"skip":false,"key":"1.10.9"},{"backlink":"chap0x09/main.html#fig1.10.10","level":"1.10","align":"center","list_caption":"Figure: 图9-10 入侵检测的典型部署模式","alt":"图9-10 入侵检测的典型部署模式","nro":127,"url":"attach/media/image11.png","index":10,"caption_template":"_CAPTION_","label":"图9-10 入侵检测的典型部署模式","attributes":{},"skip":false,"key":"1.10.10"},{"backlink":"chap0x09/main.html#fig1.10.11","level":"1.10","align":"center","list_caption":"Figure: 图 9-11 捕获的数据报文","alt":"图 9-11 捕获的数据报文","nro":128,"url":"attach/media/image12.png","index":11,"caption_template":"_CAPTION_","label":"图 9-11 捕获的数据报文","attributes":{},"skip":false,"key":"1.10.11"},{"backlink":"chap0x09/main.html#fig1.10.12","level":"1.10","align":"center","list_caption":"Figure: 图 9-12 Snort规则","alt":"图 9-12 Snort规则","nro":129,"url":"attach/media/image13.png","index":12,"caption_template":"_CAPTION_","label":"图 9-12 Snort规则","attributes":{},"skip":false,"key":"1.10.12"},{"backlink":"chap0x09/main.html#fig1.10.13","level":"1.10","align":"center","list_caption":"Figure: 图 9-13 Snort规则格式","alt":"图 9-13 Snort规则格式","nro":130,"url":"attach/media/image14.png","index":13,"caption_template":"_CAPTION_","label":"图 9-13 Snort规则格式","attributes":{},"skip":false,"key":"1.10.13"},{"backlink":"chap0x09/main.html#fig1.10.14","level":"1.10","align":"center","list_caption":"Figure: 图9-14 处理流程","alt":"图9-14 处理流程","nro":131,"url":"attach/media/image15.png","index":14,"caption_template":"_CAPTION_","label":"图9-14 处理流程","attributes":{},"skip":false,"key":"1.10.14"},{"backlink":"chap0x09/main.html#fig1.10.15","level":"1.10","align":"center","list_caption":"Figure: 图 9-15 误用检测规则","alt":"图 9-15 误用检测规则","nro":132,"url":"attach/media/image16.png","index":15,"caption_template":"_CAPTION_","label":"图 9-15 误用检测规则","attributes":{},"skip":false,"key":"1.10.15"},{"backlink":"chap0x09/main.html#fig1.10.16","level":"1.10","align":"center","list_caption":"Figure: 图 9-16 异常检测规则","alt":"图 9-16 异常检测规则","nro":133,"url":"attach/media/image17.png","index":16,"caption_template":"_CAPTION_","label":"图 9-16 异常检测规则","attributes":{},"skip":false,"key":"1.10.16"},{"backlink":"chap0x09/main.html#fig1.10.17","level":"1.10","align":"center","list_caption":"Figure: 图 9-17 Snort 数据流图","alt":"图 9-17 Snort 数据流图","nro":134,"url":"attach/media/image18.png","index":17,"caption_template":"_CAPTION_","label":"图 9-17 Snort 数据流图","attributes":{},"skip":false,"key":"1.10.17"},{"backlink":"chap0x09/main.html#fig1.10.18","level":"1.10","align":"center","list_caption":"Figure: 图 9-18 检测引擎内部数据结构表示","alt":"图 9-18 检测引擎内部数据结构表示","nro":135,"url":"attach/media/image19.png","index":18,"caption_template":"_CAPTION_","label":"图 9-18 检测引擎内部数据结构表示","attributes":{},"skip":false,"key":"1.10.18"},{"backlink":"chap0x09/main.html#fig1.10.19","level":"1.10","align":"center","list_caption":"Figure: 图 9-19 检测引擎内部数据结构展开图","alt":"图 9-19 检测引擎内部数据结构展开图","nro":136,"url":"attach/media/image20.png","index":19,"caption_template":"_CAPTION_","label":"图 9-19 检测引擎内部数据结构展开图","attributes":{},"skip":false,"key":"1.10.19"},{"backlink":"chap0x09/main.html#fig1.10.20","level":"1.10","align":"center","list_caption":"Figure: 图 9-20 Suricata产生的报警日志可视化效果图","alt":"图 9-20 Suricata产生的报警日志可视化效果图","nro":137,"url":"attach/media/kibana-selks4.png","index":20,"caption_template":"_CAPTION_","label":"图 9-20 Suricata产生的报警日志可视化效果图","attributes":{},"skip":false,"key":"1.10.20"},{"backlink":"chap0x09/main.html#fig1.10.21","level":"1.10","align":"center","list_caption":"Figure: 图 9-21 Bro 架构图","alt":"图 9-21 Bro 架构图","nro":138,"url":"attach/media/Bro_Arch.png","index":21,"caption_template":"_CAPTION_","label":"图 9-21 Bro 架构图","attributes":{},"skip":false,"key":"1.10.21"},{"backlink":"chap0x09/main.html#fig1.10.22","level":"1.10","align":"center","list_caption":"Figure: 图 9-22 Bro 集群架构拓扑图","alt":"图 9-22 Bro 集群架构拓扑图","nro":139,"url":"attach/media/Bro_Arch_Cluster.png","index":22,"caption_template":"_CAPTION_","label":"图 9-22 Bro 集群架构拓扑图","attributes":{},"skip":false,"key":"1.10.22"},{"backlink":"chap0x10/main.html#fig1.11.1","level":"1.11","align":"center","list_caption":"Figure: 图 10-1 安全策略周期图","alt":"图 10-1 安全策略周期图","nro":140,"url":"attach/media/image01.png","index":1,"caption_template":"_CAPTION_","label":"图 10-1 安全策略周期图","attributes":{},"skip":false,"key":"1.11.1"},{"backlink":"chap0x10/main.html#fig1.11.2","level":"1.11","align":"center","list_caption":"Figure: 图 10-2 漏洞生命周期阶段图","alt":"图 10-2 漏洞生命周期阶段图","nro":141,"url":"attach/media/image03.png","index":2,"caption_template":"_CAPTION_","label":"图 10-2 漏洞生命周期阶段图","attributes":{},"skip":false,"key":"1.11.2"},{"backlink":"chap0x10/main.html#fig1.11.3","level":"1.11","align":"center","list_caption":"Figure: 图 10-3 Web威胁模型","alt":"图 10-3 Web威胁模型","nro":142,"url":"attach/media/image05.png","index":3,"caption_template":"_CAPTION_","label":"图 10-3 Web威胁模型","attributes":{},"skip":false,"key":"1.11.3"},{"backlink":"chap0x10/main.html#fig1.11.4","level":"1.11","align":"center","list_caption":"Figure: 图 10-4 Apache请求处理生命周期图","alt":"图 10-4 Apache请求处理生命周期图","nro":143,"url":"attach/media/image06.png","index":4,"caption_template":"_CAPTION_","label":"图 10-4 Apache请求处理生命周期图","attributes":{},"skip":false,"key":"1.11.4"},{"backlink":"chap0x11/main.html#fig1.12.1","level":"1.12","align":"center","list_caption":"Figure: 图 11-1 欺骗防御属性","alt":"图 11-1 欺骗防御属性","nro":144,"url":"attach/images/cohen-math.gif","index":1,"caption_template":"_CAPTION_","label":"图 11-1 欺骗防御属性","attributes":{},"skip":false,"key":"1.12.1"},{"backlink":"chap0x11/main.html#fig1.12.2","level":"1.12","align":"center","list_caption":"Figure: 图 11-2 蜜场","alt":"图 11-2 蜜场","nro":145,"url":"attach/images/image001.png","index":2,"caption_template":"_CAPTION_","label":"图 11-2 蜜场","attributes":{},"skip":false,"key":"1.12.2"},{"backlink":"chap0x11/main.html#fig1.12.3","level":"1.12","align":"center","list_caption":"Figure: 图 11-3 Canarytokens 的 Token 生成页面","alt":"图 11-3 Canarytokens 的 Token 生成页面","nro":146,"url":"attach/images/CanaryTokens-1.png","index":3,"caption_template":"_CAPTION_","label":"图 11-3 Canarytokens 的 Token 生成页面","attributes":{},"skip":false,"key":"1.12.3"},{"backlink":"chap0x11/main.html#fig1.12.4","level":"1.12","align":"center","list_caption":"Figure: 图 11-4 主机基本信息","alt":"图 11-4 主机基本信息","nro":147,"url":"attach/images/CanaryTokens-2.png","index":4,"caption_template":"_CAPTION_","label":"图 11-4 主机基本信息","attributes":{},"skip":false,"key":"1.12.4"},{"backlink":"chap0x11/main.html#fig1.12.5","level":"1.12","align":"center","list_caption":"Figure: 图 11-5 Nepenthes PHARM","alt":"图 11-5 Nepenthes PHARM","nro":148,"url":"attach/images/image002.png","index":5,"caption_template":"_CAPTION_","label":"图 11-5 Nepenthes PHARM","attributes":{},"skip":false,"key":"1.12.5"},{"backlink":"chap0x11/main.html#fig1.12.6","level":"1.12","align":"center","list_caption":"Figure: 图 11-6 蜜罐基本体系架构图","alt":"图 11-6 蜜罐基本体系架构图","nro":149,"url":"attach/images/image003.png","index":6,"caption_template":"_CAPTION_","label":"图 11-6 蜜罐基本体系架构图","attributes":{},"skip":false,"key":"1.12.6"},{"backlink":"chap0x11/main.html#fig1.12.7","level":"1.12","align":"center","list_caption":"Figure: 图 11-7 Gen II 蜜网技术的数据捕获的数据流","alt":"图 11-7 Gen II 蜜网技术的数据捕获的数据流","nro":150,"url":"attach/images/image005.png","index":7,"caption_template":"_CAPTION_","label":"图 11-7 Gen II 蜜网技术的数据捕获的数据流","attributes":{},"skip":false,"key":"1.12.7"},{"backlink":"chap0x11/main.html#fig1.12.8","level":"1.12","align":"center","list_caption":"Figure: 图 11-8 Gen II 蜜网技术的数据控制架构的数据流","alt":"图 11-8 Gen II 蜜网技术的数据控制架构的数据流","nro":151,"url":"attach/images/image006.png","index":8,"caption_template":"_CAPTION_","label":"图 11-8 Gen II 蜜网技术的数据控制架构的数据流","attributes":{},"skip":false,"key":"1.12.8"}]},"title":"网络安全","language":"zh-hans","links":{"sidebar":{"中传信安课程网站":"https://c4pr1c3.github.io/cuc-wiki/"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"gitbook":">=2.0.0","description":"本科信息安全专业教材@CUC"},"file":{"path":"chap0x09/main.md","mtime":"2021-11-29T23:33:36.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-29T23:35:45.727Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-add-js-css/360d86d18c90f62b8f86c8d8b7764cf2-custom.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  juice-shop:
+    image: "bkimminich/juice-shop"
+    ports:
+     - "3000:3000"
+  shake-logger:
+    build: .
+    ports:
+     - "8080:80"

@@ -1,0 +1,46 @@
+language: node_js
+node_js:
+  - "15.11.0"
+
+before_install:
+  - openssl aes-256-cbc -K $gitee_key -iv $gitee_iv -in ./.travis/travis.key.enc -out gitee_deploy_key -d
+  - chmod 600 gitee_deploy_key
+  - eval $(ssh-agent)
+  - ssh-add gitee_deploy_key
+
+notifications:
+  email:
+    on_success: never
+
+install:
+  - npm install gitbook-cli graceful-fs@4.2.0
+  - cd node_modules/npm/node_modules/ && npm install graceful-fs@4.2.0 && cd -
+  - node node_modules/gitbook-cli/bin/gitbook.js install
+
+script:
+  - node node_modules/gitbook-cli/bin/gitbook.js build
+
+after_script:
+  - git checkout -b gh-pages
+  - cd _book
+  - git init
+  - git remote add origin https://${REF}
+  - git remote add gitee "git@gitee.com:c4pr1c3/cuc-ns.git"
+  - git remote -v
+  - git add .
+  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
+  - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
+  - git push --force --quiet gitee gh-pages
+  - git push --force --quiet "git@gitee.com:c4pr1c3/cuc-ns.git" master:gh-pages
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - REF=github.com/c4pr1c3/cuc-ns.git # 设置 github 地址
+
+addons:
+  ssh_known_hosts:
+    - gitee.com
