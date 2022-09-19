@@ -103,7 +103,7 @@ HTTP 反向代理的代表：
 ####  3.1.2.4 HTTP 代理的工作模式
 
 1. X-Forwarded-For (XFF)
-    X-Forwarded-For(XFF) 是用来识别通过 HTTP 代理或负载均衡方式连接到 Web 服务器的客户端最原始的 IP 地址的 HTTP 请求头字段。
+    X-Forwarded-For (XFF) 是用来识别通过 HTTP 代理或负载均衡方式连接到 Web 服务器的客户端最原始的 IP 地址的 HTTP 请求头字段。
     Squid 缓存代理服务器的开发人员最早引入了这一 HTTP 头字段，并由 IETF 在 Forwarded-For HTTP 头字段标准化草案中正式提出。标识用户的真实 IP。它的 HTTP 头一般格式如下:
 
     X-Forwarded-For: client1, proxy1, proxy2, proxy3
