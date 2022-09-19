@@ -106,15 +106,15 @@ HTTP 反向代理的代表：
     X-Forwarded-For(XFF) 是用来识别通过 HTTP 代理或负载均衡方式连接到 Web 服务器的客户端最原始的 IP 地址的 HTTP 请求头字段。
     Squid 缓存代理服务器的开发人员最早引入了这一 HTTP 头字段，并由 IETF 在 Forwarded-For HTTP 头字段标准化草案中正式提出。标识用户的真实 IP。它的 HTTP 头一般格式如下:
 
-    X-Forwarded-For: client1, proxy1, proxy2,proxy3
+    X-Forwarded-For: client1, proxy1, proxy2, proxy3
 
-    其中的值通过一个逗号+空格把多个IP地址区分开,最左边 (client1) 是最原始客户端的 IP 地址,代理服务器每成功收到一个请求，就把请求来源 IP 地址添加到右边。在上面这个例子中，这个请求成功通过了三台代理服务器： proxy1 , proxy2 及 proxy3。请求由 client1 发出，到达了 proxy3 (proxy3 可能是请求的终点)。请求刚从 client1 中发出时，XFF 是空的，请求被发往 proxy1 ；通过 proxy1 的时候，client1 被添加到 XFF 中，之后请求被发往 proxy2 ;通过 proxy2 的时候，proxy1 被添加到 XFF 中，之后请求被发往 proxy3；通过 proxy3 时，proxy2 被添加到 XFF 中，之后请求的的去向不明，如果 proxy3 不是请求终点，请求会被继续转发。
+    其中的值通过一个逗号+空格把多个IP地址区分开,最左边 (client1) 是最原始客户端的 IP 地址,代理服务器每成功收到一个请求，就把请求来源 IP 地址添加到右边。在上面这个例子中，这个请求成功通过了三台代理服务器： proxy1 , proxy2 及 proxy3。请求由 client1 发出，到达了 proxy3 (proxy3 可能是请求的终点)。请求刚从 client1 中发出时，XFF 是空的，请求被发往 proxy1；通过 proxy1 的时候，client1 被添加到 XFF 中，之后请求被发往 proxy2 ;通过 proxy2 的时候，proxy1 被添加到 XFF 中，之后请求被发往 proxy3；通过 proxy3 时，proxy2 被添加到 XFF 中，之后请求的的去向不明，如果 proxy3 不是请求终点，请求会被继续转发。
 
 2. 匿名代理
     不提供 X-Forwarded-For 字段，所有通过代理服务器的连接只会显示代理服务器的 IP 地址(而非连接发起的原始 IP 地址)，这样的代理服务器实际上充当了匿名服务提供者的角色，如果连接的原始 IP 地址不可得，恶意访问的检测与预防的难度将大大增加。
 
 3. 非匿名代理
-    即提供不提供 X-Forwarded-For 字段，可获得连接发起的原始 IP 地址。
+    即提供 X-Forwarded-For 字段，可获得连接发起的原始 IP 地址。
     在实际应用中 HTTP 代理类型下表所示，其中高匿名代理甚至无法判断是否使用到代理服务。下面的表格总结了使用 PHP 语言编写客户端使用的代理服务器类型的基本方法：
 
 |            | REMOTE_ADDR          | HTTP_VIA                   | HTTP_X_FORWARDED_FOR                          |
