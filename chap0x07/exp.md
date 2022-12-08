@@ -26,7 +26,7 @@
 |---|---|---|---|---|
 | 未验证的用户输入  | Parameter Tampering->Bypass HTML Field Restrictions / Bypass Client Side JavaScript Validation | Client side  |   | Weblogic 常规渗透测试环境  | 
 | CSRF  |   | Cross-Site Request Forgeries  | ✓  |   | 
-| 缓冲区溢出  | Buffer Overflows->Off-by-One Overflows  |   |   |   | 
+| 缓冲区溢出  | Buffer OverFlaws->Off-by-One OverFlaws  |   |   |   | 
 | 文件上传漏洞  | Malicious Execution  |   | ✓  | CVE-2018-2894  |  
 | 文件包含  |   |   |  ✓ | PHP文件包含漏洞（利用phpinfo）  |  
 | XXE  |  Parameter Tampering->XXE | XXE  |   |   |  
@@ -46,13 +46,13 @@
 
 基于[WebGoat 7.0.1 Release](https://github.com/WebGoat/WebGoat/tree/7.0.1)
 
-* Authentication Flows ( 6.脆弱的访问控制 )
+* Authentication Flaws ( 6.脆弱的访问控制 )
     * Forgot Password
     * Multi Level Login 2
 * Cross-Site Scripting 
     * Stored XSS Attacks ( 4.跨站点脚本(XSS) )
     * Cross Site Request Forgery (CSRF) ( 11.跨站点请求伪造 )
-* Injection Flows ( 3. 注⼊缺陷 )
+* Injection Flaws ( 3. 注⼊缺陷 )
     * Command injection
     * LAB: SQL Injection
 * Malicious Execution
@@ -60,7 +60,7 @@
 * Parameter Tampering ( 1. 未验证的用户输⼊ )
     * Bypass HTML Field Restrictions
     * Exploit Hidden Fields
-* Session Management Flows ( 7.脆弱认证和会话管理 )
+* Session Management Flaws ( 7.脆弱认证和会话管理 )
     * Session Fixation
 
 #### 修改WebGoat 7.0.1的默认监听IP地址
